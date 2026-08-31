@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # ♿ DMovel — Interaktive Präsentation SITEC UFPA 2026
 ### Intelligente urbane Barrierefreiheit & kollaborative Kartierung
@@ -17,7 +17,7 @@
 [![Web App](https://img.shields.io/badge/Live%20App-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
-  <strong>Interaktive 6-Folien-Präsentation mit integriertem Vollbild-Motivationsvideo, universeller Barrierefreiheit und Live-QR-Code-Tests für die Woche des Technologieinstituts (SITEC 2026) an der Bundesuniversität von Pará (UFPA).</strong>
+  <strong>Interaktive 6-Folien-Präsentation mit integriertem App-Iframe-Emulator, geführter Onboarding-Tour, Vollbild-Motivationsvideo, universeller Barrierefreiheit und Live-QR-Code-Tests für die SITEC 2026 an der UFPA.</strong>
 </p>
 
 [🌐 Online-Präsentation ansehen](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 DMovel Web-App testen](https://lapshub.github.io/dmovel_web_app/) • [📄 LaPS-Forschungslabor](https://www.laps.ufpa.br/)
@@ -26,62 +26,11 @@
 
 ---
 
-## 📌 Überblick
+## 🎯 Highlights
 
-**DMovel** ist eine offene, verteilte und mehrsprachige Plattform für assistive Technologien, die entwickelt wurde, um die städtische Mobilität und physische Barrierefreiheit im Amazonasgebiet (Belém, Brasilien) sowie auf dem Universitätsgelände der UFPA zu kartieren, zu bewerten und nachhaltig zu verbessern.
-
-Dieses Repository enthält die offizielle Web-Präsentation für die **SITEC UFPA 2026 (Semana do Instituto de Tecnologia • 1. und 2. September 2026)**, konzipiert nach höchsten **Software-Engineering- und Barrierefreiheitsstandards (AAA)**.
-
----
-
-## 🎯 Hauptmerkmale der Präsentation
-
-### 1. 🎬 Vollbild-Motivationsvideo-Interkalation
-- Enthält das **von Prof. Kelly für DMovel produzierte Motivationsvideo** (Alle Rechte vorbehalten bei DMovel / UFPA).
-- Der Vortragende kann die Taste <kbd>M</kbd> drücken, um nahtlos in das Vollbild-Video zu wechseln und danach exakt zur aktuellen Folie zurückzukehren.
-
-### 2. 📱 Permanenter QR-Code auf jeder Folie für Live-Tests
-- Jede Folie verfügt über einen kontrastreichen QR-Code, mit dem Studierende und Lehrende die Web-App direkt im Smartphone öffnen können:
-  👉 **`https://lapshub.github.io/dmovel_web_app/`**
-
-### 3. 🌓 Projektormodus & OLED-Dunkelmodus
-- **Projektormodus (Helles Design):** Speziell kalibriert für helle Hörsäle und Projektoren (`#F8FAFC`, `#0F172A`, `#0361A3`).
-- **Dunkelmodus (OLED):** Hoher Kontrast mit leuchtenden Akzenten.
-- Umschaltbar über die Taste <kbd>T</kbd>.
-
-### 4. ♿ Universelle digitale Barrierefreiheit (WCAG 2.1 AAA)
-- **Integrierte Sprachausgabe (TTS):** Taste <kbd>V</kbd> liest die Folieninhalte und Sprechernotizen über die Web Speech API auf Portugiesisch vor.
-- **Dynamische Schriftgrößenanpassung:** Tasten <kbd>+</kbd> und <kbd>-</kbd>.
-- **Screenreader-Unterstützung:** Semantisches HTML5 mit ARIA-Attributen.
-- **Barrierefreiheits-Leitfaden:** Taste <kbd>A</kbd>.
-
----
-
-## 👥 Autoren & Akademische Betreuung
-
-- **Wissenschaftliche Mitarbeiter & Studierende:**
-  - **João da Cruz N. Neto** — Forscher & Software-Ingenieur (`joaodacruznatividade@gmail.com`)
-  - **Daniel Moreira Barra** — Forscher & Student der Biomedizintechnik
-- **Akademischer Betreuer:**
-  - **Prof. Dr. Ronaldo de Freitas Zampolo** — Leiter des Signalverarbeitungslabors (LaPS)
-- **Institutionen:**
-  - **LaPS / LAPSHub** (Laboratório de Processamento de Sinais)
-  - **ITEC** (Instituto de Tecnologia)
-  - **UFPA** (Universidade Federal do Pará), Belém, Brasilien
-
----
-
-## ⌨️ Tastaturkürzel
-
-| Tastenkürzel | Funktion |
-| :--- | :--- |
-| <kbd>→</kbd> / <kbd>Leertaste</kbd> / <kbd>BildAb</kbd> | Nächste Folie |
-| <kbd>←</kbd> / <kbd>BildAuf</kbd> | Vorherige Folie |
-| <kbd>M</kbd> | Motivationsvideo öffnen / schließen |
-| <kbd>T</kbd> | Projektormodus ↔ Dunkelmodus |
-| <kbd>V</kbd> | Sprachausgabe (TTS) ein- / ausschalten |
-| <kbd>+</kbd> / <kbd>-</kbd> | Schrift vergrößern / verkleinern |
-| <kbd>N</kbd> | Sprechernotizen einblenden |
-| <kbd>A</kbd> | Barrierefreiheits-Menü öffnen |
-| <kbd>F</kbd> | Vollbildmodus |
-| <kbd>Esc</kbd> | Dialoge / Video schließen |
+- **📱 Eingebetteter Web-App-Emulator (Iframe):** Taste <kbd>I</kbd> oder Klick auf "App Embutido".
+- **🧭 Geführte Einführungstour für Erstbesucher:** Interaktiver 5-Schritte-Rundgang.
+- **📱 Volle Responsivität & Wischgesten:** Für Smartphones, Tablets, Desktops und Beamer.
+- **🎬 Motivationsvideo:** Taste <kbd>M</kbd>.
+- **🌓 Projektormodus & OLED-Dunkelmodus:** Taste <kbd>T</kbd>.
+- **♿ Barrierefreiheit (WCAG AAA):** Sprachausgabe (TTS, Taste <kbd>V</kbd>), Schriftgrößenanpassung (<kbd>+</kbd>/<kbd>-</kbd>).

@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # ♿ DMovel — Apresentação Interativa SITEC UFPA 2026
 ### Acessibilidade Urbana Inteligente & Cartografia Colaborativa
@@ -17,7 +17,7 @@
 [![Web App](https://img.shields.io/badge/App%20Online-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
-  <strong>Apresentação interativa em 6 slides com Vídeo Motivador em tela cheia, Acessibilidade Universal & Teste ao Vivo por QR Code para a Semana do Instituto de Tecnologia (SITEC 2026) da Universidade Federal do Pará (UFPA).</strong>
+  <strong>Apresentação interativa em 6 slides com Emulador Iframe do App, Tour Guiado para novos usuários, Vídeo Motivador em tela cheia, Acessibilidade Universal & Teste ao Vivo por QR Code para a Semana do Instituto de Tecnologia (SITEC 2026) da Universidade Federal do Pará (UFPA).</strong>
 </p>
 
 [🌐 Ver Apresentação Online](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Testar DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratório LaPS](https://www.laps.ufpa.br/)
@@ -30,42 +30,37 @@
 
 O **DMovel** é um ecossistema aberto, distribuído e bilíngue de tecnologia assistiva, concebido para mapear, avaliar e transformar a mobilidade urbana e a acessibilidade física de pessoas com deficiência na Amazônia (Belém, PA) e no campus universitário da UFPA.
 
-Este repositório contém a apresentação web oficial interativa para a **SITEC UFPA 2026 (Semana do Instituto de Tecnologia • 1 e 2 de setembro de 2026)**, construída sob rigoroso padrão de **engenharia de software e acessibilidade digital AAA**.
+Este repositório contém a apresentação web oficial interativa para a **SITEC UFPA 2026 (Semana do Instituto de Tecnologia • 1 e 2 de setembro de 2026)**, construída sob rigoroso padrão de **responsividade multi-dispositivo, engenharia de software e acessibilidade digital AAA**.
 
 ---
 
 ## 🎯 Destaques da Apresentação
 
-### 1. 🎬 Intercalação com Vídeo Motivador em Tela Cheia
-- Integração nativa com o **vídeo motivacional produzido pela Professora Kelly para o DMovel** (Direitos reservados ao DMovel / UFPA).
-- O orador pode pressionar a tecla <kbd>M</kbd> (ou clicar no botão de vídeo no rodapé) para abrir a exibição cinematográfica e retornar fluidamente ao slide exato onde estava, sem perder o ritmo ou o estado da fala.
+### 1. 📱 Emulador Iframe do Web App Integrado
+- Teste o aplicativo Flutter Web completo diretamente dentro da aba da apresentação, sem precisar trocar de janela!
+- Pressione <kbd>I</kbd> ou clique no botão **"App Embutido"** no rodapé para abrir o emulador de smartphone interativo.
 
-### 2. 📱 QR Code Persistente em Todos os Slides para Teste ao Vivo
-- Cada um dos 6 slides possui um QR Code de alto contraste que permite a estudantes e professores na plateia apontarem a câmera do smartphone e abrirem imediatamente o Web App oficial em produção:
+### 2. 🧭 Tour Guiado para Primeiros Visitantes
+- Ao entrar pela primeira vez, o visitante recebe um tour interativo em 5 passos explicando as funcionalidades, atalhos do teclado e recursos inclusivos.
+- Veteranos podem reiniciar o tour quando quiserem através do menu de acessibilidade (<kbd>A</kbd>).
+
+### 3. 📱 Responsividade Total & Gestos de Swipe
+- Layout otimizado para **Smartphones (com navegação por deslizamento de dedos - swipe), Tablets, Laptops e Projetores de Auditório**.
+
+### 4. 🎬 Intercalação com Vídeo Motivador em Tela Cheia
+- Integração com o **vídeo motivacional produzido pela Professora Kelly para o DMovel**. Pressione <kbd>M</kbd> para abrir e voltar fluidamente ao slide exato onde estava.
+
+### 5. 📱 QR Code Persistente em Todos os Slides
+- QR Code de alto contraste em todos os 6 slides para leitura instantânea por smartphones:
   👉 **`https://lapshub.github.io/dmovel_web_app/`**
-- Slide 1 com Card Hero inicial, Slides 2 a 5 com badge compacto no topo direito, e Slide 6 com Mega QR Code para a sessão de perguntas e demonstração prática.
 
-### 3. 🌓 Modo Projetor & Modo Escuro OLED Calibrados
-- **Modo Projetor (Tema Claro):** Fundo `#F8FAFC`, tipografia escura `#0F172A` e azul institucional `#0361A3`, desenhado para resistir à luz ambiente de salas de aula e auditórios.
-- **Modo Escuro (OLED):** Fundo `#070B19` com realces neon e contraste WCAG AAA.
-- Alternância instantânea com a tecla <kbd>T</kbd>.
+### 6. 🌓 Modo Projetor & Modo Escuro OLED
+- Alternância rápida com a tecla <kbd>T</kbd>.
 
-### 4. ♿ Recursos de Acessibilidade Universal Integrados (WCAG 2.1 AAA)
-- **Leitor de Tela por Voz (TTS Integrado):** Pressione <kbd>V</kbd> para narrar o slide e as notas em português claro com a Web Speech API.
-- **Zoom de Texto:** Ajuste o tamanho da fonte em tempo real com <kbd>+</kbd> e <kbd>-</kbd> (ou botões `A+` / `A-`).
-- **Compatibilidade com Leitores de Tela:** Estrutura semântica ARIA (`role="region"`, `aria-live="polite"`), navegação integral por teclado e audiodescrições detalhadas.
-- **Guia de Acessibilidade:** Pressione <kbd>A</kbd> para visualizar a lista de atalhos e recursos inclusivos.
-
----
-
-## 🗂️ Estrutura dos 6 Slides (Foco em Produto & Engenharia)
-
-1. **Slide 1 — Abertura SITEC 2026:** Missão DMovel, autoria, orientador e QR Code Hero de teste inicial.
-2. **Slide 2 — O Desafio Urbano na Amazônia & Belém:** A barreira da falta de dados, desafios do campus da UFPA e números globais (15% OMS, 18,6M IBGE).
-3. **Slide 3 — A Solução DMovel & Três Pilares:** Cartografia Colaborativa, Avaliação Multicritério Ponderada e Inclusão Global com Tradução Neural.
-4. **Slide 4 — Galeria Mobile & Execução Real:** Capturas no hardware Samsung Galaxy M34 5G (Android 16): Biometria, Mapas Vetoriais, Sliders com Emojis e Temas Claro/Escuro.
-5. **Slide 5 — Engenharia de Software Padrão AAA:** Flutter 3.41, Python 3.14 No-GIL / FastAPI, MongoDB com 2dsphere, Redis, Dash Mantine, Backblaze B2 e 380+ testes sem mocks.
-6. **Slide 6 — Conclusão, Visão Futura & Mega Demonstração:** IA preditiva de barreiras por visão computacional, rotas acessíveis no campus, QR Code central e Q&A.
+### 7. ♿ Acessibilidade Universal (WCAG 2.1 AAA)
+- **Leitor de Voz por Síntese (TTS):** Tecla <kbd>V</kbd>.
+- **Zoom de Texto:** Teclas <kbd>+</kbd> e <kbd>-</kbd>.
+- **Estrutura Semântica ARIA & Navegação por Teclado.**
 
 ---
 
@@ -89,30 +84,13 @@ Este repositório contém a apresentação web oficial interativa para a **SITEC
 | :--- | :--- |
 | <kbd>→</kbd> / <kbd>Espaço</kbd> / <kbd>PageDown</kbd> | Próximo Slide |
 | <kbd>←</kbd> / <kbd>PageUp</kbd> | Slide Anterior |
-| <kbd>M</kbd> | Abrir / Fechar Vídeo Motivador em Tela Cheia |
+| <kbd>I</kbd> / <kbd>W</kbd> | **Abrir / Fechar Web App Embutido (Emulador Iframe)** |
+| <kbd>M</kbd> | **Abrir / Fechar Vídeo Motivador em Tela Cheia** |
 | <kbd>T</kbd> | Alternar Modo Projetor / Modo Escuro |
 | <kbd>V</kbd> | Iniciar / Pausar Leitor de Voz (TTS) |
 | <kbd>+</kbd> / <kbd>-</kbd> | Aumentar / Diminuir tamanho das fontes |
 | <kbd>N</kbd> | Abrir / Fechar Notas do Orador |
-| <kbd>A</kbd> | Abrir Guia de Acessibilidade |
+| <kbd>A</kbd> | Abrir Guia de Acessibilidade & Tour |
 | <kbd>F</kbd> | Modo Tela Cheia no Navegador |
 | <kbd>Home</kbd> / <kbd>End</kbd> | Ir para o Primeiro / Último Slide |
-| <kbd>Esc</kbd> | Fechar Vídeo ou Janelas Modais |
-
----
-
-## 🚀 Como Executar Localmente
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/joaosnet/dmovel-sitec-2026.git
-   cd dmovel-sitec-2026
-   ```
-
-2. **Suba um servidor HTTP local:**
-   ```bash
-   python -m http.server 8000
-   ```
-
-3. **Abra no navegador:**
-   Acesse `http://localhost:8000/`
+| <kbd>Esc</kbd> | Fechar Vídeo, Emulador ou Modais |

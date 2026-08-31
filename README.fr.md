@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # ♿ DMovel — Présentation Interactive SITEC UFPA 2026
 ### Accessibilité Urbaine Intelligente & Cartographie Collaborative
@@ -17,7 +17,7 @@
 [![Web App](https://img.shields.io/badge/Application%20Web-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
-  <strong>Présentation interactive en 6 diapositives avec Vidéo Motivationnelle plein écran, Accessibilité Universelle et Tests QR Code en direct pour la Semaine de l'Institut de Technologie (SITEC 2026) à l'Université Fédérale du Pará (UFPA).</strong>
+  <strong>Présentation interactive en 6 diapositives avec Émulateur Iframe de l'App, Visite Guidée pour nouveaux utilisateurs, Vidéo Motivationnelle plein écran, Accessibilité Universelle et Tests QR Code en direct pour la SITEC 2026 à l'UFPA.</strong>
 </p>
 
 [🌐 Voir la Présentation en Ligne](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Tester l'Application Web](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratoire LaPS](https://www.laps.ufpa.br/)
@@ -26,62 +26,11 @@
 
 ---
 
-## 📌 Vue d'Ensemble
+## 🎯 Points Forts
 
-**DMovel** est une plateforme technologique inclusive, distribuée et bilingue conçue pour cartographier, évaluer et transformer la mobilité urbaine et l'accessibilité physique en Amazonie (Belém, Brésil) et sur les campus universitaires.
-
-Ce dépôt héberge la présentation web officielle pour la **SITEC UFPA 2026 (Semaine de l'Institut de Technologie • 1er et 2 septembre 2026)**, réalisée selon les normes les plus strictes d'**ingénierie logicielle et d'accessibilité numérique AAA**.
-
----
-
-## 🎯 Points Forts de la Présentation
-
-### 1. 🎬 Intercalation avec Vidéo Motivationnelle Plein Écran
-- Intègre la **vidéo documentaire produite par la Professeure Kelly pour le projet DMovel** (Droits réservés DMovel / UFPA).
-- Le présentateur peut appuyer sur la touche <kbd>M</kbd> pour afficher la vidéo en plein écran et revenir instantanément à la diapositive en cours.
-
-### 2. 📱 QR Code Présent sur Toutes les Diapositives
-- Chaque diapositive intègre un QR Code à fort contraste permettant au public d'ouvrir directement l'application Web officielle :
-  👉 **`https://lapshub.github.io/dmovel_web_app/`**
-
-### 3. 🌓 Mode Projecteur & Thème Sombre OLED
-- **Mode Projecteur (Thème Clair) :** Conçu pour les auditoriums illuminés (`#F8FAFC`, `#0F172A`, `#0361A3`).
-- **Thème Sombre (OLED) :** Contraste élevé avec reflets néon.
-- Basculement instantané via la touche <kbd>T</kbd>.
-
-### 4. ♿ Accessibilité Numérique Universelle (WCAG 2.1 AAA)
-- **Synthèse Vocale Intégrée (TTS) :** Touche <kbd>V</kbd> pour écouter le texte et les notes de l'orateur en portugais.
-- **Ajustement de la Taille du Texte :** Touches <kbd>+</kbd> et <kbd>-</kbd>.
-- **Compatibilité Lecteurs d'Écran :** Structure sémantique ARIA complète.
-- **Guide d'Accessibilité :** Touche <kbd>A</kbd>.
-
----
-
-## 👥 Auteurs & Encadrement Universitaire
-
-- **Chercheurs Étudiants / Présentateurs :**
-  - **João da Cruz N. Neto** — Chercheur & Ingénieur Logiciel (`joaodacruznatividade@gmail.com`)
-  - **Daniel Moreira Barra** — Chercheur & Étudiant en Génie Biomédical
-- **Professeur Encadrant :**
-  - **Prof. Dr. Ronaldo de Freitas Zampolo** — Coordinateur du Laboratoire de Traitement du Signal (LaPS)
-- **Institutions :**
-  - **LaPS / LAPSHub** (Laboratório de Processamento de Sinais)
-  - **ITEC** (Instituto de Tecnologia)
-  - **UFPA** (Universidade Federal do Pará), Belém, Pará, Brésil
-
----
-
-## ⌨️ Raccourcis Clavier du Présentateur
-
-| Raccourci | Action |
-| :--- | :--- |
-| <kbd>→</kbd> / <kbd>Espace</kbd> / <kbd>PageSuiv</kbd> | Diapositive Suivante |
-| <kbd>←</kbd> / <kbd>PagePréc</kbd> | Diapositive Précédente |
-| <kbd>M</kbd> | Ouvrir / Fermer la Vidéo Motivationnelle |
-| <kbd>T</kbd> | Basculer Mode Projecteur ↔ Mode Sombre |
-| <kbd>V</kbd> | Activer / Arrêter la Synthèse Vocale (TTS) |
-| <kbd>+</kbd> / <kbd>-</kbd> | Agrandir / Réduire la Police |
-| <kbd>N</kbd> | Ouvrir / Fermer les Notes de l'Orateur |
-| <kbd>A</kbd> | Ouvrir le Guide d'Accessibilité |
-| <kbd>F</kbd> | Mode Plein Écran |
-| <kbd>Esc</kbd> | Fermer les Fenêtres / Vidéo |
+- **📱 Émulateur Web App Intégré (Iframe) :** Touche <kbd>I</kbd> ou bouton "App Embutido".
+- **🧭 Visite Guidée Interactive pour Nouveaux Visiteurs :** Parcours en 5 étapes.
+- **📱 Responsivité Multi-Appareils & Gestes Tactiles (Swipe) :** Smartphones, tablettes et vidéoprojecteurs.
+- **🎬 Vidéo Motivationnelle :** Touche <kbd>M</kbd>.
+- **🌓 Mode Projecteur & Thème Sombre OLED :** Touche <kbd>T</kbd>.
+- **♿ Accessibilité Universelle (WCAG AAA) :** Synthèse vocale (TTS, touche <kbd>V</kbd>), zoom de texte (<kbd>+</kbd>/<kbd>-</kbd>).
