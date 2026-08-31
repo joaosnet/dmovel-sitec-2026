@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ========================================================================= -->
+  <!-- SEO METADATA & DISCOVERABILITY (SITEC UFPA 2026 • 1 E 2 DE SETEMBRO)        -->
+  <!-- ========================================================================= -->
+  <title>DMovel - Apresentação SITEC UFPA 2026 | Acessibilidade Urbana Inteligente</title>
+  <meta name="title" content="DMovel - Apresentação SITEC UFPA 2026 | Acessibilidade Urbana Inteligente">
+  <meta name="description" content="Apresentação interativa do projeto DMovel para o SITEC UFPA 2026 (1 e 2 de setembro). Ecossistema de acessibilidade urbana, cartografia colaborativa e avaliação multicritério desenvolvido no LaPS / ITEC / UFPA. Teste ao vivo pelo Web App.">
+  <meta name="keywords" content="SITEC UFPA 2026, SITEC 2026, ITEC UFPA, DMovel, Acessibilidade Urbana, LaPS UFPA, LAPSHub, Engenharia UFPA, Mapeamento Colaborativo, Belém, Tecnologia Assistiva, Flutter, FastAPI, Python 3.14, Inclusão PCD, 1 e 2 de setembro">
+  <meta name="author" content="João da Cruz N. Neto, Daniel Moreira Barra, Prof. Dr. Ronaldo de Freitas Zampolo">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+  <meta name="date" content="2026-09-01">
+  <link rel="canonical" href="https://lapshub.github.io/dmovel-sitec-2026/">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lapshub.github.io/dmovel-sitec-2026/">
+  <meta property="og:title" content="DMovel - Apresentação SITEC UFPA 2026">
+  <meta property="og:description" content="Mapeando Cidades Acessíveis para Todos. Apresentação na Semana do Instituto de Tecnologia (ITEC/UFPA), 1 e 2 de setembro de 2026.">
+  <meta property="og:image" content="assets/images/screen_15_interactive_map.png">
+  <meta property="og:site_name" content="DMovel - LaPS / ITEC / UFPA">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://lapshub.github.io/dmovel-sitec-2026/">
+  <meta name="twitter:title" content="DMovel - Apresentação SITEC UFPA 2026">
+  <meta name="twitter:description" content="Plataforma de Acessibilidade Urbana Inteligente desenvolvida na UFPA. Teste ao vivo pelo Web App.">
+  <meta name="twitter:image" content="assets/images/screen_15_interactive_map.png">
+
+  <!-- Schema.org JSON-LD Structured Data for High Search Visibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        "@id": "https://lapshub.github.io/dmovel-sitec-2026/#event",
+        "name": "SITEC UFPA 2026 - Semana do Instituto de Tecnologia",
+        "description": "Apresentação acadêmica e tecnológica do projeto DMovel: Mapeando Acessibilidade Urbana Inteligente.",
+        "startDate": "2026-09-01T08:00:00-03:00",
+        "endDate": "2026-09-02T18:00:00-03:00",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Instituto de Tecnologia (ITEC) - Universidade Federal do Pará",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Augusto Corrêa, 01 - Guamá",
+            "addressLocality": "Belém",
+            "addressRegion": "PA",
+            "postalCode": "66075-110",
+            "addressCountry": "BR"
+          }
+        },
+        "organizer": {
+          "@type": "EducationalOrganization",
+          "name": "Laboratório de Processamento de Sinais (LaPS) / ITEC / UFPA",
+          "url": "https://www.laps.ufpa.br/"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "DMovel Web App",
+        "operatingSystem": "All",
+        "applicationCategory": "AccessibilityApplication",
+        "url": "https://lapshub.github.io/dmovel_web_app/",
+        "author": {
+          "@type": "Organization",
+          "name": "LAPSHub / UFPA"
+        }
+      },
+      {
+        "@type": "PresentationDigitalDocument",
+        "name": "Apresentação DMovel SITEC UFPA 2026",
+        "headline": "Mapeando Cidades Acessíveis para Todos",
+        "author": [
+          { "@type": "Person", "name": "João da Cruz N. Neto" },
+          { "@type": "Person", "name": "Daniel Moreira Barra" }
+        ],
+        "contributor": {
+          "@type": "Person",
+          "name": "Prof. Dr. Ronaldo de Freitas Zampolo"
+        },
+        "publisher": {
+          "@type": "EducationalOrganization",
+          "name": "Universidade Federal do Pará (UFPA)"
+        },
+        "datePublished": "2026-09-01"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- QRCode.js library for crisp vector/canvas generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              300: '#7cc5fb',
+              400: '#38bdf8',
+              500: '#0361A3', // DMovel Primary Official
+              600: '#0284c7',
+              700: '#00497D', // DMovel Primary Dark Container
+              800: '#003258',
+              900: '#0B132B',
+              accent: '#00B4D8',
+              highlight: '#9FCAFF'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base Themes */
+    :root {
+      --bg-gradient-dark: linear-gradient(135deg, #070B19 0%, #0B132B 50%, #081B33 100%);
+      --bg-gradient-light: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 50%, #E2E8F0 100%);
+    }
+
+    html {
+      font-size: 16px;
+      transition: font-size 0.2s ease;
+    }
+
+    /* Dark Mode (Default) */
+    html.theme-dark body {
+      background: var(--bg-gradient-dark);
+      color: #F1F5F9;
+    }
+    html.theme-dark .glass-card {
+      background: rgba(19, 29, 58, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    }
+    html.theme-dark .glass-nav {
+      background: rgba(11, 19, 43, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    html.theme-dark .text-adaptive-title {
+      color: #FFFFFF;
+    }
+    html.theme-dark .text-adaptive-muted {
+      color: #94A3B8;
+    }
+
+    /* Light / Projector Mode (High Contrast & High Brightness for Auditoriums) */
+    html.theme-light body {
+      background: var(--bg-gradient-light);
+      color: #0F172A;
+    }
+    html.theme-light .glass-card {
+      background: #FFFFFF;
+      border: 2px solid #CBD5E1;
+      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.12);
+    }
+    html.theme-light .glass-nav {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid #94A3B8;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    html.theme-light .text-adaptive-title {
+      color: #034275;
+    }
+    html.theme-light .text-adaptive-muted {
+      color: #334155;
+    }
+
+    body {
+      overflow: hidden;
+      user-select: none;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+      transform: scale(0.985);
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Reduced Motion Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .slide, * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+
+    .reduced-motion .slide {
+      transition: none !important;
+    }
+
+    /* Phone Mockups */
+    .phone-mockup {
+      position: relative;
+      border: 6px solid #1E293B;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+      background: #000;
+      max-height: 64vh;
+      aspect-ratio: 9 / 19.5;
+    }
+
+    html.theme-light .phone-mockup {
+      border: 6px solid #334155;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+    }
+
+    .phone-mockup img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* QR Code Container for Projector Scan Safety */
+    .qr-badge-container {
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Focus Ring for Keyboard Accessibility */
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid #00B4D8 !important;
+      outline-offset: 3px !important;
+    }
+
+    /* Accessibility Voice Pulse */
+    .speaking-active {
+      box-shadow: 0 0 0 4px #00B4D8, 0 0 20px #00B4D8 !important;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased flex flex-col justify-between" role="region" aria-label="Apresentação DMovel SITEC UFPA 2026">
+
+  <!-- Progress Bar Top -->
+  <div class="fixed top-0 left-0 w-full h-2 bg-slate-900/60 z-50">
+    <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-400 via-blue-600 to-indigo-600 transition-all duration-300" style="width: 16.66%;"></div>
+  </div>
+
+  <!-- Announcement Bar for Screen Readers (ARIA Live) -->
+  <div id="aria-announcer" class="sr-only" aria-live="polite">Slide 1 de 6: Apresentação DMovel no SITEC UFPA 2026</div>
+
+  <!-- Main Slide Deck Container -->
+  <main id="presentation-container" class="relative w-full h-full">
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 1: CAPA & ABERTURA SITEC 2026 + QR CODE HERO                        -->
+    <!-- ========================================================================= -->
+    <section class="slide active flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="1" 
+             data-notes="Olá a todos os professores, estudantes e pesquisadores presentes na SITEC 2026! Sou o João Neto, e junto com o Daniel Barra, sob a orientação do Professor Ronaldo Zampolo no LaPS da UFPA, apresentamos o DMovel: um ecossistema de acessibilidade urbana e mapeamento colaborativo. Convido todos no auditório a apontarem a câmera para o QR Code na tela e abrirem o Web App agora mesmo para testar em tempo real!"
+             aria-label="Slide 1: Capa de Abertura do DMovel na SITEC UFPA 2026">
+      
+      <!-- Ambient Glows -->
+      <div class="absolute -top-20 -left-20 w-96 h-96 bg-sky-600/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Top Header Info -->
+      <div class="flex justify-between items-center z-10">
+        <div class="flex items-center space-x-4">
+          <img src="assets/images/logo_dmovel.png" alt="Logotipo Oficial DMovel" class="w-12 h-12 rounded-2xl shadow-lg object-contain bg-white/10 p-1 border border-white/20">
+          <div>
+            <span class="font-heading font-black text-2xl tracking-wider text-adaptive-title">DMOVEL</span>
+            <p class="text-xs text-sky-400 font-semibold tracking-widest uppercase">Acessibilidade Urbana Inteligente</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-3 text-xs md:text-sm px-4 py-2 rounded-full glass-card">
+          <i class="fa-solid fa-graduation-cap text-sky-400"></i>
+          <span class="font-bold text-adaptive-title">SITEC UFPA 2026</span>
+          <span class="text-slate-400">|</span>
+          <span class="font-medium text-adaptive-muted">1 e 2 de Setembro • ITEC • LaPS</span>
+        </div>
+      </div>
+
+      <!-- Hero Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10 my-auto">
+        
+        <!-- Left Column: Title & Mission -->
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold uppercase tracking-wider mb-5">
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
+            <span>Semana do Instituto de Tecnologia • UFPA</span>
+          </div>
+          
+          <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-adaptive-title mb-5">
+            Mapeando Cidades Acessíveis para Todos.
+          </h1>
+          
+          <p class="text-lg lg:text-xl text-adaptive-muted font-normal leading-relaxed max-w-3xl mb-6">
+            Uma plataforma distribuída, colaborativa e acessível que empodera pessoas com deficiência a explorar, avaliar e transformar a mobilidade urbana na Amazônia.
+          </p>
+
+          <!-- Authors & Advisors Banner -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl pt-2">
+            <div class="p-3.5 rounded-xl glass-card border-sky-500/30">
+              <p class="text-xs text-sky-400 uppercase font-bold tracking-wider">Discentes Pesquisadores</p>
+              <p class="text-base font-bold text-adaptive-title">João da Cruz N. Neto</p>
+              <p class="text-base font-bold text-adaptive-title">Daniel Moreira Barra</p>
+              <p class="text-xs text-adaptive-muted mt-0.5">Engenharia • UFPA</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl glass-card border-blue-500/30">
+              <p class="text-xs text-sky-400 uppercase font-bold tracking-wider">Orientação Docente</p>
+              <p class="text-base font-bold text-adaptive-title">Prof. Dr. Ronaldo de Freitas Zampolo</p>
+              <p class="text-xs text-adaptive-muted mt-0.5">Laboratório de Processamento de Sinais (LaPS / ITEC)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Testing QR Hero -->
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="p-6 rounded-3xl qr-badge-container text-center border-4 border-sky-500/40 transform hover:scale-105 transition-transform max-w-xs w-full">
+            <div class="flex items-center justify-center space-x-2 text-sky-700 font-extrabold text-xs uppercase tracking-widest mb-3">
+              <i class="fa-solid fa-mobile-screen-button text-base animate-bounce"></i>
+              <span>Teste ao Vivo Agora!</span>
+            </div>
+            
+            <div class="bg-white p-2.5 rounded-2xl shadow-inner inline-block mx-auto border border-slate-200">
+              <div id="qrcode-slide-1" class="flex justify-center" aria-label="QR Code para testar o DMovel Web App"></div>
+            </div>
+
+            <p class="mt-3 text-xs font-bold text-slate-800">
+              Aponte a câmera do seu celular
+            </p>
+            <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" class="text-[11px] text-sky-700 font-mono underline block mt-1 hover:text-sky-900 font-semibold">
+              lapshub.github.io/dmovel_web_app
+            </a>
+            <span class="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[10px]">
+              <i class="fa-solid fa-circle-check text-[9px] mr-1"></i>Web App 100% Funcional
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <div class="flex items-center space-x-2">
+          <span>UFPA • ITEC • LAPSHub</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <span>Navegação: <kbd class="px-2 py-0.5 rounded bg-slate-800 text-white font-mono text-[10px]">Espaço</kbd> ou <kbd class="px-2 py-0.5 rounded bg-slate-800 text-white font-mono text-[10px]">Setas</kbd></span>
+          <span>Slide 1 / 6</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 2: O PROBLEMA & O DESAFIO URBANO NA AMAZÔNIA                        -->
+    <!-- ========================================================================= -->
+    <section class="slide flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="2" 
+             data-notes="Mais de 1 bilhão de pessoas no mundo vivem com alguma deficiência. Em Belém e no próprio campus universitário da UFPA, a ausência de dados georreferenciados sobre rampas, calçadas acessíveis e banheiros adaptados cria uma barreira invisível. Aplicativos comuns de trânsito ignoram cadeirantes e deficientes visuais. O DMovel nasce no ITEC para solucionar esse vazio de dados."
+             aria-label="Slide 2: O Desafio da Mobilidade Urbana e a Falta de Dados">
+      
+      <!-- Top Header Info + Persistent QR Badge -->
+      <div class="flex justify-between items-center z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">01. O Desafio Urbano</span>
+          <h3 class="text-sm font-semibold text-adaptive-muted">A Barreira da Falta de Informação em Belém e na UFPA</h3>
+        </div>
+
+        <!-- Persistent Top-Right QR Badge -->
+        <div class="flex items-center space-x-3 qr-badge-container px-3 py-1.5 border border-sky-400/40">
+          <div id="qrcode-slide-2" class="w-10 h-10 flex items-center justify-center"></div>
+          <div class="text-left leading-tight pr-1">
+            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Main Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10 my-auto">
+        
+        <!-- Left: The Problem Cards -->
+        <div class="lg:col-span-7">
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-5">
+            A Barreira Invisível: Cidades Não Mapeadas para PCDs
+          </h2>
+          
+          <p class="text-base text-adaptive-muted font-normal mb-6 leading-relaxed">
+            Plataformas comerciais de mapas atendem automóveis e pedestres convencionais, mas negligenciam dados essenciais como largura de portas, desníveis de calçada e sinalização tátil.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start space-x-4 p-4 rounded-2xl glass-card">
+              <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-500 flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-adaptive-title">Insegurança & Incerteza no Deslocamento</h4>
+                <p class="text-xs sm:text-sm text-adaptive-muted mt-1">A falta de certeza sobre a acessibilidade do destino gera isolamento e impede o direito fundamental de ir e vir.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 rounded-2xl glass-card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-500 flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fa-solid fa-map-pin"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-adaptive-title">Desafio Crítico no Contexto Amazônico</h4>
+                <p class="text-xs sm:text-sm text-adaptive-muted mt-1">Calçadas irregulares, chuvas equatoriais e ausência de dados públicos estruturados exigem inteligência colaborativa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real Numbers & LAPSHub Mission -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div class="p-6 rounded-2xl glass-card text-center flex flex-col justify-center border-sky-500/30">
+            <span class="font-heading font-black text-4xl lg:text-5xl text-sky-500 mb-1">15%</span>
+            <p class="text-xs font-bold text-adaptive-title uppercase tracking-wider">População Global</p>
+            <p class="text-[11px] text-adaptive-muted mt-1">+1 Bilhão de pessoas com deficiência (OMS)</p>
+          </div>
+
+          <div class="p-6 rounded-2xl glass-card text-center flex flex-col justify-center border-blue-500/30">
+            <span class="font-heading font-black text-4xl lg:text-5xl text-blue-500 mb-1">+18.6M</span>
+            <p class="text-xs font-bold text-adaptive-title uppercase tracking-wider">No Brasil</p>
+            <p class="text-[11px] text-adaptive-muted mt-1">Demandam acessibilidade diária (IBGE)</p>
+          </div>
+
+          <div class="col-span-2 p-5 rounded-2xl bg-gradient-to-r from-sky-950/70 to-blue-950/70 border border-sky-500/40 text-left">
+            <div class="flex items-center space-x-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-sky-500 text-white flex items-center justify-center text-sm font-bold">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm sm:text-base">A Resposta do LaPS / ITEC / UFPA</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-sky-100 leading-relaxed font-light">
+              Construir uma cartografia viva, auditada e aberta, permitindo que a própria comunidade universitária e a sociedade mapeiem e avaliem a acessibilidade urbana.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <span>Contexto & Motivação</span>
+        <span>Slide 2 / 6</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 3: A SOLUÇÃO DMOVEL & SEUS 3 PILARES                                -->
+    <!-- ========================================================================= -->
+    <section class="slide flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="3" 
+             data-notes="Apresentamos os três pilares que tornam o DMovel único: 1. Cartografia Colaborativa com georreferenciamento de precisão e fotos comprobatórias; 2. Avaliação Multicritério com notas quantitativas e qualitativas ponderadas; 3. Inclusão Global com suporte a 4 idiomas e tradução neural automática de comentários."
+             aria-label="Slide 3: Os Três Pilares da Solução DMovel">
+      
+      <!-- Top Header Info + Persistent QR Badge -->
+      <div class="flex justify-between items-center z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">02. A Solução DMovel</span>
+          <h3 class="text-sm font-semibold text-adaptive-muted">Abordagem Integrada de Engenharia e Sociedade</h3>
+        </div>
+
+        <!-- Persistent Top-Right QR Badge -->
+        <div class="flex items-center space-x-3 qr-badge-container px-3 py-1.5 border border-sky-400/40">
+          <div id="qrcode-slide-3" class="w-10 h-10 flex items-center justify-center"></div>
+          <div class="text-left leading-tight pr-1">
+            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Main Content -->
+      <div class="my-auto z-10">
+        <div class="text-center max-w-3xl mx-auto mb-8">
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-adaptive-title mb-3">
+            Três Pilares de Transformação Urbana
+          </h2>
+          <p class="text-base text-adaptive-muted font-normal">
+            Uma arquitetura orientada ao usuário para coleta, validação e disseminação de acessibilidade.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Pillar 1 -->
+          <div class="p-6 rounded-2xl glass-card border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition-all">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mb-4 shadow-inner">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-adaptive-title mb-2">1. Cartografia Aberta</h3>
+              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+                Cadastro rápido de Pontos de Interesse (POIs) com coordenadas GPS precisas, categorias temáticas (Saúde, Educação, Lazer) e upload de fotos comprobatórias.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-sky-400 font-bold">
+              <span>Geo-índices & Mapas Vetoriais</span>
+              <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-6 rounded-2xl glass-card border border-blue-500/30 flex flex-col justify-between hover:border-blue-400 transition-all">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mb-4 shadow-inner">
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-adaptive-title mb-2">2. Avaliação Multicritério</h3>
+              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+                Avaliação decomposta em critérios objetivos: Apoio & Atendimento, Espaço Físico & Mobilidade e Acessibilidade da Informação, com sliders dinâmicos.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-blue-400 font-bold">
+              <span>Métricas de Acessibilidade AAA</span>
+              <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-6 rounded-2xl glass-card border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-400 transition-all">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-4 shadow-inner">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-adaptive-title mb-2">3. Inclusão & Tradução Neural</h3>
+              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+                Suporte multilíngue em tempo real (Português, Inglês, Francês e Alemão) com pipeline de tradução neural automática para comentários e relatos.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-indigo-400 font-bold">
+              <span>Internacionalização Ativa</span>
+              <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <span>Arquitetura da Solução</span>
+        <span>Slide 3 / 6</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 4: GALERIA DE FUNCIONALIDADES MOBILE & EXPERIÊNCIA REAL             -->
+    <!-- ========================================================================= -->
+    <section class="slide flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="4" 
+             data-notes="Aqui vemos a experiência real capturada no Samsung Galaxy M34 com Android 16. O app conta com autenticação por biometria e passkeys, mapa interativo de Belém com marcadores acessíveis, avaliação intuitiva com sliders de emojis dinâmicos e suporte total a temas claro e escuro seguindo as diretrizes WCAG 2.1 AAA."
+             aria-label="Slide 4: Galeria de Telas e Funcionalidades Mobile">
+      
+      <!-- Top Header Info + Persistent QR Badge -->
+      <div class="flex justify-between items-center z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">03. Galeria Mobile & UX</span>
+          <h3 class="text-sm font-semibold text-adaptive-muted">Execução Real em Hardware Samsung Galaxy M34 5G (Android 16)</h3>
+        </div>
+
+        <!-- Persistent Top-Right QR Badge -->
+        <div class="flex items-center space-x-3 qr-badge-container px-3 py-1.5 border border-sky-400/40">
+          <div id="qrcode-slide-4" class="w-10 h-10 flex items-center justify-center"></div>
+          <div class="text-left leading-tight pr-1">
+            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Main Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10 my-auto">
+        
+        <!-- Left Column: Feature Highlights -->
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-950 text-sky-400 text-xs font-bold mb-4 border border-sky-500/40">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>Interface Inclusiva & Fluida</span>
+          </div>
+          
+          <h2 class="font-heading font-black text-3xl sm:text-4xl text-adaptive-title mb-4">
+            Design Focado em Reduzir Barreiras
+          </h2>
+          
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl glass-card flex items-start space-x-3">
+              <i class="fa-solid fa-fingerprint text-sky-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-adaptive-title block">Passkeys & Biometria Nativa</strong>
+                <span class="text-adaptive-muted">Acesso instantâneo sem necessidade de digitar senhas complexas.</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl glass-card flex items-start space-x-3">
+              <i class="fa-solid fa-map-location text-blue-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-adaptive-title block">Mapa Interativo com Camadas</strong>
+                <span class="text-adaptive-muted">Filtros por categorias e marcadores de alto contraste para baixa visão.</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl glass-card flex items-start space-x-3">
+              <i class="fa-solid fa-face-smile text-emerald-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-adaptive-title block">Sliders com Emojis Dinâmicos</strong>
+                <span class="text-adaptive-muted">Feedback expressivo para avaliação de acessibilidade sem fricção.</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl glass-card flex items-start space-x-3">
+              <i class="fa-solid fa-circle-half-stroke text-amber-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-adaptive-title block">WCAG 2.1 AAA: Tema Escuro OLED & Claro</strong>
+                <span class="text-adaptive-muted">Legibilidade perfeita sob sol intenso ou em ambientes escuros.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 4 Real Screen Mockups -->
+        <div class="lg:col-span-7 flex justify-center items-center space-x-3 sm:space-x-4">
+          
+          <!-- Screen 1: Biometrics / Auth -->
+          <div class="phone-mockup">
+            <img src="assets/images/screen_10_authenticated.png" alt="Tela de Autenticação com Biometria DMovel">
+          </div>
+
+          <!-- Screen 2: Interactive Map -->
+          <div class="phone-mockup ring-2 ring-sky-400/60">
+            <img src="assets/images/screen_15_interactive_map.png" alt="Mapa Interativo com POIs em Belém">
+          </div>
+
+          <!-- Screen 3: Sliders Evaluation -->
+          <div class="phone-mockup">
+            <img src="assets/images/screen_20_rate_questions_expanded.png" alt="Avaliação Multicritério com Sliders e Emojis">
+          </div>
+
+          <!-- Screen 4: Light Theme -->
+          <div class="phone-mockup">
+            <img src="assets/images/screen_26_light_theme_profile.png" alt="Perfil em Tema Claro de Alto Contraste">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <span>Demonstração de Produto</span>
+        <span>Slide 4 / 6</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 5: ENGENHARIA DE SOFTWARE & STACK PADRÃO AAA                       -->
+    <!-- ========================================================================= -->
+    <section class="slide flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="5" 
+             data-notes="No aspecto de engenharia de software, o DMovel adota o estado da arte: Flutter 3.41 no mobile, Python 3.14 free-threaded sem GIL com FastAPI assíncrono para altíssima performance, MongoDB com índices geoespaciais 2dsphere, Redis para cache, Dash Mantine para auditoria e Backblaze B2 para mídias. Uma suíte de mais de 380 testes automatizados garante robustez de ponta a ponta."
+             aria-label="Slide 5: Engenharia de Software e Stack Tecnológico">
+      
+      <!-- Top Header Info + Persistent QR Badge -->
+      <div class="flex justify-between items-center z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">04. Engenharia & Infraestrutura</span>
+          <h3 class="text-sm font-semibold text-adaptive-muted">Arquitetura Moderna Desenvolvida no LaPS / ITEC / UFPA</h3>
+        </div>
+
+        <!-- Persistent Top-Right QR Badge -->
+        <div class="flex items-center space-x-3 qr-badge-container px-3 py-1.5 border border-sky-400/40">
+          <div id="qrcode-slide-5" class="w-10 h-10 flex items-center justify-center"></div>
+          <div class="text-left leading-tight pr-1">
+            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Main Content -->
+      <div class="my-auto z-10">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <h2 class="font-heading font-black text-3xl sm:text-4xl text-adaptive-title mb-2">Stack Tecnológico Padrão AAA</h2>
+          <p class="text-sm text-adaptive-muted">Engenharia de alta velocidade, concorrência e resiliência a falhas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Frontend -->
+          <div class="p-6 rounded-2xl glass-card text-center border-t-4 border-sky-500">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-3xl mb-4">
+              <i class="fa-brands fa-flutter"></i>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-adaptive-title">Mobile & Web</h4>
+            <p class="text-xs text-sky-400 font-bold mb-2">Flutter 3.41 / Dart 3.11</p>
+            <p class="text-xs text-adaptive-muted">60/120 FPS, Material 3, Biometria FIDO2/Passkeys e Temas Dinâmicos.</p>
+          </div>
+
+          <!-- Card 2: Backend -->
+          <div class="p-6 rounded-2xl glass-card text-center border-t-4 border-emerald-500">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mb-4">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-adaptive-title">High-Speed Backend</h4>
+            <p class="text-xs text-emerald-400 font-bold mb-2">Python 3.14 (No-GIL) + FastAPI</p>
+            <p class="text-xs text-adaptive-muted">Execução free-threaded sem trava global do GIL, alta concorrência assíncrona.</p>
+          </div>
+
+          <!-- Card 3: Database & Cache -->
+          <div class="p-6 rounded-2xl glass-card text-center border-t-4 border-amber-500">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mb-4">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-adaptive-title">Dados & Geo-Espacial</h4>
+            <p class="text-xs text-amber-400 font-bold mb-2">MongoDB & Redis</p>
+            <p class="text-xs text-adaptive-muted">Índices geoespaciais 2dsphere para consultas por raio, Beanie ODM e cache.</p>
+          </div>
+
+          <!-- Card 4: Management & Cloud -->
+          <div class="p-6 rounded-2xl glass-card text-center border-t-4 border-purple-500">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-3xl mb-4">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-adaptive-title">Moderação & Mídia</h4>
+            <p class="text-xs text-purple-400 font-bold mb-2">Dash & Backblaze B2</p>
+            <p class="text-xs text-adaptive-muted">Painel de auditoria de sugestões com visual diff e persistência segura em nuvem.</p>
+          </div>
+
+        </div>
+
+        <!-- Quality & Test Metric Bar -->
+        <div class="mt-8 p-4 rounded-2xl bg-slate-900/80 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <div class="flex items-center space-x-3 text-slate-300">
+            <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+            <span><strong>Confiabilidade & Qualidade de Código:</strong> Suíte com <strong>380+ testes automatizados</strong> sem mocks.</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-400 font-bold">
+              100% Testes Aprovados
+            </span>
+            <span class="px-3 py-1 rounded-full bg-sky-950 border border-sky-500/40 text-sky-400 font-bold">
+              Docker Dev & Prod
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <span>Engenharia & Confiabilidade</span>
+        <span>Slide 5 / 6</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE 6: IMPACTO ACADÊMICO, FUTURO & MEGA TESTE AO VIVO                   -->
+    <!-- ========================================================================= -->
+    <section class="slide flex-col justify-between p-8 lg:p-14 relative overflow-hidden" data-slide="6" 
+             data-notes="Para concluir, o DMovel mostra como a engenharia da computação no ITEC/UFPA pode gerar impacto social real e inclusivo. Nossos próximos passos envolvem visão computacional com IA para detecção automática de barreiras e rotas integradas com o transporte público. Agradecemos a atenção de todos e abrimos agora para perguntas e demonstração ao vivo pelo Web App!"
+             aria-label="Slide 6: Conclusão, Impacto Acadêmico e Teste ao Vivo">
+      
+      <!-- Top Header Info -->
+      <div class="flex justify-between items-center z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">05. Conclusão & Futuro</span>
+          <h3 class="text-sm font-semibold text-adaptive-muted">Pesquisa & Inovação no LaPS / ITEC / UFPA</h3>
+        </div>
+
+        <div class="flex items-center space-x-3 text-xs px-4 py-1.5 rounded-full glass-card">
+          <i class="fa-solid fa-comments text-sky-400"></i>
+          <span class="font-bold text-adaptive-title">Perguntas & Respostas (Q&A)</span>
+        </div>
+      </div>
+
+      <!-- Slide Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10 my-auto">
+        
+        <!-- Left: Future Steps & Academic Impact -->
+        <div class="lg:col-span-7">
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-4">
+            Tecnologia a Serviço da Dignidade Humana
+          </h2>
+          
+          <p class="text-base text-adaptive-muted font-normal mb-6 leading-relaxed">
+            O DMovel une rigor científico, pesquisa em engenharia e impacto comunitário direto na cidade de Belém e na Universidade Federal do Pará.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-sm mb-1">
+                <i class="fa-solid fa-brain text-purple-400 mr-2"></i>IA Preditiva de Barreiras
+              </h4>
+              <p class="text-xs text-adaptive-muted">Classificação automática de desníveis e calçadas via visão computacional em fotos.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-sm mb-1">
+                <i class="fa-solid fa-route text-sky-400 mr-2"></i>Rotas Acessíveis no Campus
+              </h4>
+              <p class="text-xs text-adaptive-muted">Navegação adaptada para estudantes e visitantes entre pavilhões da UFPA.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-sm mb-1">
+                <i class="fa-solid fa-handshake-angle text-emerald-400 mr-2"></i>Parcerias Acadêmicas
+              </h4>
+              <p class="text-xs text-adaptive-muted">Integração de dados com órgãos municipais e pesquisas de pós-graduação.</p>
+            </div>
+
+            <div class="p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-sm mb-1">
+                <i class="fa-solid fa-code-branch text-blue-400 mr-2"></i>Código Aberto & Extensão
+              </h4>
+              <p class="text-xs text-adaptive-muted">Projetos de extensão universitária envolvendo novos discentes do ITEC.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Mega Live QR Code Hero for the Entire Audience -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="p-7 rounded-3xl qr-badge-container text-center border-4 border-sky-500/50 shadow-2xl max-w-sm w-full">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase tracking-wider mb-3">
+              <i class="fa-solid fa-qrcode text-base"></i>
+              <span>Escaneie e Teste Agora!</span>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl shadow-inner inline-block mx-auto border-2 border-slate-300">
+              <div id="qrcode-slide-6" class="flex justify-center" aria-label="Mega QR Code para o Web App do DMovel"></div>
+            </div>
+
+            <p class="mt-4 text-sm font-extrabold text-slate-900">
+              Acesse o DMovel Web no seu smartphone:
+            </p>
+            <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" class="text-xs text-sky-700 font-mono underline block mt-1 hover:text-sky-900 font-bold">
+              https://lapshub.github.io/dmovel_web_app/
+            </a>
+
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-600 font-medium">
+              Contato: <strong class="text-slate-900">joaodacruznatividade@gmail.com</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-4 text-xs text-adaptive-muted">
+        <div>
+          <strong class="text-adaptive-title">Laboratório de Processamento de Sinais (LaPS)</strong> • ITEC / UFPA
+        </div>
+        <div class="text-sky-400 font-bold">
+          SITEC UFPA 2026 • 1 e 2 de Setembro • Muito Obrigado!
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FULLSCREEN MOTIVATIONAL VIDEO OVERLAY (TECLA M OU BOTÃO NO RODAPÉ)        -->
+  <!-- ========================================================================= -->
+  <div id="video-modal" class="fixed inset-0 bg-black/95 z-50 flex flex-col justify-between p-4 md:p-8 hidden" role="dialog" aria-modal="true" aria-label="Vídeo Motivador DMovel Produzido pela Professora Kelly">
+    
+    <!-- Video Header Bar -->
+    <div class="flex justify-between items-center text-white z-10 px-2">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-sky-600/80 flex items-center justify-center text-white shadow-lg">
+          <i class="fa-solid fa-clapperboard"></i>
+        </div>
+        <div>
+          <h3 class="font-heading font-extrabold text-lg sm:text-xl text-white">Vídeo Motivador • DMovel</h3>
+          <p class="text-xs text-sky-300 font-medium">Produzido pela Professora Kelly para o DMovel (Direitos Reservados DMovel / UFPA)</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <span class="hidden sm:inline-block text-xs text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700">
+          Pressione <kbd class="px-1.5 py-0.5 rounded bg-slate-900 text-sky-300 font-mono">M</kbd> ou <kbd class="px-1.5 py-0.5 rounded bg-slate-900 text-sky-300 font-mono">Esc</kbd> para voltar aos slides
+        </span>
+        <button id="btn-close-video" class="w-10 h-10 rounded-full bg-slate-800/90 hover:bg-red-600 text-white flex items-center justify-center transition-all text-base border border-slate-700" aria-label="Fechar Vídeo e Retornar aos Slides">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Video Canvas Container -->
+    <div class="relative w-full max-w-6xl mx-auto my-auto flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl border border-sky-500/30 bg-black aspect-video max-h-[78vh]">
+      <video id="motivational-video" class="w-full h-full object-contain" controls preload="metadata" playsinline>
+        <source src="assets/video/dmovel_video_motivacional.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo HTML5.
+      </video>
+    </div>
+
+    <!-- Video Footer Controls Hint -->
+    <div class="flex justify-between items-center text-xs text-slate-400 px-2 border-t border-slate-800 pt-3">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-circle-info text-sky-400"></i>
+        <span>Use o vídeo para intercalar a motivação de impacto social e retornar fluidamente à apresentação.</span>
+      </div>
+      <div>
+        <span>SITEC UFPA 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- BOTTOM CONTROLS & ACCESSIBILITY BAR                                       -->
+  <!-- ========================================================================= -->
+  <footer class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex items-center space-x-2 px-5 py-2.5 rounded-full glass-nav shadow-2xl border">
+    
+    <!-- Prev Slide Button -->
+    <button id="btn-prev" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-white flex items-center justify-center transition-all" title="Slide Anterior (Seta Esquerda)" aria-label="Slide Anterior">
+      <i class="fa-solid fa-chevron-left text-xs"></i>
+    </button>
+    
+    <!-- Slide Indicator -->
+    <span id="slide-indicator" class="text-xs font-bold px-2 text-adaptive-title min-w-[65px] text-center" aria-live="polite">1 / 6</span>
+    
+    <!-- Next Slide Button -->
+    <button id="btn-next" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-white flex items-center justify-center transition-all" title="Próximo Slide (Seta Direita / Espaço)" aria-label="Próximo Slide">
+      <i class="fa-solid fa-chevron-right text-xs"></i>
+    </button>
+    
+    <div class="w-px h-5 bg-slate-700/50 mx-1"></div>
+
+    <!-- Motivational Video Intercalation Button -->
+    <button id="btn-video" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-red-600 text-red-400 hover:text-white flex items-center justify-center transition-all" title="Vídeo Motivador DMovel (Tecla M)" aria-label="Abrir Vídeo Motivador">
+      <i class="fa-solid fa-play text-xs"></i>
+    </button>
+
+    <!-- Theme Toggle (Dark vs Projector Mode) -->
+    <button id="btn-theme" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-600 text-amber-300 flex items-center justify-center transition-all" title="Alternar Tema Escuro / Modo Projetor (Tecla T)" aria-label="Alternar Tema Escuro e Modo Projetor">
+      <i class="fa-solid fa-sun text-xs" id="theme-icon"></i>
+    </button>
+
+    <!-- Text-to-Speech Voice Reader -->
+    <button id="btn-tts" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-600 text-emerald-300 flex items-center justify-center transition-all" title="Ouvir Narração por Voz do Slide (Tecla V)" aria-label="Ouvir Narração por Voz do Slide">
+      <i class="fa-solid fa-volume-high text-xs" id="tts-icon"></i>
+    </button>
+
+    <!-- Font Zoom In -->
+    <button id="btn-zoom-in" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 flex items-center justify-center transition-all font-bold text-xs" title="Aumentar Tamanho da Fonte (Tecla +)" aria-label="Aumentar Fonte">
+      A+
+    </button>
+
+    <!-- Font Zoom Out -->
+    <button id="btn-zoom-out" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 flex items-center justify-center transition-all font-bold text-xs" title="Diminuir Tamanho da Fonte (Tecla -)" aria-label="Diminuir Fonte">
+      A-
+    </button>
+
+    <div class="w-px h-5 bg-slate-700/50 mx-1"></div>
+
+    <!-- Fullscreen -->
+    <button id="btn-fullscreen" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-cyan-600 text-white flex items-center justify-center transition-all" title="Tela Cheia (Tecla F)" aria-label="Tela Cheia">
+      <i class="fa-solid fa-expand text-xs"></i>
+    </button>
+
+    <!-- Speaker Notes -->
+    <button id="btn-notes" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-indigo-600 text-white flex items-center justify-center transition-all" title="Notas do Apresentador (Tecla N)" aria-label="Notas do Apresentador">
+      <i class="fa-solid fa-note-sticky text-xs"></i>
+    </button>
+
+    <!-- Accessibility Shortcuts Help Modal Button -->
+    <button id="btn-a11y-help" class="w-9 h-9 rounded-full bg-sky-700 hover:bg-sky-600 text-white flex items-center justify-center transition-all" title="Guia de Acessibilidade & Atalhos (Tecla A)" aria-label="Ajuda de Acessibilidade">
+      <i class="fa-solid fa-universal-access text-sm"></i>
+    </button>
+
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- SPEAKER NOTES FLOATING MODAL                                              -->
+  <!-- ========================================================================= -->
+  <div id="speaker-notes-modal" class="fixed bottom-20 right-6 w-96 max-w-[90vw] p-5 rounded-2xl glass-card border border-sky-500/40 shadow-2xl z-40 hidden" role="dialog" aria-label="Notas do Apresentador">
+    <div class="flex justify-between items-center mb-3">
+      <div class="flex items-center space-x-2 text-sky-400 text-xs font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-microphone-lines"></i>
+        <span>Notas do Apresentador</span>
+      </div>
+      <button id="btn-close-notes" class="text-slate-400 hover:text-white text-sm" aria-label="Fechar Notas">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <p id="speaker-notes-text" class="text-xs text-adaptive-title leading-relaxed font-light">
+      Notas do slide atual aparecerão aqui.
+    </p>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- ACCESSIBILITY HELP MODAL                                                  -->
+  <!-- ========================================================================= -->
+  <div id="a11y-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-label="Guia de Recursos de Acessibilidade">
+    <div class="p-6 md:p-8 rounded-3xl glass-card max-w-lg w-full border-2 border-sky-500/50 shadow-2xl">
+      <div class="flex justify-between items-center mb-4">
+        <div class="flex items-center space-x-3 text-sky-400">
+          <i class="fa-solid fa-universal-access text-2xl"></i>
+          <h3 class="text-xl font-heading font-bold text-adaptive-title">Recursos de Acessibilidade</h3>
+        </div>
+        <button id="btn-close-a11y" class="text-slate-400 hover:text-white text-lg p-2" aria-label="Fechar Guia de Acessibilidade">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-adaptive-muted">
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-play text-red-400 mr-2"></i><strong>Vídeo Motivador (Intercalar):</strong></span>
+          <kbd class="px-2.5 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">M</kbd>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-volume-high text-emerald-400 mr-2"></i><strong>Ouvir Narração por Voz (TTS):</strong></span>
+          <kbd class="px-2.5 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">V</kbd>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-sun text-amber-400 mr-2"></i><strong>Modo Projetor (Alto Contraste):</strong></span>
+          <kbd class="px-2.5 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">T</kbd>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-magnifying-glass-plus text-blue-400 mr-2"></i><strong>Aumentar / Diminuir Fonte:</strong></span>
+          <div class="space-x-1">
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">+</kbd>
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">-</kbd>
+          </div>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-arrows-left-right text-cyan-400 mr-2"></i><strong>Navegar Slides:</strong></span>
+          <div class="space-x-1">
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">←</kbd>
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">→</kbd>
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">Espaço</kbd>
+          </div>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40">
+          <span><i class="fa-solid fa-expand text-purple-400 mr-2"></i><strong>Tela Cheia / Notas:</strong></span>
+          <div class="space-x-1">
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">F</kbd>
+            <kbd class="px-2 py-1 rounded bg-slate-900 text-sky-300 font-mono font-bold">N</kbd>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <button id="btn-understood-a11y" class="px-6 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-lg shadow-sky-600/30">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT CONTROLLER, VIDEO PLAYER & ACCESSIBILITY SCRIPTS               -->
+  <!-- ========================================================================= -->
+  <script>
+    const WEB_APP_URL = "https://lapshub.github.io/dmovel_web_app/";
+    let currentSlide = 1;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const progressBar = document.getElementById('progress-bar');
+    const slideIndicator = document.getElementById('slide-indicator');
+    const speakerNotesText = document.getElementById('speaker-notes-text');
+    const speakerNotesModal = document.getElementById('speaker-notes-modal');
+    const a11yModal = document.getElementById('a11y-modal');
+    const videoModal = document.getElementById('video-modal');
+    const motivationalVideo = document.getElementById('motivational-video');
+    const ariaAnnouncer = document.getElementById('aria-announcer');
+    const themeIcon = document.getElementById('theme-icon');
+    const btnTts = document.getElementById('btn-tts');
+
+    let currentFontSizeRem = 1.0;
+    let isSpeaking = false;
+    let synth = window.speechSynthesis;
+
+    // --- QR Code Generator Initialization ---
+    function initQRCodes() {
+      // Slide 1 Hero QR
+      if (document.getElementById("qrcode-slide-1")) {
+        new QRCode(document.getElementById("qrcode-slide-1"), {
+          text: WEB_APP_URL,
+          width: 170,
+          height: 170,
+          colorDark: "#034275",
+          colorLight: "#FFFFFF",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      }
+
+      // Small Badges for Slides 2, 3, 4, 5
+      for (let i = 2; i <= 5; i++) {
+        const el = document.getElementById(`qrcode-slide-${i}`);
+        if (el) {
+          new QRCode(el, {
+            text: WEB_APP_URL,
+            width: 40,
+            height: 40,
+            colorDark: "#034275",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.M
+          });
+        }
+      }
+
+      // Slide 6 Mega Hero QR
+      if (document.getElementById("qrcode-slide-6")) {
+        new QRCode(document.getElementById("qrcode-slide-6"), {
+          text: WEB_APP_URL,
+          width: 180,
+          height: 180,
+          colorDark: "#034275",
+          colorLight: "#FFFFFF",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      }
+    }
+
+    // --- Slide Navigation ---
+    function updateSlide(index) {
+      if (index < 1) index = 1;
+      if (index > totalSlides) index = totalSlides;
+      currentSlide = index;
+
+      if (synth && synth.speaking) {
+        stopTTS();
+      }
+
+      slides.forEach((slide, i) => {
+        if (i + 1 === currentSlide) {
+          slide.classList.add('active');
+          const notes = slide.getAttribute('data-notes') || 'Sem notas para este slide.';
+          speakerNotesText.textContent = notes;
+          
+          const label = slide.getAttribute('aria-label') || `Slide ${currentSlide}`;
+          ariaAnnouncer.textContent = `${label} (${currentSlide} de ${totalSlides})`;
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      const progressPercent = (currentSlide / totalSlides) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+      slideIndicator.textContent = `${currentSlide} / ${totalSlides}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) updateSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) updateSlide(currentSlide - 1);
+    }
+
+    // --- Motivational Video Intercalation Player ---
+    function toggleVideoModal() {
+      if (videoModal.classList.contains('hidden')) {
+        openVideoModal();
+      } else {
+        closeVideoModal();
+      }
+    }
+
+    function openVideoModal() {
+      if (synth && synth.speaking) stopTTS();
+      videoModal.classList.remove('hidden');
+      motivationalVideo.currentTime = 0;
+      motivationalVideo.play().catch(e => console.log('Autoplay handled:', e));
+    }
+
+    function closeVideoModal() {
+      motivationalVideo.pause();
+      videoModal.classList.add('hidden');
+    }
+
+    // --- Theme Switcher (Dark vs Projector Mode) ---
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('theme-dark')) {
+        html.classList.remove('theme-dark');
+        html.classList.add('theme-light');
+        themeIcon.className = "fa-solid fa-moon text-xs";
+        themeIcon.parentElement.classList.replace('text-amber-300', 'text-sky-300');
+        themeIcon.parentElement.title = "Alternar para Modo Escuro (Tecla T)";
+      } else {
+        html.classList.remove('theme-light');
+        html.classList.add('theme-dark');
+        themeIcon.className = "fa-solid fa-sun text-xs";
+        themeIcon.parentElement.classList.replace('text-sky-300', 'text-amber-300');
+        themeIcon.parentElement.title = "Alternar para Modo Projetor (Tecla T)";
+      }
+    }
+
+    // --- Text-to-Speech (TTS) Voice Narration ---
+    function toggleTTS() {
+      if (!synth) {
+        alert("Síntese de voz não suportada neste navegador.");
+        return;
+      }
+
+      if (synth.speaking) {
+        stopTTS();
+      } else {
+        startTTS();
+      }
+    }
+
+    function startTTS() {
+      const activeSlide = document.querySelector('.slide.active');
+      if (!activeSlide) return;
+
+      const notes = activeSlide.getAttribute('data-notes') || '';
+      const heading = activeSlide.querySelector('h1, h2')?.textContent || '';
+      const textToRead = `${heading}. ${notes}`;
+
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.lang = 'pt-BR';
+      utterance.rate = 1.05;
+      utterance.pitch = 1.0;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        btnTts.classList.add('speaking-active');
+      };
+
+      utterance.onend = () => {
+        stopTTS();
+      };
+
+      utterance.onerror = () => {
+        stopTTS();
+      };
+
+      synth.speak(utterance);
+    }
+
+    function stopTTS() {
+      if (synth) synth.cancel();
+      isSpeaking = false;
+      btnTts.classList.remove('speaking-active');
+    }
+
+    // --- Font Scaling (Zoom Accessibility) ---
+    function zoomIn() {
+      if (currentFontSizeRem < 1.35) {
+        currentFontSizeRem += 0.07;
+        document.documentElement.style.fontSize = `${currentFontSizeRem * 16}px`;
+      }
+    }
+
+    function zoomOut() {
+      if (currentFontSizeRem > 0.85) {
+        currentFontSizeRem -= 0.07;
+        document.documentElement.style.fontSize = `${currentFontSizeRem * 16}px`;
+      }
+    }
+
+    // --- Fullscreen & Modals ---
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.log(err));
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+
+    function toggleNotes() {
+      speakerNotesModal.classList.toggle('hidden');
+    }
+
+    function toggleA11yModal() {
+      a11yModal.classList.toggle('hidden');
+    }
+
+    // --- Keyboard Event Listeners ---
+    document.addEventListener('keydown', (e) => {
+      // Avoid shortcuts if input active
+      if (['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) return;
+
+      // When video is open
+      if (!videoModal.classList.contains('hidden')) {
+        if (e.key === 'Escape' || e.key === 'm' || e.key === 'M') {
+          closeVideoModal();
+          e.preventDefault();
+        } else if (e.key === ' ' || e.key === 'k' || e.key === 'K') {
+          if (motivationalVideo.paused) motivationalVideo.play();
+          else motivationalVideo.pause();
+          e.preventDefault();
+        }
+        return;
+      }
+
+      switch (e.key) {
+        case 'ArrowRight':
+        case ' ':
+        case 'PageDown':
+          nextSlide();
+          break;
+        case 'ArrowLeft':
+        case 'PageUp':
+          prevSlide();
+          break;
+        case 'm':
+        case 'M':
+          toggleVideoModal();
+          break;
+        case 'f':
+        case 'F':
+          toggleFullscreen();
+          break;
+        case 't':
+        case 'T':
+          toggleTheme();
+          break;
+        case 'v':
+        case 'V':
+          toggleTTS();
+          break;
+        case 'n':
+        case 'N':
+          toggleNotes();
+          break;
+        case 'a':
+        case 'A':
+          toggleA11yModal();
+          break;
+        case '+':
+        case '=':
+          zoomIn();
+          break;
+        case '-':
+        case '_':
+          zoomOut();
+          break;
+        case 'Home':
+          updateSlide(1);
+          break;
+        case 'End':
+          updateSlide(totalSlides);
+          break;
+        case 'Escape':
+          a11yModal.classList.add('hidden');
+          speakerNotesModal.classList.add('hidden');
+          closeVideoModal();
+          stopTTS();
+          break;
+      }
+    });
+
+    // --- Button Bindings ---
+    document.getElementById('btn-next').addEventListener('click', nextSlide);
+    document.getElementById('btn-prev').addEventListener('click', prevSlide);
+    document.getElementById('btn-video').addEventListener('click', toggleVideoModal);
+    document.getElementById('btn-close-video').addEventListener('click', closeVideoModal);
+    document.getElementById('btn-theme').addEventListener('click', toggleTheme);
+    document.getElementById('btn-tts').addEventListener('click', toggleTTS);
+    document.getElementById('btn-zoom-in').addEventListener('click', zoomIn);
+    document.getElementById('btn-zoom-out').addEventListener('click', zoomOut);
+    document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
+    document.getElementById('btn-notes').addEventListener('click', toggleNotes);
+    document.getElementById('btn-close-notes').addEventListener('click', toggleNotes);
+    document.getElementById('btn-a11y-help').addEventListener('click', toggleA11yModal);
+    document.getElementById('btn-close-a11y').addEventListener('click', toggleA11yModal);
+    document.getElementById('btn-understood-a11y').addEventListener('click', toggleA11yModal);
+
+    // Initialize Presentation
+    window.addEventListener('DOMContentLoaded', () => {
+      initQRCodes();
+      updateSlide(1);
+    });
+  </script>
+</body>
+</html>
