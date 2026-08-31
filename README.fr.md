@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # ♿ DMovel — Présentation Interactive SITEC UFPA 2026
 ### Accessibilité Urbaine Intelligente & Cartographie Collaborative
@@ -10,17 +10,17 @@
 
 <br/>
 
-[![Événement](https://img.shields.io/badge/%C3%89v%C3%A9nement-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
-[![Dates](https://img.shields.io/badge/Dates-1%20et%202%20Septembre%202026-0284c7?style=for-the-badge)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Événement](https://img.shields.io/badge/%C3%89v%C3%A9nement-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
+[![Dates](https://img.shields.io/badge/Dates-1%20et%202%20Septembre%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
-[![Accessibilité](https://img.shields.io/badge/WCAG%202.1-Conformit%C3%A9%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Accessibilité](https://img.shields.io/badge/WCAG%202.1-Conformit%C3%A9%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Web App](https://img.shields.io/badge/Application%20Web-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
   <strong>Présentation interactive en 6 diapositives avec Vidéo Motivationnelle plein écran, Accessibilité Universelle et Tests QR Code en direct pour la Semaine de l'Institut de Technologie (SITEC 2026) à l'Université Fédérale du Pará (UFPA).</strong>
 </p>
 
-[🌐 Voir la Présentation en Ligne](https://lapshub.github.io/dmovel-sitec-2026/) • [📱 Tester l'Application Web](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratoire LaPS](https://www.laps.ufpa.br/)
+[🌐 Voir la Présentation en Ligne](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Tester l'Application Web](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratoire LaPS](https://www.laps.ufpa.br/)
 
 </div>
 

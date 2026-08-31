@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # ♿ DMovel — SITEC UFPA 2026 Interactive Presentation
 ### Intelligent Urban Accessibility & Crowdsourced Mapping
@@ -10,17 +10,17 @@
 
 <br/>
 
-[![Event](https://img.shields.io/badge/Event-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
-[![Dates](https://img.shields.io/badge/Dates-Sept%201--2%2C%202026-0284c7?style=for-the-badge)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Event](https://img.shields.io/badge/Event-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
+[![Dates](https://img.shields.io/badge/Dates-Sept%201--2%2C%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
-[![Accessibility](https://img.shields.io/badge/WCAG%202.1-AAA%20Compliant-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Accessibility](https://img.shields.io/badge/WCAG%202.1-AAA%20Compliant-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Live Web App](https://img.shields.io/badge/Live%20App-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
   <strong>Interactive 6-Slide Presentation with Fullscreen Motivational Video, Universal Accessibility & Live Web App QR Testing for the Technology Institute Week (SITEC 2026) at the Federal University of Pará (UFPA).</strong>
 </p>
 
-[🌐 View Online Presentation](https://lapshub.github.io/dmovel-sitec-2026/) • [📱 Test DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Academic Report](https://www.laps.ufpa.br/)
+[🌐 View Online Presentation](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Test DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Academic Report](https://www.laps.ufpa.br/)
 
 </div>
 
@@ -105,7 +105,7 @@ This repository hosts the official interactive web presentation prepared for **S
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/LAPSHub/dmovel-sitec-2026.git
+   git clone https://github.com/joaosnet/dmovel-sitec-2026.git
    cd dmovel-sitec-2026
    ```
 

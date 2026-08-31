@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # ♿ DMovel — Apresentação Interativa SITEC UFPA 2026
 ### Acessibilidade Urbana Inteligente & Cartografia Colaborativa
@@ -10,17 +10,17 @@
 
 <br/>
 
-[![Evento](https://img.shields.io/badge/Evento-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
-[![Datas](https://img.shields.io/badge/Datas-1%20e%202%20de%20Setembro%2C%202026-0284c7?style=for-the-badge)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Evento](https://img.shields.io/badge/Evento-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
+[![Datas](https://img.shields.io/badge/Datas-1%20e%202%20de%20Setembro%2C%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Instituição](https://img.shields.io/badge/Institui%C3%A7%C3%A3o-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
-[![Acessibilidade](https://img.shields.io/badge/WCAG%202.1-Conformidade%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://lapshub.github.io/dmovel-sitec-2026/)
+[![Acessibilidade](https://img.shields.io/badge/WCAG%202.1-Conformidade%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Web App](https://img.shields.io/badge/App%20Online-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
   <strong>Apresentação interativa em 6 slides com Vídeo Motivador em tela cheia, Acessibilidade Universal & Teste ao Vivo por QR Code para a Semana do Instituto de Tecnologia (SITEC 2026) da Universidade Federal do Pará (UFPA).</strong>
 </p>
 
-[🌐 Ver Apresentação Online](https://lapshub.github.io/dmovel-sitec-2026/) • [📱 Testar DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratório LaPS](https://www.laps.ufpa.br/)
+[🌐 Ver Apresentação Online](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Testar DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratório LaPS](https://www.laps.ufpa.br/)
 
 </div>
 
@@ -105,7 +105,7 @@ Este repositório contém a apresentação web oficial interativa para a **SITEC
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/LAPSHub/dmovel-sitec-2026.git
+   git clone https://github.com/joaosnet/dmovel-sitec-2026.git
    cd dmovel-sitec-2026
    ```
 
