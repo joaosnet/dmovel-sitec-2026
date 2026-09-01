@@ -2,7 +2,12 @@
 <html lang="pt-BR" class="theme-dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#031024">
+  <link rel="manifest" href="manifest.json">
   
   <!-- ========================================================================= -->
   <!-- SEO METADATA & DISCOVERABILITY (SITEC UFPA 2026 • 1 E 2 DE SETEMBRO)        -->
@@ -310,8 +315,12 @@
     /* 1. MOBILE PORTRAIT CALIBRATION (e.g. 360 x 760)                           */
     /* ------------------------------------------------------------------------- */
     @media (max-width: 450px) {
+      body {
+        min-height: 100dvh !important;
+      }
       .slide {
-        padding: 0.85rem 0.75rem 6.5rem 0.75rem !important;
+        min-height: 100dvh !important;
+        padding: max(0.65rem, env(safe-area-inset-top)) max(0.65rem, env(safe-area-inset-right)) max(6.5rem, env(safe-area-inset-bottom)) max(0.65rem, env(safe-area-inset-left)) !important;
       }
       .slide h1 {
         font-size: 1.65rem !important;
@@ -336,14 +345,14 @@
     /* ------------------------------------------------------------------------- */
     @media (max-height: 450px) and (orientation: landscape) {
       body {
-        height: 100vh !important;
+        height: 100dvh !important;
         overflow: hidden !important;
       }
       
       .slide {
-        height: 100vh !important;
-        max-height: 100vh !important;
-        padding: 0.35rem 0.75rem 2.85rem 0.75rem !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
+        padding: max(0.25rem, env(safe-area-inset-top)) max(0.65rem, env(safe-area-inset-right)) max(2.85rem, env(safe-area-inset-bottom)) max(0.65rem, env(safe-area-inset-left)) !important;
         overflow-y: auto !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -662,6 +671,12 @@
   <div class="fixed top-0 left-0 w-full h-2 bg-slate-900/60 z-50">
     <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-400 via-blue-600 to-indigo-600 transition-all duration-300" style="width: 16.66%;"></div>
   </div>
+
+  <!-- Floating Mobile Fullscreen Prompt Chip -->
+  <button id="mobile-fullscreen-chip" class="fixed top-3 right-3 z-50 px-2.5 py-1 rounded-full bg-sky-600/90 hover:bg-sky-500 text-white font-bold text-[10px] sm:text-xs flex items-center space-x-1.5 shadow-lg shadow-sky-600/40 backdrop-blur border border-sky-400/40 transition-all md:hidden" title="Expandir para Tela Cheia" aria-label="Expandir Apresentação para Tela Cheia">
+    <i class="fa-solid fa-expand text-[10px]"></i>
+    <span>Tela Cheia</span>
+  </button>
 
   <!-- Announcement Bar for Screen Readers (ARIA Live) -->
   <div id="aria-announcer" class="sr-only" aria-live="polite">Slide 1 de 6: Apresentação DMovel no SITEC UFPA 2026</div>
@@ -2106,14 +2121,93 @@
       }
     }
 
-    // --- Fullscreen & Modals ---
+    // --- Mobile Device Detection & Fullscreen Controller ---
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+             || (window.matchMedia("(max-width: 800px)").matches && ('ontouchstart' in window || navigator.maxTouchPoints > 0));
+    }
+
     function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => console.log(err));
-      } else if (document.exitFullscreen) {
-        document.exitFullscreen();
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        requestAppFullscreen();
+      } else {
+        exitAppFullscreen();
       }
     }
+
+    function requestAppFullscreen() {
+      const docEl = document.documentElement;
+      const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+      if (req) {
+        return req.call(docEl).then(() => {
+          updateFullscreenUI();
+        }).catch(err => {
+          console.log('Fullscreen request note:', err);
+        });
+      }
+      return Promise.resolve();
+    }
+
+    function exitAppFullscreen() {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+      if (exit) {
+        return exit.call(document).then(() => {
+          updateFullscreenUI();
+        }).catch(err => {
+          console.log('Exit fullscreen note:', err);
+        });
+      }
+      return Promise.resolve();
+    }
+
+    function updateFullscreenUI() {
+      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+      const chip = document.getElementById('mobile-fullscreen-chip');
+      if (chip) {
+        if (isFs || !isMobileDevice()) {
+          chip.classList.add('hidden');
+        } else {
+          chip.classList.remove('hidden');
+        }
+      }
+    }
+
+    document.addEventListener('fullscreenchange', updateFullscreenUI);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
+
+    // Auto-enter fullscreen on user's first mobile interaction (tap/touch/click)
+    let autoFullscreenAttempted = false;
+    function attemptAutoMobileFullscreen(e) {
+      if (autoFullscreenAttempted) return;
+      if (isMobileDevice() && !document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (e && e.target && e.target.closest('a, button, input, select, textarea')) {
+          setTimeout(() => {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+              requestAppFullscreen();
+            }
+          }, 60);
+          return;
+        }
+        autoFullscreenAttempted = true;
+        requestAppFullscreen();
+      }
+    }
+
+    window.addEventListener('touchstart', attemptAutoMobileFullscreen, { passive: true });
+    window.addEventListener('click', attemptAutoMobileFullscreen);
+
+    // Double tap on empty background to toggle fullscreen on mobile
+    let lastTapTime = 0;
+    document.addEventListener('touchend', (e) => {
+      if (e.target && e.target.closest('button, a, input, select, textarea, .qr-badge-container')) return;
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTapTime;
+      if (tapLength < 350 && tapLength > 50) {
+        toggleFullscreen();
+        e.preventDefault();
+      }
+      lastTapTime = currentTime;
+    });
 
     function toggleNotes() {
       speakerNotesModal.classList.toggle('hidden');
@@ -2241,6 +2335,7 @@
     document.getElementById('btn-a11y-help').addEventListener('click', toggleA11yModal);
     document.getElementById('btn-close-a11y').addEventListener('click', toggleA11yModal);
     document.getElementById('btn-understood-a11y').addEventListener('click', toggleA11yModal);
+    document.getElementById('mobile-fullscreen-chip')?.addEventListener('click', toggleFullscreen);
 
     // Tour buttons
     btnTourNext.addEventListener('click', nextTourStep);
@@ -2252,6 +2347,7 @@
       initQRCodes();
       updateSlide(1);
       checkFirstTimeTour();
+      updateFullscreenUI();
     });
   </script>
 </body>
