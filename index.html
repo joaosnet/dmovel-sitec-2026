@@ -331,9 +331,20 @@
         line-height: 1.25 !important;
       }
       .qr-badge-container {
-        max-width: 220px !important;
+        max-width: 290px !important;
         margin: 0 auto !important;
         padding: 0.85rem !important;
+      }
+      .flip-card-container {
+        max-width: 320px !important;
+        width: 100% !important;
+      }
+      .flip-card-container .qr-badge-container {
+        max-width: 320px !important;
+        width: 100% !important;
+      }
+      .slide[data-slide="6"] {
+        padding-bottom: 8rem !important;
       }
       .phone-mockup {
         max-height: 38vh !important;
@@ -656,8 +667,10 @@
     }
 
     /* 3D Flip Card Container & Animation for Slide 6 */
+    /* Bulletproof 3D Flip Card Container & Animation for Slide 6 */
     .flip-card-container {
-      perspective: 1000px;
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
       width: 100%;
       max-width: 360px;
       margin: 0 auto;
@@ -665,22 +678,13 @@
     .flip-card-inner {
       position: relative;
       width: 100%;
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      will-change: transform, opacity;
     }
-    .flip-card-inner.flipped {
-      transform: rotateY(180deg);
-    }
-    .flip-card-front, .flip-card-back {
+    .flip-card-face {
       width: 100%;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-    .flip-card-back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotateY(180deg);
+      position: relative;
     }
 
     /* Focus Ring for Keyboard Accessibility */
@@ -1413,8 +1417,8 @@
             <!-- 3D Flip Card Body -->
             <div id="qr-flip-inner" class="flip-card-inner">
               
-              <!-- Front Face: DMovel Web App (Default, Large QR) -->
-              <div class="flip-card-front">
+              <!-- Face 1: DMovel Web App (Default, Large QR) -->
+              <div id="flip-face-app" class="flip-card-face">
                 <div class="p-4 sm:p-5 rounded-3xl qr-badge-container text-center border-4 border-sky-500/60 shadow-2xl bg-white">
                   <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-900 text-xs font-black uppercase tracking-wider mb-2">
                     <i class="fa-solid fa-mobile-screen-button text-sm text-sky-600 animate-bounce"></i>
@@ -1433,9 +1437,9 @@
                     </a>
                   </div>
 
-                  <button onclick="flipQRCodeCard('portfolio')" class="mt-2 px-3 py-1 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 text-[11px] font-bold inline-flex items-center space-x-1 transition-colors border border-sky-200">
+                  <button type="button" onclick="flipQRCodeCard('portfolio')" class="mt-2 px-3.5 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-bold inline-flex items-center space-x-1.5 transition-colors border border-sky-200 shadow-sm cursor-pointer" aria-label="Girar para Portfólio de João Neto">
                     <span>Ver Portfólio de João Neto</span>
-                    <i class="fa-solid fa-rotate text-[10px]"></i>
+                    <i class="fa-solid fa-rotate text-xs text-sky-500"></i>
                   </button>
 
                   <!-- Realização Logos -->
@@ -1456,8 +1460,8 @@
                 </div>
               </div>
 
-              <!-- Back Face: João Neto Portfolio (Rotated 180deg, Large QR) -->
-              <div class="flip-card-back">
+              <!-- Face 2: João Neto Portfolio (Initially hidden, revealed on flip) -->
+              <div id="flip-face-portfolio" class="flip-card-face hidden">
                 <div class="p-4 sm:p-5 rounded-3xl qr-badge-container text-center border-4 border-indigo-500/60 shadow-2xl bg-white">
                   <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 text-xs font-black uppercase tracking-wider mb-2">
                     <i class="fa-solid fa-laptop-code text-sm text-indigo-600 animate-pulse"></i>
@@ -1476,8 +1480,8 @@
                     </a>
                   </div>
 
-                  <button onclick="flipQRCodeCard('app')" class="mt-2 px-3 py-1 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-[11px] font-bold inline-flex items-center space-x-1 transition-colors border border-indigo-200">
-                    <i class="fa-solid fa-rotate text-[10px]"></i>
+                  <button type="button" onclick="flipQRCodeCard('app')" class="mt-2 px-3.5 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold inline-flex items-center space-x-1.5 transition-colors border border-indigo-200 shadow-sm cursor-pointer" aria-label="Voltar para DMovel App">
+                    <i class="fa-solid fa-rotate text-xs text-indigo-500"></i>
                     <span>Voltar para DMovel App</span>
                   </button>
 
@@ -1945,28 +1949,62 @@
       }
     }
 
-    // --- Slide 6 3D Flip Card Controller ---
+    // --- Slide 6 3D Flip Card Controller (Bulletproof Hybrid) ---
+    let currentFlipFace = 'app';
+    let isFlipping = false;
+
     function flipQRCodeCard(target) {
+      if (isFlipping) return;
       const inner = document.getElementById('qr-flip-inner');
+      const faceApp = document.getElementById('flip-face-app');
+      const facePortfolio = document.getElementById('flip-face-portfolio');
       const tabApp = document.getElementById('toggle-tab-app');
       const tabPortfolio = document.getElementById('toggle-tab-portfolio');
-      if (!inner) return;
+      if (!inner || !faceApp || !facePortfolio) return;
 
-      const shouldFlip = (target === 'portfolio') || (target === 'toggle' && !inner.classList.contains('flipped'));
+      const nextFace = (target === 'toggle') 
+        ? (currentFlipFace === 'app' ? 'portfolio' : 'app') 
+        : target;
 
-      if (shouldFlip) {
-        inner.classList.add('flipped');
-        if (tabApp && tabPortfolio) {
-          tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white";
-          tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md";
+      if (nextFace === currentFlipFace) return;
+
+      isFlipping = true;
+
+      // First half of 3D flip animation (rotate to 90deg edge-on with subtle scale)
+      inner.style.transition = 'transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease';
+      inner.style.transform = 'scale(0.92) rotateY(90deg)';
+      inner.style.opacity = '0.7';
+
+      setTimeout(() => {
+        currentFlipFace = nextFace;
+        if (nextFace === 'portfolio') {
+          faceApp.classList.add('hidden');
+          facePortfolio.classList.remove('hidden');
+          if (tabApp && tabPortfolio) {
+            tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white cursor-pointer";
+            tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md cursor-pointer";
+          }
+        } else {
+          facePortfolio.classList.add('hidden');
+          faceApp.classList.remove('hidden');
+          if (tabApp && tabPortfolio) {
+            tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md cursor-pointer";
+            tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white cursor-pointer";
+          }
         }
-      } else {
-        inner.classList.remove('flipped');
-        if (tabApp && tabPortfolio) {
-          tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md";
-          tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white";
-        }
-      }
+
+        // Second half of 3D flip animation (rotate back from -90deg to 0deg)
+        inner.style.transform = 'scale(0.92) rotateY(-90deg)';
+        void inner.offsetWidth; // force reflow
+
+        inner.style.transition = 'transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease';
+        inner.style.transform = 'scale(1) rotateY(0deg)';
+        inner.style.opacity = '1';
+
+        setTimeout(() => {
+          isFlipping = false;
+        }, 240);
+      }, 230);
     }
 
     // --- Slide Navigation ---
