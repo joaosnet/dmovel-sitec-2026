@@ -265,32 +265,50 @@
     /* Phone Mockups */
     .phone-mockup {
       position: relative;
-      border: 5px solid #1E293B;
-      border-radius: 24px;
+      border: 4px solid #1E293B;
+      border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
       background: #000;
-      max-height: 58vh;
-      aspect-ratio: 9 / 19.5;
+      max-height: min(44vh, 320px);
+      aspect-ratio: 1080 / 2340;
     }
 
     @media (max-width: 768px) {
       .phone-mockup {
-        max-height: 44vh;
-        border-width: 4px;
-        border-radius: 18px;
+        max-height: 40vh;
+        border-width: 3px;
+        border-radius: 16px;
       }
     }
 
     html.theme-light .phone-mockup {
-      border: 5px solid #334155;
+      border: 4px solid #334155;
       box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.25);
     }
 
     .phone-mockup img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      .slide-4-gallery {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.65rem !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+      }
+      .slide-4-gallery .phone-mockup {
+        max-height: min(44vh, 320px) !important;
+        height: min(44vh, 320px) !important;
+        aspect-ratio: 1080 / 2340 !important;
+        flex-shrink: 0 !important;
+      }
     }
 
     /* QR Code Container for Projector Scan Safety */
@@ -343,11 +361,56 @@
         max-width: 320px !important;
         width: 100% !important;
       }
+      .slide[data-slide="3"] {
+        padding-bottom: 7.5rem !important;
+      }
+      .slide-3-pillars {
+        gap: 0.5rem !important;
+      }
+      .slide-3-pillars > div {
+        padding: 0.65rem 0.85rem !important;
+      }
+      .slide[data-slide="4"] {
+        padding-bottom: 7.5rem !important;
+      }
+      .slide[data-slide="4"] .slide-features-list {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.4rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .slide[data-slide="4"] .slide-features-list > div {
+        padding: 0.45rem 0.6rem !important;
+        border-radius: 0.75rem !important;
+      }
+      .slide[data-slide="4"] .slide-features-list strong {
+        font-size: 0.68rem !important;
+        line-height: 1.2 !important;
+      }
+      .slide[data-slide="4"] .slide-features-list span {
+        display: none !important;
+      }
+      .slide-4-gallery {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 0.75rem !important;
+        padding: 0.5rem 0.25rem 0.75rem 0.25rem !important;
+        width: 100% !important;
+      }
+      .slide-4-gallery .phone-mockup {
+        scroll-snap-align: center !important;
+        flex-shrink: 0 !important;
+        height: 255px !important;
+        max-height: 38vh !important;
+        aspect-ratio: 1080 / 2340 !important;
+        border-width: 3px !important;
+        border-radius: 14px !important;
+      }
       .slide[data-slide="6"] {
         padding-bottom: 8rem !important;
-      }
-      .phone-mockup {
-        max-height: 38vh !important;
       }
     }
 
@@ -1111,7 +1174,7 @@
             Design Focado em Reduzir Barreiras
           </h2>
           
-          <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+          <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm slide-features-list">
             <div class="p-2 sm:p-3 rounded-xl glass-card flex items-start space-x-2.5 sm:space-x-3">
               <i class="fa-solid fa-fingerprint text-sky-400 text-sm sm:text-base mt-0.5"></i>
               <div>
@@ -1154,28 +1217,33 @@
         </div>
 
         <!-- Right Column: 4 Real Screen Mockups Carousel -->
-        <div class="lg:col-span-7 flex justify-start sm:justify-center items-center space-x-2 sm:space-x-3 overflow-x-auto py-2 slide-4-gallery">
-          
-          <!-- Screen 1: Biometrics / Auth -->
-          <div class="phone-mockup flex-shrink-0">
-            <img src="assets/images/screen_10_authenticated.png" alt="Tela de Autenticação com Biometria DMovel">
-          </div>
+        <div class="lg:col-span-7 flex flex-col items-center">
+          <div class="w-full flex justify-start lg:justify-center items-center space-x-2 sm:space-x-3 overflow-x-auto py-1.5 slide-4-gallery">
+            
+            <!-- Screen 1: Biometrics / Auth -->
+            <div class="phone-mockup flex-shrink-0">
+              <img src="assets/images/screen_10_authenticated.png" alt="Tela de Autenticação com Biometria DMovel" loading="lazy">
+            </div>
 
-          <!-- Screen 2: Interactive Map -->
-          <div class="phone-mockup ring-2 ring-sky-400/60 flex-shrink-0">
-            <img src="assets/images/screen_15_interactive_map.png" alt="Mapa Interativo com POIs em Belém">
-          </div>
+            <!-- Screen 2: Interactive Map -->
+            <div class="phone-mockup ring-2 ring-sky-400/60 flex-shrink-0">
+              <img src="assets/images/screen_15_interactive_map.png" alt="Mapa Interativo com POIs em Belém" loading="lazy">
+            </div>
 
-          <!-- Screen 3: Sliders Evaluation -->
-          <div class="phone-mockup flex-shrink-0">
-            <img src="assets/images/screen_20_rate_questions_expanded.png" alt="Avaliação Multicritério com Sliders e Emojis">
-          </div>
+            <!-- Screen 3: Sliders Evaluation -->
+            <div class="phone-mockup flex-shrink-0">
+              <img src="assets/images/screen_20_rate_questions_expanded.png" alt="Avaliação Multicritério com Sliders e Emojis" loading="lazy">
+            </div>
 
-          <!-- Screen 4: Light Theme -->
-          <div class="phone-mockup flex-shrink-0">
-            <img src="assets/images/screen_26_light_theme_profile.png" alt="Perfil em Tema Claro de Alto Contraste">
-          </div>
+            <!-- Screen 4: Light Theme -->
+            <div class="phone-mockup flex-shrink-0">
+              <img src="assets/images/screen_26_light_theme_profile.png" alt="Perfil em Tema Claro de Alto Contraste" loading="lazy">
+            </div>
 
+          </div>
+          <div class="text-center text-[10px] text-adaptive-muted mt-1 block sm:hidden">
+            <i class="fa-solid fa-arrows-left-right mr-1 text-sky-400"></i><span>Deslize para o lado para ver as 4 telas reais</span>
+          </div>
         </div>
 
       </div>
