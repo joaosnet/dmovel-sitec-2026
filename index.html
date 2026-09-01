@@ -344,9 +344,12 @@
         max-height: 100vh !important;
         padding: 0.35rem 0.75rem 2.85rem 0.75rem !important;
         overflow-y: auto !important;
-        display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
+      }
+
+      .slide.active {
+        display: flex !important;
       }
 
       /* Compact Top Header */
@@ -579,9 +582,14 @@
         font-size: 0.65rem !important;
       }
       footer.glass-nav #btn-app-emulator {
+        width: 1.65rem !important;
         height: 1.65rem !important;
-        padding: 0 0.5rem !important;
+        padding: 0 !important;
+        justify-content: center !important;
         font-size: 0.65rem !important;
+      }
+      footer.glass-nav #btn-app-emulator span {
+        display: none !important;
       }
       footer.glass-nav #slide-indicator {
         font-size: 0.7rem !important;
