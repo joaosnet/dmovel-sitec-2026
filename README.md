@@ -65,6 +65,11 @@ This repository hosts the official interactive web presentation prepared for **S
 - **Dynamic Font Scaling:** Adjust typography on the fly with <kbd>+</kbd> and <kbd>-</kbd>.
 - **Full Screen Reader Support:** Semantic HTML5, ARIA live announcements, and full keyboard control.
 
+### 8. 📐 Precision Mobile Responsiveness (760 x 360 & 360 x 760)
+- **Panoramic Landscape Mode (760 x 360):** 2-column side-by-side presentation layout ensuring all slide content and scannable QR codes fit cleanly without vertical clipping.
+- **Fluid Portrait Mode (360 x 760):** Smart compact navigation bar with a quick tools popover drawer (`•••`) preventing any horizontal overflow on narrow viewports.
+- **Edge-to-Edge Fluid Modals:** Web app emulator and video player automatically maximize to 100% of mobile viewports.
+
 ---
 
 ## 🗂️ 6-Slide Narrative Structure

@@ -296,6 +296,316 @@
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     }
 
+    /* Global QR Image Scaling */
+    #qrcode-slide-1 img, #qrcode-slide-1 canvas,
+    #qrcode-slide-6 img, #qrcode-slide-6 canvas {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ------------------------------------------------------------------------- */
+    /* 1. MOBILE PORTRAIT CALIBRATION (e.g. 360 x 760)                           */
+    /* ------------------------------------------------------------------------- */
+    @media (max-width: 450px) {
+      .slide {
+        padding: 0.85rem 0.75rem 6.5rem 0.75rem !important;
+      }
+      .slide h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.25 !important;
+      }
+      .slide h2 {
+        font-size: 1.35rem !important;
+        line-height: 1.25 !important;
+      }
+      .qr-badge-container {
+        max-width: 220px !important;
+        margin: 0 auto !important;
+        padding: 0.85rem !important;
+      }
+      .phone-mockup {
+        max-height: 38vh !important;
+      }
+    }
+
+    /* ------------------------------------------------------------------------- */
+    /* 2. MOBILE LANDSCAPE PRESENTATION MODE (e.g. 760 x 360)                    */
+    /* ------------------------------------------------------------------------- */
+    @media (max-height: 450px) and (orientation: landscape) {
+      body {
+        height: 100vh !important;
+        overflow: hidden !important;
+      }
+      
+      .slide {
+        height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 0.35rem 0.75rem 2.85rem 0.75rem !important;
+        overflow-y: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+
+      /* Compact Top Header */
+      .slide-header-box {
+        margin-bottom: 0.2rem !important;
+        padding-bottom: 0.15rem !important;
+      }
+      .slide-header-box img {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+      }
+      .slide-header-box span.font-heading {
+        font-size: 0.85rem !important;
+      }
+      .slide-header-box p {
+        font-size: 0.5rem !important;
+      }
+      .slide-header-badge {
+        font-size: 0.65rem !important;
+        padding: 0.15rem 0.5rem !important;
+      }
+
+      /* Headings & Texts */
+      .slide h1 {
+        font-size: 1.15rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0.25rem !important;
+      }
+      .slide h2 {
+        font-size: 1.05rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0.25rem !important;
+      }
+      .slide h3 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.15rem !important;
+      }
+      .slide p.text-adaptive-muted, .slide p.text-adaptive-title {
+        font-size: 0.7rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      /* Landscape Grid: 2 Columns Side-by-Side */
+      .landscape-grid {
+        display: grid !important;
+        grid-template-columns: 1.35fr 1fr !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+        margin: auto 0 !important;
+        padding: 0.15rem 0 !important;
+      }
+
+      /* Action Buttons */
+      .slide-actions {
+        margin-bottom: 0.25rem !important;
+      }
+      .slide-actions button {
+        padding: 0.25rem 0.6rem !important;
+        font-size: 0.65rem !important;
+      }
+
+      /* Cards & Authors in Landscape */
+      .compact-cards-landscape {
+        display: flex !important;
+        gap: 0.4rem !important;
+      }
+      .compact-cards-landscape > div {
+        padding: 0.35rem 0.5rem !important;
+        border-radius: 0.6rem !important;
+      }
+      .compact-cards-landscape p {
+        font-size: 0.65rem !important;
+        line-height: 1.15 !important;
+        margin: 0 !important;
+      }
+
+      /* Institutional Logos in Landscape */
+      .landscape-logos-bar {
+        margin-top: 0.25rem !important;
+        padding-top: 0.15rem !important;
+      }
+      .landscape-logos-bar span {
+        font-size: 0.55rem !important;
+      }
+      .landscape-logos-bar .h-8 {
+        height: 1.4rem !important;
+        padding: 0.1rem 0.4rem !important;
+      }
+      .landscape-logos-bar img {
+        height: 1rem !important;
+      }
+
+      /* QR Code Card in Landscape */
+      .qr-badge-container {
+        max-width: 140px !important;
+        padding: 0.4rem 0.5rem !important;
+        border-radius: 12px !important;
+      }
+      .qr-badge-container #qrcode-slide-1,
+      .qr-badge-container #qrcode-slide-6 {
+        max-width: 90px !important;
+        max-height: 90px !important;
+        margin: 0 auto !important;
+      }
+      .qr-badge-container p, .qr-badge-container a {
+        font-size: 0.6rem !important;
+        margin-top: 0.15rem !important;
+      }
+      .qr-badge-container span {
+        font-size: 0.55rem !important;
+      }
+
+      /* Slide 2 Specific Landscape */
+      .slide-2-problem-cards {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.4rem !important;
+      }
+      .slide-2-problem-cards > div {
+        padding: 0.35rem 0.5rem !important;
+      }
+      .slide-2-problem-cards h4 {
+        font-size: 0.7rem !important;
+      }
+      .slide-2-problem-cards p {
+        font-size: 0.6rem !important;
+      }
+      .slide-2-stats {
+        padding: 0.3rem 0.5rem !important;
+      }
+      .slide-2-stats span.font-heading {
+        font-size: 1.25rem !important;
+      }
+
+      /* Slide 3 Specific Landscape: 3 Columns */
+      .slide-3-pillars {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 0.4rem !important;
+      }
+      .slide-3-pillars > div {
+        padding: 0.4rem 0.5rem !important;
+      }
+      .slide-3-pillars h3 {
+        font-size: 0.75rem !important;
+      }
+      .slide-3-pillars p {
+        font-size: 0.6rem !important;
+        line-height: 1.15 !important;
+      }
+      .slide-3-pillars .w-12 {
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      /* Slide 4 Specific Landscape: Mockups Carousel */
+      .slide-4-gallery {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        gap: 0.5rem !important;
+        padding: 0.25rem 0 !important;
+      }
+      .phone-mockup {
+        max-height: 175px !important;
+        border-width: 2px !important;
+        border-radius: 12px !important;
+      }
+
+      /* Slide 5 Specific Landscape: 4 Columns */
+      .slide-5-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        gap: 0.35rem !important;
+      }
+      .slide-5-grid > div {
+        padding: 0.35rem 0.4rem !important;
+      }
+      .slide-5-grid h4 {
+        font-size: 0.7rem !important;
+      }
+      .slide-5-grid p {
+        font-size: 0.55rem !important;
+        line-height: 1.15 !important;
+      }
+      .slide-5-grid .w-12 {
+        width: 1.6rem !important;
+        height: 1.6rem !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 0.2rem !important;
+      }
+      .slide-5-metric-bar {
+        padding: 0.25rem 0.5rem !important;
+        margin-top: 0.3rem !important;
+        font-size: 0.65rem !important;
+      }
+
+      /* Slide 6 Specific Landscape */
+      .slide-6-future-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.35rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+      .slide-6-future-grid > div {
+        padding: 0.25rem 0.4rem !important;
+      }
+      .slide-6-future-grid h4 {
+        font-size: 0.65rem !important;
+        margin: 0 !important;
+      }
+      .slide-6-future-grid p {
+        font-size: 0.55rem !important;
+        line-height: 1.15 !important;
+      }
+
+      /* Compact Footer Navigation */
+      footer.glass-nav {
+        bottom: 4px !important;
+        padding: 0.2rem 0.6rem !important;
+        border-radius: 20px !important;
+        max-width: 98vw !important;
+      }
+      footer.glass-nav button {
+        width: 1.65rem !important;
+        height: 1.65rem !important;
+        font-size: 0.65rem !important;
+      }
+      footer.glass-nav #btn-app-emulator {
+        height: 1.65rem !important;
+        padding: 0 0.5rem !important;
+        font-size: 0.65rem !important;
+      }
+      footer.glass-nav #slide-indicator {
+        font-size: 0.7rem !important;
+        min-width: 40px !important;
+      }
+    }
+
+    /* ------------------------------------------------------------------------- */
+    /* 3. MODALS FULLSCREEN IN MOBILE (e.g. <= 500px width or <= 450px height)   */
+    /* ------------------------------------------------------------------------- */
+    @media (max-width: 500px), (max-height: 450px) {
+      #app-emulator-modal > div {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+      }
+      #video-modal {
+        padding: 0.5rem !important;
+      }
+    }
+
     /* Focus Ring for Keyboard Accessibility */
     button:focus-visible, a:focus-visible {
       outline: 3px solid #00B4D8 !important;
@@ -353,16 +663,16 @@
       <div class="absolute bottom-10 right-10 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Top Header Info -->
-      <div class="flex flex-wrap justify-between items-center gap-3 z-10">
-        <div class="flex items-center space-x-3 sm:space-x-4">
-          <img src="assets/images/logo_dmovel.png" alt="Logotipo Oficial DMovel" class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl shadow-lg object-contain bg-white/10 p-1 border border-white/20">
+      <div class="flex flex-wrap justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
+        <div class="flex items-center space-x-2 sm:space-x-4">
+          <img src="assets/images/logo_dmovel.png" alt="Logotipo Oficial DMovel" class="w-8 h-8 sm:w-12 sm:h-12 rounded-2xl shadow-lg object-contain bg-white/10 p-1 border border-white/20">
           <div>
-            <span class="font-heading font-black text-xl sm:text-2xl tracking-wider text-adaptive-title">DMOVEL</span>
-            <p class="text-[10px] sm:text-xs text-sky-400 font-semibold tracking-widest uppercase">Acessibilidade Urbana Inteligente</p>
+            <span class="font-heading font-black text-lg sm:text-2xl tracking-wider text-adaptive-title">DMOVEL</span>
+            <p class="text-[9px] sm:text-xs text-sky-400 font-semibold tracking-widest uppercase">Acessibilidade Urbana Inteligente</p>
           </div>
         </div>
         
-        <div class="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass-card">
+        <div class="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm px-2.5 sm:px-4 py-1 sm:py-2 rounded-full glass-card slide-header-badge">
           <i class="fa-solid fa-graduation-cap text-sky-400"></i>
           <span class="font-bold text-adaptive-title">SITEC UFPA 2026</span>
           <span class="text-slate-400">|</span>
@@ -371,64 +681,64 @@
       </div>
 
       <!-- Hero Main Content Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center z-10 my-auto py-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center z-10 my-auto py-2 sm:py-4 landscape-grid">
         
         <!-- Left Column: Title & Mission -->
         <div class="lg:col-span-8">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-sky-950/80 border border-sky-500/40 text-sky-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4">
+          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-lg bg-sky-950/80 border border-sky-500/40 text-sky-300 text-[9px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-4">
             <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
             <span>Semana do Instituto de Tecnologia • UFPA</span>
           </div>
           
-          <h1 class="font-heading font-black text-3xl sm:text-4xl lg:text-6xl leading-tight text-adaptive-title mb-4">
+          <h1 class="font-heading font-black text-2xl sm:text-4xl lg:text-6xl leading-tight text-adaptive-title mb-2 sm:mb-4">
             Mapeando Cidades Acessíveis para Todos.
           </h1>
           
-          <p class="text-base sm:text-lg lg:text-xl text-adaptive-muted font-normal leading-relaxed max-w-3xl mb-5">
+          <p class="text-xs sm:text-lg lg:text-xl text-adaptive-muted font-normal leading-relaxed max-w-3xl mb-3 sm:mb-5">
             Uma plataforma distribuída, colaborativa e acessível que empodera pessoas com deficiência a explorar, avaliar e transformar a mobilidade urbana na Amazônia.
           </p>
 
           <!-- Action Buttons on Hero -->
-          <div class="flex flex-wrap gap-3 mb-5">
-            <button onclick="openAppEmulator()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-bold text-xs sm:text-sm flex items-center space-x-2 shadow-lg shadow-sky-600/30 transition-transform active:scale-95">
+          <div class="flex flex-wrap gap-2 sm:gap-3 mb-3 sm:mb-5 slide-actions">
+            <button onclick="openAppEmulator()" class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-bold text-xs sm:text-sm flex items-center space-x-2 shadow-lg shadow-sky-600/30 transition-transform active:scale-95">
               <i class="fa-solid fa-mobile-screen-button"></i>
               <span>Abrir App Embutido no Site</span>
             </button>
-            <button onclick="openVideoModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm flex items-center space-x-2 border border-slate-700 transition-all">
+            <button onclick="openVideoModal()" class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm flex items-center space-x-2 border border-slate-700 transition-all">
               <i class="fa-solid fa-play text-red-400"></i>
               <span>Ver Vídeo Motivador</span>
             </button>
           </div>
 
           <!-- Authors & Advisors Banner -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl">
-            <div class="p-3 sm:p-3.5 rounded-xl glass-card border-sky-500/30">
-              <p class="text-[10px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Discentes Pesquisadores</p>
-              <p class="text-sm sm:text-base font-bold text-adaptive-title">João da Cruz N. Neto</p>
-              <p class="text-sm sm:text-base font-bold text-adaptive-title">Daniel Moreira Barra</p>
-              <p class="text-[11px] text-adaptive-muted mt-0.5">Engenharia • UFPA</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 max-w-2xl compact-cards-landscape">
+            <div class="p-2.5 sm:p-3.5 rounded-xl glass-card border-sky-500/30">
+              <p class="text-[9px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Discentes Pesquisadores</p>
+              <p class="text-xs sm:text-base font-bold text-adaptive-title">João da Cruz N. Neto</p>
+              <p class="text-xs sm:text-base font-bold text-adaptive-title">Daniel Moreira Barra</p>
+              <p class="text-[10px] text-adaptive-muted mt-0.5">Engenharia • UFPA</p>
             </div>
 
-            <div class="p-3 sm:p-3.5 rounded-xl glass-card border-blue-500/30">
-              <p class="text-[10px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Orientação Docente</p>
+            <div class="p-2.5 sm:p-3.5 rounded-xl glass-card border-blue-500/30">
+              <p class="text-[9px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Orientação Docente</p>
               <p class="text-xs sm:text-sm font-bold text-adaptive-title">Prof. Dr. Ronaldo de Freitas Zampolo</p>
               <p class="text-xs sm:text-sm font-bold text-adaptive-title">Prof. Dr. Agostinho Luiz da Silva Castro</p>
-              <p class="text-[11px] text-adaptive-muted mt-0.5">LaPS & LAMIC • ITEC / UFPA</p>
+              <p class="text-[10px] text-adaptive-muted mt-0.5">LaPS & LAMIC • ITEC / UFPA</p>
             </div>
           </div>
 
           <!-- Official Institutional Logos -->
-          <div class="flex flex-wrap items-center gap-2 sm:gap-3 mt-4 pt-1">
-            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400">Apoio Institucional:</span>
-            <div class="flex items-center space-x-2">
-              <div class="bg-white px-2.5 py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-8" title="Universidade Federal do Pará (UFPA)">
-                <img src="assets/images/logo_ufpa.png" alt="Logo Oficial UFPA" class="h-6 w-auto object-contain">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 mt-3 sm:mt-4 pt-1 landscape-logos-bar">
+            <span class="text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400">Apoio Institucional:</span>
+            <div class="flex items-center space-x-1.5 sm:space-x-2">
+              <div class="bg-white px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-7 sm:h-8" title="Universidade Federal do Pará (UFPA)">
+                <img src="assets/images/logo_ufpa.png" alt="Logo Oficial UFPA" class="h-5 sm:h-6 w-auto object-contain">
               </div>
-              <div class="bg-white px-2.5 py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-8" title="Laboratório de Processamento de Sinais (LaPS)">
-                <img src="assets/images/logo_laps.png" alt="Logo Oficial LaPS" class="h-6 w-auto object-contain">
+              <div class="bg-white px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-7 sm:h-8" title="Laboratório de Processamento de Sinais (LaPS)">
+                <img src="assets/images/logo_laps.png" alt="Logo Oficial LaPS" class="h-5 sm:h-6 w-auto object-contain">
               </div>
-              <div class="bg-white px-2.5 py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-8" title="Laboratório de Microcomputadores e Controladores (LAMIC)">
-                <img src="assets/images/logo_lamic.png" alt="Logo Oficial LAMIC" class="h-6 w-auto object-contain">
+              <div class="bg-white px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-xl shadow-sm border border-slate-300 flex items-center h-7 sm:h-8" title="Laboratório de Microcomputadores e Controladores (LAMIC)">
+                <img src="assets/images/logo_lamic.png" alt="Logo Oficial LAMIC" class="h-5 sm:h-6 w-auto object-contain">
               </div>
             </div>
           </div>
@@ -480,53 +790,53 @@
              aria-label="Slide 2: O Desafio da Mobilidade Urbana e a Falta de Dados">
       
       <!-- Top Header Info + Persistent QR Badge -->
-      <div class="flex justify-between items-center gap-3 z-10">
+      <div class="flex justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
         <div>
-          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">01. O Desafio Urbano</span>
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">01. O Desafio Urbano</span>
           <h3 class="text-xs sm:text-sm font-semibold text-adaptive-muted">A Barreira da Falta de Informação em Belém e na UFPA</h3>
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2.5 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
-          <div id="qrcode-slide-2" class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"></div>
+        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+          <div id="qrcode-slide-2" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
-            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
-            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+            <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[8px] text-slate-700 font-mono">dmovel_web_app</span>
           </div>
         </div>
       </div>
 
       <!-- Slide Main Content -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center z-10 my-auto py-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center z-10 my-auto py-2 sm:py-4 landscape-grid">
         
         <!-- Left: The Problem Cards -->
         <div class="lg:col-span-7">
-          <h2 class="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-4 sm:mb-5">
+          <h2 class="font-heading font-black text-xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-2 sm:mb-5">
             A Barreira Invisível: Cidades Não Mapeadas para PCDs
           </h2>
           
-          <p class="text-sm sm:text-base text-adaptive-muted font-normal mb-5 leading-relaxed">
+          <p class="text-xs sm:text-base text-adaptive-muted font-normal mb-3 sm:mb-5 leading-relaxed">
             Plataformas comerciais de mapas atendem automóveis e pedestres convencionais, mas negligenciam dados essenciais como largura de portas, desníveis de calçada e sinalização tátil.
           </p>
 
-          <div class="space-y-3 sm:space-y-4">
-            <div class="flex items-start space-x-3 sm:space-x-4 p-3.5 sm:p-4 rounded-2xl glass-card">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-500/20 text-red-500 flex items-center justify-center text-lg sm:text-xl flex-shrink-0">
+          <div class="space-y-2 sm:space-y-4 slide-2-problem-cards">
+            <div class="flex items-start space-x-2.5 sm:space-x-4 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl glass-card">
+              <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-red-500/20 text-red-500 flex items-center justify-center text-sm sm:text-xl flex-shrink-0">
                 <i class="fa-solid fa-triangle-exclamation"></i>
               </div>
               <div>
-                <h4 class="text-sm sm:text-base font-bold text-adaptive-title">Insegurança & Incerteza no Deslocamento</h4>
-                <p class="text-xs sm:text-sm text-adaptive-muted mt-1">A falta de certeza sobre a acessibilidade do destino gera isolamento e impede o direito fundamental de ir e vir.</p>
+                <h4 class="text-xs sm:text-base font-bold text-adaptive-title">Insegurança & Incerteza no Deslocamento</h4>
+                <p class="text-[10px] sm:text-sm text-adaptive-muted mt-0.5 sm:mt-1">A falta de certeza sobre a acessibilidade do destino gera isolamento e impede o direito fundamental de ir e vir.</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-3 sm:space-x-4 p-3.5 sm:p-4 rounded-2xl glass-card">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 text-amber-500 flex items-center justify-center text-lg sm:text-xl flex-shrink-0">
+            <div class="flex items-start space-x-2.5 sm:space-x-4 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl glass-card">
+              <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm sm:text-xl flex-shrink-0">
                 <i class="fa-solid fa-map-pin"></i>
               </div>
               <div>
-                <h4 class="text-sm sm:text-base font-bold text-adaptive-title">Desafio Crítico no Contexto Amazônico</h4>
-                <p class="text-xs sm:text-sm text-adaptive-muted mt-1">Calçadas irregulares, chuvas equatoriais e ausência de dados públicos estruturados exigem inteligência colaborativa.</p>
+                <h4 class="text-xs sm:text-base font-bold text-adaptive-title">Desafio Crítico no Contexto Amazônico</h4>
+                <p class="text-[10px] sm:text-sm text-adaptive-muted mt-0.5 sm:mt-1">Calçadas irregulares, chuvas equatoriais e ausência de dados públicos estruturados exigem inteligência colaborativa.</p>
               </div>
             </div>
           </div>
@@ -576,81 +886,81 @@
              aria-label="Slide 3: Os Três Pilares da Solução DMovel">
       
       <!-- Top Header Info + Persistent QR Badge -->
-      <div class="flex justify-between items-center gap-3 z-10">
+      <div class="flex justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
         <div>
-          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">02. A Solução DMovel</span>
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">02. A Solução DMovel</span>
           <h3 class="text-xs sm:text-sm font-semibold text-adaptive-muted">Abordagem Integrada de Engenharia e Sociedade</h3>
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2.5 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
-          <div id="qrcode-slide-3" class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"></div>
+        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+          <div id="qrcode-slide-3" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
-            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
-            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+            <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[8px] text-slate-700 font-mono">dmovel_web_app</span>
           </div>
         </div>
       </div>
 
       <!-- Slide Main Content -->
-      <div class="my-auto z-10 py-4">
-        <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-          <h2 class="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-adaptive-title mb-2 sm:mb-3">
+      <div class="my-auto z-10 py-2 sm:py-4">
+        <div class="text-center max-w-3xl mx-auto mb-4 sm:mb-8">
+          <h2 class="font-heading font-black text-xl sm:text-4xl lg:text-5xl text-adaptive-title mb-1.5 sm:mb-3">
             Três Pilares de Transformação Urbana
           </h2>
-          <p class="text-sm sm:text-base text-adaptive-muted font-normal">
+          <p class="text-xs sm:text-base text-adaptive-muted font-normal">
             Uma arquitetura orientada ao usuário para coleta, validação e disseminação de acessibilidade.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 slide-3-pillars">
           
           <!-- Pillar 1 -->
-          <div class="p-5 sm:p-6 rounded-2xl glass-card border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition-all">
+          <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl glass-card border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition-all">
             <div>
-              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl sm:text-2xl mb-3 sm:mb-4 shadow-inner">
+              <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg sm:text-2xl mb-2 sm:mb-4 shadow-inner">
                 <i class="fa-solid fa-map-location-dot"></i>
               </div>
-              <h3 class="font-heading font-bold text-lg sm:text-xl text-adaptive-title mb-2">1. Cartografia Aberta</h3>
-              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+              <h3 class="font-heading font-bold text-base sm:text-xl text-adaptive-title mb-1 sm:mb-2">1. Cartografia Aberta</h3>
+              <p class="text-[11px] sm:text-sm text-adaptive-muted leading-relaxed">
                 Cadastro rápido de Pontos de Interesse (POIs) com coordenadas GPS precisas, categorias temáticas (Saúde, Educação, Lazer) e upload de fotos comprobatórias.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-sky-400 font-bold">
+            <div class="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-slate-700/30 flex items-center text-xs text-sky-400 font-bold">
               <span>Geo-índices & Mapas Vetoriais</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
             </div>
           </div>
 
           <!-- Pillar 2 -->
-          <div class="p-5 sm:p-6 rounded-2xl glass-card border border-blue-500/30 flex flex-col justify-between hover:border-blue-400 transition-all">
+          <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl glass-card border border-blue-500/30 flex flex-col justify-between hover:border-blue-400 transition-all">
             <div>
-              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl sm:text-2xl mb-3 sm:mb-4 shadow-inner">
+              <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg sm:text-2xl mb-2 sm:mb-4 shadow-inner">
                 <i class="fa-solid fa-star-half-stroke"></i>
               </div>
-              <h3 class="font-heading font-bold text-lg sm:text-xl text-adaptive-title mb-2">2. Avaliação Multicritério</h3>
-              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+              <h3 class="font-heading font-bold text-base sm:text-xl text-adaptive-title mb-1 sm:mb-2">2. Avaliação Multicritério</h3>
+              <p class="text-[11px] sm:text-sm text-adaptive-muted leading-relaxed">
                 Avaliação decomposta em critérios objetivos: Apoio & Atendimento, Espaço Físico & Mobilidade e Acessibilidade da Informação, com sliders dinâmicos.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-blue-400 font-bold">
+            <div class="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-slate-700/30 flex items-center text-xs text-blue-400 font-bold">
               <span>Métricas de Acessibilidade AAA</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
             </div>
           </div>
 
           <!-- Pillar 3 -->
-          <div class="p-5 sm:p-6 rounded-2xl glass-card border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-400 transition-all">
+          <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl glass-card border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-400 transition-all">
             <div>
-              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl sm:text-2xl mb-3 sm:mb-4 shadow-inner">
+              <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg sm:text-2xl mb-2 sm:mb-4 shadow-inner">
                 <i class="fa-solid fa-language"></i>
               </div>
-              <h3 class="font-heading font-bold text-lg sm:text-xl text-adaptive-title mb-2">3. Inclusão & Tradução Dinâmica</h3>
-              <p class="text-xs sm:text-sm text-adaptive-muted leading-relaxed">
+              <h3 class="font-heading font-bold text-base sm:text-xl text-adaptive-title mb-1 sm:mb-2">3. Inclusão & Tradução Dinâmica</h3>
+              <p class="text-[11px] sm:text-sm text-adaptive-muted leading-relaxed">
                 Suporte multilíngue em tempo real (Português, Inglês, Francês e Alemão) com pipeline de tradução dinâmica automática para comentários e relatos.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-700/30 flex items-center text-xs text-indigo-400 font-bold">
+            <div class="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-slate-700/30 flex items-center text-xs text-indigo-400 font-bold">
               <span>Internacionalização Ativa</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
             </div>
@@ -660,7 +970,7 @@
       </div>
 
       <!-- Slide Footer -->
-      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-3 text-[11px] sm:text-xs text-adaptive-muted">
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-2 sm:pt-3 text-[10px] sm:text-xs text-adaptive-muted">
         <span>Arquitetura da Solução</span>
         <span>Slide 3 / 6</span>
       </div>
@@ -674,80 +984,80 @@
              aria-label="Slide 4: Galeria de Telas e Funcionalidades Mobile">
       
       <!-- Top Header Info + Persistent QR Badge -->
-      <div class="flex justify-between items-center gap-3 z-10">
+      <div class="flex justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
         <div>
-          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">03. Galeria Mobile & UX</span>
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">03. Galeria Mobile & UX</span>
           <h3 class="text-xs sm:text-sm font-semibold text-adaptive-muted">Execução Real em Hardware Samsung Galaxy M34 5G (Android 16)</h3>
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2.5 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
-          <div id="qrcode-slide-4" class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"></div>
+        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+          <div id="qrcode-slide-4" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
-            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
-            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+            <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[8px] text-slate-700 font-mono">dmovel_web_app</span>
           </div>
         </div>
       </div>
 
       <!-- Slide Main Content -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center z-10 my-auto py-3">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center z-10 my-auto py-2 sm:py-3 landscape-grid">
         
         <!-- Left Column: Feature Highlights -->
         <div class="lg:col-span-5">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-950 text-sky-400 text-[10px] sm:text-xs font-bold mb-3 border border-sky-500/40">
+          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-sky-950 text-sky-400 text-[9px] sm:text-xs font-bold mb-2 sm:mb-3 border border-sky-500/40">
             <i class="fa-solid fa-mobile-screen"></i>
             <span>Interface Inclusiva & Fluida</span>
           </div>
           
-          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-adaptive-title mb-3">
+          <h2 class="font-heading font-black text-xl sm:text-3xl lg:text-4xl text-adaptive-title mb-2 sm:mb-3">
             Design Focado em Reduzir Barreiras
           </h2>
           
-          <div class="space-y-2.5 sm:space-y-3 text-xs sm:text-sm">
-            <div class="p-2.5 sm:p-3 rounded-xl glass-card flex items-start space-x-3">
-              <i class="fa-solid fa-fingerprint text-sky-400 text-base mt-0.5"></i>
+          <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+            <div class="p-2 sm:p-3 rounded-xl glass-card flex items-start space-x-2.5 sm:space-x-3">
+              <i class="fa-solid fa-fingerprint text-sky-400 text-sm sm:text-base mt-0.5"></i>
               <div>
-                <strong class="text-adaptive-title block">Passkeys & Biometria Nativa</strong>
-                <span class="text-adaptive-muted">Acesso instantâneo sem necessidade de digitar senhas complexas.</span>
+                <strong class="text-adaptive-title block text-xs sm:text-sm">Passkeys & Biometria Nativa</strong>
+                <span class="text-[10px] sm:text-xs text-adaptive-muted">Acesso instantâneo sem necessidade de digitar senhas complexas.</span>
               </div>
             </div>
 
-            <div class="p-2.5 sm:p-3 rounded-xl glass-card flex items-start space-x-3">
-              <i class="fa-solid fa-map-location text-blue-400 text-base mt-0.5"></i>
+            <div class="p-2 sm:p-3 rounded-xl glass-card flex items-start space-x-2.5 sm:space-x-3">
+              <i class="fa-solid fa-map-location text-blue-400 text-sm sm:text-base mt-0.5"></i>
               <div>
-                <strong class="text-adaptive-title block">Mapa Interativo com Camadas</strong>
-                <span class="text-adaptive-muted">Filtros por categorias e marcadores de alto contraste para baixa visão.</span>
+                <strong class="text-adaptive-title block text-xs sm:text-sm">Mapa Interativo com Camadas</strong>
+                <span class="text-[10px] sm:text-xs text-adaptive-muted">Filtros por categorias e marcadores de alto contraste para baixa visão.</span>
               </div>
             </div>
 
-            <div class="p-2.5 sm:p-3 rounded-xl glass-card flex items-start space-x-3">
-              <i class="fa-solid fa-face-smile text-emerald-400 text-base mt-0.5"></i>
+            <div class="p-2 sm:p-3 rounded-xl glass-card flex items-start space-x-2.5 sm:space-x-3">
+              <i class="fa-solid fa-face-smile text-emerald-400 text-sm sm:text-base mt-0.5"></i>
               <div>
-                <strong class="text-adaptive-title block">Sliders com Emojis Dinâmicos</strong>
-                <span class="text-adaptive-muted">Feedback expressivo para avaliação de acessibilidade sem fricção.</span>
+                <strong class="text-adaptive-title block text-xs sm:text-sm">Sliders com Emojis Dinâmicos</strong>
+                <span class="text-[10px] sm:text-xs text-adaptive-muted">Feedback expressivo para avaliação de acessibilidade sem fricção.</span>
               </div>
             </div>
 
-            <div class="p-2.5 sm:p-3 rounded-xl glass-card flex items-start space-x-3">
-              <i class="fa-solid fa-circle-half-stroke text-amber-400 text-base mt-0.5"></i>
+            <div class="p-2 sm:p-3 rounded-xl glass-card flex items-start space-x-2.5 sm:space-x-3">
+              <i class="fa-solid fa-circle-half-stroke text-amber-400 text-sm sm:text-base mt-0.5"></i>
               <div>
-                <strong class="text-adaptive-title block">WCAG 2.1 AAA: Tema Escuro OLED & Claro</strong>
-                <span class="text-adaptive-muted">Legibilidade perfeita sob sol intenso ou em ambientes escuros.</span>
+                <strong class="text-adaptive-title block text-xs sm:text-sm">WCAG 2.1 AAA: Tema Escuro OLED & Claro</strong>
+                <span class="text-[10px] sm:text-xs text-adaptive-muted">Legibilidade perfeita sob sol intenso ou em ambientes escuros.</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-4">
-            <button onclick="openAppEmulator()" class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-lg shadow-sky-600/30">
+          <div class="mt-3 sm:mt-4">
+            <button onclick="openAppEmulator()" class="w-full py-2 sm:py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-lg shadow-sky-600/30">
               <i class="fa-solid fa-mobile-screen"></i>
               <span>Testar Agora no Emulador Embutido</span>
             </button>
           </div>
         </div>
 
-        <!-- Right Column: 4 Real Screen Mockups -->
-        <div class="lg:col-span-7 flex justify-center items-center space-x-2 sm:space-x-3 overflow-x-auto py-2">
+        <!-- Right Column: 4 Real Screen Mockups Carousel -->
+        <div class="lg:col-span-7 flex justify-start sm:justify-center items-center space-x-2 sm:space-x-3 overflow-x-auto py-2 slide-4-gallery">
           
           <!-- Screen 1: Biometrics / Auth -->
           <div class="phone-mockup flex-shrink-0">
@@ -774,7 +1084,7 @@
       </div>
 
       <!-- Slide Footer -->
-      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-3 text-[11px] sm:text-xs text-adaptive-muted">
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-2 sm:pt-3 text-[10px] sm:text-xs text-adaptive-muted">
         <span>Demonstração de Produto</span>
         <span>Slide 4 / 6</span>
       </div>
@@ -788,84 +1098,84 @@
              aria-label="Slide 5: Engenharia de Software e Stack Tecnológico">
       
       <!-- Top Header Info + Persistent QR Badge -->
-      <div class="flex justify-between items-center gap-3 z-10">
+      <div class="flex justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
         <div>
-          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">04. Engenharia & Infraestrutura</span>
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">04. Engenharia & Infraestrutura</span>
           <h3 class="text-xs sm:text-sm font-semibold text-adaptive-muted">Arquitetura Moderna Desenvolvida no LaPS / LAMIC / ITEC / UFPA</h3>
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2.5 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
-          <div id="qrcode-slide-5" class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"></div>
+        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+          <div id="qrcode-slide-5" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
-            <span class="text-[10px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
-            <span class="text-[9px] text-slate-700 font-mono">dmovel_web_app</span>
+            <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
+            <span class="text-[8px] text-slate-700 font-mono">dmovel_web_app</span>
           </div>
         </div>
       </div>
 
       <!-- Slide Main Content -->
-      <div class="my-auto z-10 py-4">
-        <div class="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-adaptive-title mb-2">Stack Tecnológico Padrão AAA</h2>
+      <div class="my-auto z-10 py-2 sm:py-4">
+        <div class="text-center max-w-2xl mx-auto mb-4 sm:mb-8">
+          <h2 class="font-heading font-black text-xl sm:text-3xl lg:text-4xl text-adaptive-title mb-1.5 sm:mb-2">Stack Tecnológico Padrão AAA</h2>
           <p class="text-xs sm:text-sm text-adaptive-muted">Engenharia de alta velocidade, concorrência e resiliência a falhas.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 slide-5-grid">
           
           <!-- Card 1: Frontend -->
-          <div class="p-4 sm:p-6 rounded-2xl glass-card text-center border-t-4 border-sky-500">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4">
+          <div class="p-3 sm:p-6 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-sky-500">
+            <div class="w-10 h-10 sm:w-14 sm:h-14 mx-auto rounded-xl sm:rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl sm:text-3xl mb-2 sm:mb-4">
               <i class="fa-brands fa-flutter"></i>
             </div>
-            <h4 class="font-heading font-bold text-base sm:text-lg text-adaptive-title">Mobile & Web</h4>
-            <p class="text-[11px] sm:text-xs text-sky-400 font-bold mb-2">Flutter 3.41 / Dart 3.11</p>
-            <p class="text-xs text-adaptive-muted">60/120 FPS, Material 3, Biometria FIDO2/Passkeys e Temas Dinâmicos.</p>
+            <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">Mobile & Web</h4>
+            <p class="text-[10px] sm:text-xs text-sky-400 font-bold mb-1 sm:mb-2">Flutter 3.41 / Dart 3.11</p>
+            <p class="text-[10px] sm:text-xs text-adaptive-muted">60/120 FPS, Material 3, Biometria FIDO2/Passkeys e Temas Dinâmicos.</p>
           </div>
 
           <!-- Card 2: Backend -->
-          <div class="p-4 sm:p-6 rounded-2xl glass-card text-center border-t-4 border-emerald-500">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4">
+          <div class="p-3 sm:p-6 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-emerald-500">
+            <div class="w-10 h-10 sm:w-14 sm:h-14 mx-auto rounded-xl sm:rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl sm:text-3xl mb-2 sm:mb-4">
               <i class="fa-brands fa-python"></i>
             </div>
-            <h4 class="font-heading font-bold text-base sm:text-lg text-adaptive-title">High-Speed Backend</h4>
-            <p class="text-[11px] sm:text-xs text-emerald-400 font-bold mb-2">Python 3.14 (No-GIL) + FastAPI</p>
-            <p class="text-xs text-adaptive-muted">Execução free-threaded sem trava global do GIL, alta concorrência assíncrona.</p>
+            <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">High-Speed Backend</h4>
+            <p class="text-[10px] sm:text-xs text-emerald-400 font-bold mb-1 sm:mb-2">Python 3.14 (No-GIL) + FastAPI</p>
+            <p class="text-[10px] sm:text-xs text-adaptive-muted">Execução free-threaded sem trava global do GIL, alta concorrência assíncrona.</p>
           </div>
 
           <!-- Card 3: Database & Cache -->
-          <div class="p-4 sm:p-6 rounded-2xl glass-card text-center border-t-4 border-amber-500">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4">
+          <div class="p-3 sm:p-6 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-amber-500">
+            <div class="w-10 h-10 sm:w-14 sm:h-14 mx-auto rounded-xl sm:rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl sm:text-3xl mb-2 sm:mb-4">
               <i class="fa-solid fa-database"></i>
             </div>
-            <h4 class="font-heading font-bold text-base sm:text-lg text-adaptive-title">Dados & Geo-Espacial</h4>
-            <p class="text-[11px] sm:text-xs text-amber-400 font-bold mb-2">MongoDB & Redis</p>
-            <p class="text-xs text-adaptive-muted">Índices geoespaciais 2dsphere para consultas por raio, Beanie ODM e cache.</p>
+            <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">Dados & Geo-Espacial</h4>
+            <p class="text-[10px] sm:text-xs text-amber-400 font-bold mb-1 sm:mb-2">MongoDB & Redis</p>
+            <p class="text-[10px] sm:text-xs text-adaptive-muted">Índices geoespaciais 2dsphere para consultas por raio, Beanie ODM e cache.</p>
           </div>
 
           <!-- Card 4: Management & Cloud -->
-          <div class="p-4 sm:p-6 rounded-2xl glass-card text-center border-t-4 border-purple-500">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4">
+          <div class="p-3 sm:p-6 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-purple-500">
+            <div class="w-10 h-10 sm:w-14 sm:h-14 mx-auto rounded-xl sm:rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl sm:text-3xl mb-2 sm:mb-4">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h4 class="font-heading font-bold text-base sm:text-lg text-adaptive-title">Moderação & Mídia</h4>
-            <p class="text-[11px] sm:text-xs text-purple-400 font-bold mb-2">Dash & Backblaze B2</p>
-            <p class="text-xs text-adaptive-muted">Painel de auditoria de sugestões com visual diff e persistência segura em nuvem.</p>
+            <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">Moderação & Mídia</h4>
+            <p class="text-[10px] sm:text-xs text-purple-400 font-bold mb-1 sm:mb-2">Dash & Backblaze B2</p>
+            <p class="text-[10px] sm:text-xs text-adaptive-muted">Painel de auditoria de sugestões com visual diff e persistência segura em nuvem.</p>
           </div>
 
         </div>
 
         <!-- Quality & Test Metric Bar -->
-        <div class="mt-6 sm:mt-8 p-3.5 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs">
-          <div class="flex items-center space-x-3 text-slate-300">
-            <i class="fa-solid fa-circle-check text-emerald-400 text-base sm:text-lg"></i>
+        <div class="mt-4 sm:mt-8 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-900/80 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 text-xs slide-5-metric-bar">
+          <div class="flex items-center space-x-2.5 sm:space-x-3 text-slate-300">
+            <i class="fa-solid fa-circle-check text-emerald-400 text-sm sm:text-lg"></i>
             <span><strong>Confiabilidade & Qualidade de Código:</strong> Suíte com <strong>380+ testes automatizados</strong> sem mocks.</span>
           </div>
           <div class="flex items-center space-x-2">
-            <span class="px-2.5 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-400 font-bold text-[11px]">
+            <span class="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-400 font-bold text-[10px] sm:text-[11px]">
               100% Testes Aprovados
             </span>
-            <span class="px-2.5 py-1 rounded-full bg-sky-950 border border-sky-500/40 text-sky-400 font-bold text-[11px]">
+            <span class="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-sky-950 border border-sky-500/40 text-sky-400 font-bold text-[10px] sm:text-[11px]">
               Docker Dev & Prod
             </span>
           </div>
@@ -873,7 +1183,7 @@
       </div>
 
       <!-- Slide Footer -->
-      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-3 text-[11px] sm:text-xs text-adaptive-muted">
+      <div class="flex justify-between items-end z-10 border-t border-slate-700/40 pt-2 sm:pt-3 text-[10px] sm:text-xs text-adaptive-muted">
         <span>Engenharia & Confiabilidade</span>
         <span>Slide 5 / 6</span>
       </div>
@@ -887,67 +1197,67 @@
              aria-label="Slide 6: Conclusão, Impacto Acadêmico e Teste ao Vivo">
       
       <!-- Top Header Info -->
-      <div class="flex justify-between items-center gap-3 z-10">
+      <div class="flex justify-between items-center gap-2 sm:gap-3 z-10 slide-header-box">
         <div>
-          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">05. Conclusão & Futuro</span>
+          <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-sky-400">05. Conclusão & Futuro</span>
           <h3 class="text-xs sm:text-sm font-semibold text-adaptive-muted">Pesquisa & Inovação no LaPS / LAMIC / ITEC / UFPA</h3>
         </div>
 
-        <div class="flex items-center space-x-2 sm:space-x-3 text-xs px-3 sm:px-4 py-1.5 rounded-full glass-card">
+        <div class="flex items-center space-x-2 sm:space-x-3 text-xs px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full glass-card slide-header-badge">
           <i class="fa-solid fa-comments text-sky-400"></i>
           <span class="font-bold text-adaptive-title">Perguntas & Respostas (Q&A)</span>
         </div>
       </div>
 
       <!-- Slide Main Content Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center z-10 my-auto py-3">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center z-10 my-auto py-2 sm:py-3 landscape-grid">
         
         <!-- Left: Future Steps & Academic Impact -->
         <div class="lg:col-span-7">
-          <h2 class="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-3 sm:mb-4">
+          <h2 class="font-heading font-black text-xl sm:text-4xl lg:text-5xl text-adaptive-title leading-tight mb-2 sm:mb-4">
             Tecnologia a Serviço da Dignidade Humana
           </h2>
           
-          <p class="text-sm sm:text-base text-adaptive-muted font-normal mb-5 leading-relaxed">
+          <p class="text-xs sm:text-base text-adaptive-muted font-normal mb-3 sm:mb-5 leading-relaxed">
             O DMovel une rigor científico, pesquisa em engenharia e impacto comunitário direto na cidade de Belém e na Universidade Federal do Pará.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
-            <div class="p-3.5 sm:p-4 rounded-xl glass-card">
-              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-1">
-                <i class="fa-solid fa-brain text-purple-400 mr-2"></i>IA Preditiva de Barreiras
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-4 slide-6-future-grid">
+            <div class="p-2.5 sm:p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-0.5 sm:mb-1">
+                <i class="fa-solid fa-brain text-purple-400 mr-1.5 sm:mr-2"></i>IA Preditiva de Barreiras
               </h4>
-              <p class="text-[11px] sm:text-xs text-adaptive-muted">Classificação automática de desníveis e calçadas via visão computacional em fotos.</p>
+              <p class="text-[10px] sm:text-xs text-adaptive-muted">Classificação automática de desníveis e calçadas via visão computacional em fotos.</p>
             </div>
 
-            <div class="p-3.5 sm:p-4 rounded-xl glass-card">
-              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-1">
-                <i class="fa-solid fa-route text-sky-400 mr-2"></i>Rotas Acessíveis no Campus
+            <div class="p-2.5 sm:p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-0.5 sm:mb-1">
+                <i class="fa-solid fa-route text-sky-400 mr-1.5 sm:mr-2"></i>Rotas Acessíveis no Campus
               </h4>
-              <p class="text-[11px] sm:text-xs text-adaptive-muted">Navegação adaptada para estudantes e visitantes entre pavilhões da UFPA.</p>
+              <p class="text-[10px] sm:text-xs text-adaptive-muted">Navegação adaptada para estudantes e visitantes entre pavilhões da UFPA.</p>
             </div>
 
-            <div class="p-3.5 sm:p-4 rounded-xl glass-card">
-              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-1">
-                <i class="fa-solid fa-handshake-angle text-emerald-400 mr-2"></i>Parcerias Acadêmicas
+            <div class="p-2.5 sm:p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-0.5 sm:mb-1">
+                <i class="fa-solid fa-handshake-angle text-emerald-400 mr-1.5 sm:mr-2"></i>Parcerias Acadêmicas
               </h4>
-              <p class="text-[11px] sm:text-xs text-adaptive-muted">Integração de dados com órgãos municipais e pesquisas de pós-graduação.</p>
+              <p class="text-[10px] sm:text-xs text-adaptive-muted">Integração de dados com órgãos municipais e pesquisas de pós-graduação.</p>
             </div>
 
-            <div class="p-3.5 sm:p-4 rounded-xl glass-card">
-              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-1">
-                <i class="fa-solid fa-code-branch text-blue-400 mr-2"></i>Código Aberto & Extensão
+            <div class="p-2.5 sm:p-4 rounded-xl glass-card">
+              <h4 class="font-bold text-adaptive-title text-xs sm:text-sm mb-0.5 sm:mb-1">
+                <i class="fa-solid fa-code-branch text-blue-400 mr-1.5 sm:mr-2"></i>Código Aberto & Extensão
               </h4>
-              <p class="text-[11px] sm:text-xs text-adaptive-muted">Projetos de extensão universitária envolvendo novos discentes do ITEC.</p>
+              <p class="text-[10px] sm:text-xs text-adaptive-muted">Projetos de extensão universitária envolvendo novos discentes do ITEC.</p>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-3">
-            <button onclick="openAppEmulator()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm flex items-center space-x-2 shadow-lg shadow-sky-600/30">
+          <div class="flex flex-wrap gap-2 sm:gap-3 slide-actions">
+            <button onclick="openAppEmulator()" class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm flex items-center space-x-2 shadow-lg shadow-sky-600/30">
               <i class="fa-solid fa-play"></i>
               <span>Abrir Demonstração no Emulador</span>
             </button>
-            <button onclick="startTour()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm flex items-center space-x-2 border border-slate-700">
+            <button onclick="startTour()" class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm flex items-center space-x-2 border border-slate-700">
               <i class="fa-solid fa-compass text-amber-400"></i>
               <span>Refazer Tour Guiado</span>
             </button>
@@ -1142,9 +1452,35 @@
   </div>
 
   <!-- ========================================================================= -->
+  <!-- MOBILE TOOLS QUICK DRAWER (POPOVER)                                       -->
+  <!-- ========================================================================= -->
+  <div id="tools-drawer" class="fixed bottom-14 sm:bottom-16 left-1/2 transform -translate-x-1/2 z-40 hidden p-2 sm:p-2.5 rounded-2xl glass-card border border-sky-500/40 bg-slate-950/95 backdrop-blur-md flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-[94vw] shadow-2xl">
+    <button onclick="openVideoModal(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-red-600 text-red-300 hover:text-white text-xs font-semibold">
+      <i class="fa-solid fa-play text-xs"></i><span>Vídeo (M)</span>
+    </button>
+    <button onclick="toggleTts(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-emerald-300 hover:text-white text-xs font-semibold">
+      <i class="fa-solid fa-volume-high text-xs"></i><span>Voz (V)</span>
+    </button>
+    <div class="flex items-center space-x-1 bg-slate-800 rounded-xl px-1.5 py-1">
+      <button onclick="changeFontSize(0.1)" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Aumentar Fonte">A+</button>
+      <span class="text-slate-600 text-xs">|</span>
+      <button onclick="changeFontSize(-0.1)" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Diminuir Fonte">A-</button>
+    </div>
+    <button onclick="toggleSpeakerNotes(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-semibold">
+      <i class="fa-solid fa-note-sticky text-xs"></i><span>Notas (N)</span>
+    </button>
+    <button onclick="toggleFullscreen(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-cyan-600 text-cyan-300 hover:text-white text-xs font-semibold">
+      <i class="fa-solid fa-expand text-xs"></i><span>Tela Cheia</span>
+    </button>
+    <button onclick="openA11yModal(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-sky-700 hover:bg-sky-600 text-white text-xs font-semibold">
+      <i class="fa-solid fa-universal-access text-xs"></i><span>Acessibilidade</span>
+    </button>
+  </div>
+
+  <!-- ========================================================================= -->
   <!-- BOTTOM CONTROLS & ACCESSIBILITY BAR (RESPONSIVE)                          -->
   <!-- ========================================================================= -->
-  <footer class="fixed bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full glass-nav shadow-2xl border max-w-[96vw] overflow-x-auto">
+  <footer class="fixed bottom-2.5 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex items-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full glass-nav shadow-2xl border max-w-[96vw] overflow-x-auto">
     
     <!-- Prev Slide Button -->
     <button id="btn-prev" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-white flex items-center justify-center transition-all flex-shrink-0" title="Slide Anterior (Seta Esquerda)" aria-label="Slide Anterior">
@@ -1152,7 +1488,7 @@
     </button>
     
     <!-- Slide Indicator -->
-    <span id="slide-indicator" class="text-xs font-bold px-1 sm:px-2 text-adaptive-title min-w-[50px] sm:min-w-[60px] text-center flex-shrink-0" aria-live="polite">1 / 6</span>
+    <span id="slide-indicator" class="text-xs font-bold px-1 sm:px-2 text-adaptive-title min-w-[45px] sm:min-w-[60px] text-center flex-shrink-0" aria-live="polite">1 / 6</span>
     
     <!-- Next Slide Button -->
     <button id="btn-next" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-white flex items-center justify-center transition-all flex-shrink-0" title="Próximo Slide (Seta Direita / Espaço)" aria-label="Próximo Slide">
@@ -1162,14 +1498,9 @@
     <div class="w-px h-5 bg-slate-700/50 mx-0.5 sm:mx-1 flex-shrink-0"></div>
 
     <!-- Live App Iframe Emulator Button -->
-    <button id="btn-app-emulator" class="px-2.5 sm:px-3 h-8 sm:h-9 rounded-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white flex items-center space-x-1.5 transition-all text-xs font-bold shadow-md shadow-sky-600/30 flex-shrink-0" title="Abrir Web App Embutido (Tecla I)" aria-label="Abrir Web App Embutido">
+    <button id="btn-app-emulator" class="px-2 sm:px-3 h-8 sm:h-9 rounded-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white flex items-center space-x-1.5 transition-all text-xs font-bold shadow-md shadow-sky-600/30 flex-shrink-0" title="Abrir Web App Embutido (Tecla I)" aria-label="Abrir Web App Embutido">
       <i class="fa-solid fa-mobile-screen"></i>
       <span class="hidden sm:inline">App Embutido</span>
-    </button>
-
-    <!-- Motivational Video Button -->
-    <button id="btn-video" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-red-600 text-red-400 hover:text-white flex items-center justify-center transition-all flex-shrink-0" title="Vídeo Motivador DMovel (Tecla M)" aria-label="Abrir Vídeo Motivador">
-      <i class="fa-solid fa-play text-xs"></i>
     </button>
 
     <!-- Theme Toggle (Dark vs Projector Mode) -->
@@ -1177,35 +1508,46 @@
       <i class="fa-solid fa-sun text-xs" id="theme-icon"></i>
     </button>
 
+    <!-- Quick Tools Popover Toggle (Visible on Mobile / Small Screens) -->
+    <button id="btn-tools-toggle" onclick="toggleToolsDrawer()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-sky-400 hover:text-white flex md:hidden items-center justify-center transition-all flex-shrink-0" title="Mais Ferramentas & Opções" aria-label="Mais Ferramentas">
+      <i class="fa-solid fa-ellipsis text-sm"></i>
+    </button>
+
+    <!-- Desktop Secondary Controls (Hidden on Mobile) -->
+    <!-- Motivational Video Button -->
+    <button id="btn-video" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-red-600 text-red-400 hover:text-white items-center justify-center transition-all flex-shrink-0 hidden md:flex" title="Vídeo Motivador DMovel (Tecla M)" aria-label="Abrir Vídeo Motivador">
+      <i class="fa-solid fa-play text-xs"></i>
+    </button>
+
     <!-- Text-to-Speech Voice Reader -->
-    <button id="btn-tts" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-emerald-600 text-emerald-300 flex items-center justify-center transition-all flex-shrink-0" title="Ouvir Narração por Voz do Slide (Tecla V)" aria-label="Ouvir Narração por Voz do Slide">
+    <button id="btn-tts" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-emerald-600 text-emerald-300 flex items-center justify-center transition-all flex-shrink-0 hidden md:flex" title="Ouvir Narração por Voz do Slide (Tecla V)" aria-label="Ouvir Narração por Voz do Slide">
       <i class="fa-solid fa-volume-high text-xs" id="tts-icon"></i>
     </button>
 
     <!-- Font Zoom In -->
-    <button id="btn-zoom-in" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 flex items-center justify-center transition-all font-bold text-xs flex-shrink-0 hidden sm:flex" title="Aumentar Tamanho da Fonte (Tecla +)" aria-label="Aumentar Fonte">
+    <button id="btn-zoom-in" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 items-center justify-center transition-all font-bold text-xs flex-shrink-0 hidden md:flex" title="Aumentar Tamanho da Fonte (Tecla +)" aria-label="Aumentar Fonte">
       A+
     </button>
 
     <!-- Font Zoom Out -->
-    <button id="btn-zoom-out" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 flex items-center justify-center transition-all font-bold text-xs flex-shrink-0 hidden sm:flex" title="Diminuir Tamanho da Fonte (Tecla -)" aria-label="Diminuir Fonte">
+    <button id="btn-zoom-out" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-blue-600 text-blue-300 items-center justify-center transition-all font-bold text-xs flex-shrink-0 hidden md:flex" title="Diminuir Tamanho da Fonte (Tecla -)" aria-label="Diminuir Fonte">
       A-
     </button>
 
-    <div class="w-px h-5 bg-slate-700/50 mx-0.5 sm:mx-1 flex-shrink-0 hidden sm:block"></div>
+    <div class="w-px h-5 bg-slate-700/50 mx-0.5 sm:mx-1 flex-shrink-0 hidden md:block"></div>
 
     <!-- Fullscreen -->
-    <button id="btn-fullscreen" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-cyan-600 text-white flex items-center justify-center transition-all flex-shrink-0 hidden sm:flex" title="Tela Cheia (Tecla F)" aria-label="Tela Cheia">
+    <button id="btn-fullscreen" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-cyan-600 text-white items-center justify-center transition-all flex-shrink-0 hidden md:flex" title="Tela Cheia (Tecla F)" aria-label="Tela Cheia">
       <i class="fa-solid fa-expand text-xs"></i>
     </button>
 
     <!-- Speaker Notes -->
-    <button id="btn-notes" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-indigo-600 text-white flex items-center justify-center transition-all flex-shrink-0" title="Notas do Apresentador (Tecla N)" aria-label="Notas do Apresentador">
+    <button id="btn-notes" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-indigo-600 text-white items-center justify-center transition-all flex-shrink-0 hidden md:flex" title="Notas do Apresentador (Tecla N)" aria-label="Notas do Apresentador">
       <i class="fa-solid fa-note-sticky text-xs"></i>
     </button>
 
     <!-- Accessibility Shortcuts Help Modal Button -->
-    <button id="btn-a11y-help" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-sky-700 hover:bg-sky-600 text-white flex items-center justify-center transition-all flex-shrink-0" title="Guia de Acessibilidade & Atalhos (Tecla A)" aria-label="Ajuda de Acessibilidade">
+    <button id="btn-a11y-help" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-sky-700 hover:bg-sky-600 text-white items-center justify-center transition-all flex-shrink-0 hidden md:flex" title="Guia de Acessibilidade & Atalhos (Tecla A)" aria-label="Ajuda de Acessibilidade">
       <i class="fa-solid fa-universal-access text-sm"></i>
     </button>
 
@@ -1481,6 +1823,14 @@
     function reloadAppIframe() {
       if (dmovelIframe) {
         dmovelIframe.src = WEB_APP_URL;
+      }
+    }
+
+    // --- Mobile Quick Tools Popover Drawer ---
+    function toggleToolsDrawer() {
+      const drawer = document.getElementById('tools-drawer');
+      if (drawer) {
+        drawer.classList.toggle('hidden');
       }
     }
 

@@ -30,7 +30,7 @@
 
 - **📱 Émulateur Web App Intégré (Iframe) :** Touche <kbd>I</kbd> ou bouton "App Embutido".
 - **🧭 Visite Guidée Interactive pour Nouveaux Visiteurs :** Parcours en 5 étapes.
-- **📱 Responsivité Multi-Appareils & Gestes Tactiles (Swipe) :** Smartphones, tablettes et vidéoprojecteurs.
+- **📱 Responsivité Multi-Appareils & Gestes Tactiles (Swipe) :** Calibration précise pour 760 x 360 (mode panoramique) et 360 x 760 (mode portrait).
 - **🎬 Vidéo Motivationnelle :** Touche <kbd>M</kbd>.
 - **🌓 Mode Projecteur & Thème Sombre OLED :** Touche <kbd>T</kbd>.
 - **♿ Accessibilité Universelle (WCAG AAA) :** Synthèse vocale (TTS, touche <kbd>V</kbd>), zoom de texte (<kbd>+</kbd>/<kbd>-</kbd>).

@@ -30,7 +30,7 @@
 
 - **📱 Eingebetteter Web-App-Emulator (Iframe):** Taste <kbd>I</kbd> oder Klick auf "App Embutido".
 - **🧭 Geführte Einführungstour für Erstbesucher:** Interaktiver 5-Schritte-Rundgang.
-- **📱 Volle Responsivität & Wischgesten:** Für Smartphones, Tablets, Desktops und Beamer.
+- **📱 Volle Responsivität & Wischgesten:** Spezielle Kalibrierung für 760 x 360 (Querformat-Präsentationsmodus) und 360 x 760 (Hochformat).
 - **🎬 Motivationsvideo:** Taste <kbd>M</kbd>.
 - **🌓 Projektormodus & OLED-Dunkelmodus:** Taste <kbd>T</kbd>.
 - **♿ Barrierefreiheit (WCAG AAA):** Sprachausgabe (TTS, Taste <kbd>V</kbd>), Schriftgrößenanpassung (<kbd>+</kbd>/<kbd>-</kbd>).

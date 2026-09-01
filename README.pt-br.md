@@ -62,6 +62,11 @@ Este repositório contém a apresentação web oficial interativa para a **SITEC
 - **Zoom de Texto:** Teclas <kbd>+</kbd> e <kbd>-</kbd>.
 - **Estrutura Semântica ARIA & Navegação por Teclado.**
 
+### 8. 📐 Calibração Responsiva Especializada (760 x 360 & 360 x 760)
+- **Modo Paisagem Panorâmica (760 x 360):** Layout em 2 colunas lado a lado para exibição integral em smartphones sem necessidade de rolagem, carrossel horizontal de telas e cabeçalho ultracompacto.
+- **Modo Retrato Fluido (360 x 760):** Barra inferior inteligente com gaveta de ferramentas rápidas (`•••`) que nunca transborda e espaçamento inferior seguro.
+- **Modais Fluidos em Tela Cheia:** Emulador de app e reprodutor de vídeo maximizados para aproveitar 100% da viewport móvel.
+
 ---
 
 ## 👥 Autoria & Créditos Acadêmicos
