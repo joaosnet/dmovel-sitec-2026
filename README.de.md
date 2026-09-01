@@ -12,15 +12,15 @@
 
 [![Veranstaltung](https://img.shields.io/badge/Veranstaltung-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Datum](https://img.shields.io/badge/Datum-1.%20--%202.%20September%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
-[![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
+[![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%26%20LAMIC%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
 [![Barrierefreiheit](https://img.shields.io/badge/WCAG%202.1-AAA%20Konform-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Web App](https://img.shields.io/badge/Live%20App-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
 <p align="center">
-  <strong>Interaktive 6-Folien-Präsentation mit integriertem App-Iframe-Emulator, geführter Onboarding-Tour, Vollbild-Motivationsvideo, universeller Barrierefreiheit und Live-QR-Code-Tests für die SITEC 2026 an der UFPA.</strong>
+  <strong>Interaktive 6-Folien-Präsentation mit integriertem App-Iframe-Emulator, geführter Onboarding-Tour, Vollbild-Motivationsvideo, universeller Barrierefreiheit und Live-QR-Code-Tests für die SITEC 2026 an der UFPA (LaPS & LAMIC).</strong>
 </p>
 
-[🌐 Online-Präsentation ansehen](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 DMovel Web-App testen](https://lapshub.github.io/dmovel_web_app/) • [📄 LaPS-Forschungslabor](https://www.laps.ufpa.br/)
+[🌐 Online-Präsentation ansehen](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 DMovel Web-App testen](https://lapshub.github.io/dmovel_web_app/) • [📄 LaPS & LAMIC Forschungslabore](https://www.laps.ufpa.br/)
 
 </div>
 
@@ -34,3 +34,12 @@
 - **🎬 Motivationsvideo:** Taste <kbd>M</kbd>.
 - **🌓 Projektormodus & OLED-Dunkelmodus:** Taste <kbd>T</kbd>.
 - **♿ Barrierefreiheit (WCAG AAA):** Sprachausgabe (TTS, Taste <kbd>V</kbd>), Schriftgrößenanpassung (<kbd>+</kbd>/<kbd>-</kbd>).
+- **🌐 Dynamische Übersetzung:** Echtzeit-Mehrsprachigkeit für Erfahrungsberichte.
+
+---
+
+## 👥 Akademische Betreuung & Autoren
+
+- **Forscher / Vortragende:** João da Cruz N. Neto & Daniel Moreira Barra (UFPA)
+- **Akademische Betreuung:** Prof. Dr. Ronaldo de Freitas Zampolo (LaPS) & Prof. Dr. Agostinho Luiz da Silva Castro (LAMIC)
+- **Labore:** Laboratório de Processamento de Sinais (LaPS) & Laboratório de Microcomputadores e Controladores (LAMIC) • ITEC / UFPA

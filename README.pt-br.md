@@ -12,7 +12,7 @@
 
 [![Evento](https://img.shields.io/badge/Evento-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Datas](https://img.shields.io/badge/Datas-1%20e%202%20de%20Setembro%2C%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
-[![Instituição](https://img.shields.io/badge/Institui%C3%A7%C3%A3o-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
+[![Instituição](https://img.shields.io/badge/Institui%C3%A7%C3%A3o-ITEC%20%2F%20LaPS%20%26%20LAMIC%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
 [![Acessibilidade](https://img.shields.io/badge/WCAG%202.1-Conformidade%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Web App](https://img.shields.io/badge/App%20Online-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
@@ -20,7 +20,7 @@
   <strong>Apresentação interativa em 6 slides com Emulador Iframe do App, Tour Guiado para novos usuários, Vídeo Motivador em tela cheia, Acessibilidade Universal & Teste ao Vivo por QR Code para a Semana do Instituto de Tecnologia (SITEC 2026) da Universidade Federal do Pará (UFPA).</strong>
 </p>
 
-[🌐 Ver Apresentação Online](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Testar DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratório LaPS](https://www.laps.ufpa.br/)
+[🌐 Ver Apresentação Online](https://joaosnet.github.io/dmovel-sitec-2026/) • [📱 Testar DMovel Web App](https://lapshub.github.io/dmovel_web_app/) • [📄 Laboratórios LaPS & LAMIC](https://www.laps.ufpa.br/)
 
 </div>
 
@@ -69,10 +69,11 @@ Este repositório contém a apresentação web oficial interativa para a **SITEC
 - **Discentes Pesquisadores / Apresentadores:**
   - **João da Cruz N. Neto** — Pesquisador & Engenheiro de Software (`joaodacruznatividade@gmail.com`)
   - **Daniel Moreira Barra** — Pesquisador & Discente de Engenharia Biomédica
-- **Orientador:**
+- **Orientação Docente:**
   - **Prof. Dr. Ronaldo de Freitas Zampolo** — Coordenador do Laboratório de Processamento de Sinais (LaPS)
+  - **Prof. Dr. Agostinho Luiz da Silva Castro** — Coordenador do Laboratório de Microcomputadores e Controladores (LAMIC)
 - **Instituições:**
-  - **LaPS / LAPSHub** (Laboratório de Processamento de Sinais)
+  - **LaPS & LAMIC / LAPSHub** (Laboratório de Processamento de Sinais & Laboratório de Microcomputadores e Controladores)
   - **ITEC** (Instituto de Tecnologia)
   - **UFPA** (Universidade Federal do Pará), Belém, Pará
 

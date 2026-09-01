@@ -12,7 +12,7 @@
 
 [![Event](https://img.shields.io/badge/Event-SITEC%20UFPA%202026-0361A3?style=for-the-badge&logo=academia&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Dates](https://img.shields.io/badge/Dates-Sept%201--2%2C%202026-0284c7?style=for-the-badge)](https://joaosnet.github.io/dmovel-sitec-2026/)
-[![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
+[![Institution](https://img.shields.io/badge/Institution-ITEC%20%2F%20LaPS%20%26%20LAMIC%20%2F%20UFPA-0B132B?style=for-the-badge)](https://www.laps.ufpa.br/)
 [![Accessibility](https://img.shields.io/badge/WCAG%202.1-AAA%20Compliant-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Live Web App](https://img.shields.io/badge/Live%20App-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
@@ -69,12 +69,12 @@ This repository hosts the official interactive web presentation prepared for **S
 
 ## 🗂️ 6-Slide Narrative Structure
 
-1. **Slide 1 — Opening & SITEC 2026 Welcome:** DMovel mission, authors, advisors, and opening live testing QR Hero & Emulator.
-2. **Slide 2 — The Urban Challenge in the Amazon & Belém:** Invisible barriers, lack of accessibility data, global & local statistics (15% WHO, 18.6M IBGE).
-3. **Slide 3 — The DMovel Solution & Three Core Pillars:** Crowdsourced Cartography, Multi-Criteria Weighted Assessment, and Neural Translation.
+1. **Slide 1 — Opening & SITEC 2026 Welcome:** DMovel mission, authors, advisors (Prof. Dr. Ronaldo Zampolo & Prof. Dr. Agostinho Castro), official UFPA/LaPS/LAMIC logos, and opening live testing QR Hero & Emulator.
+2. **Slide 2 — The Urban Challenge in the Amazon & Belém:** Invisible barriers, lack of accessibility data, global & local statistics (15% WHO, 18.6M IBGE), and the response from LaPS & LAMIC.
+3. **Slide 3 — The DMovel Solution & Three Core Pillars:** Crowdsourced Cartography, Multi-Criteria Weighted Assessment, and Dynamic Translation.
 4. **Slide 4 — Mobile Experience & Real Device Validation:** Live execution captures on Samsung Galaxy M34 5G (Android 16): Biometrics/Passkeys, Interactive Maps, Emoji Sliders, and Dark/Light Modes.
 5. **Slide 5 — Software Engineering & AAA Tech Stack:** Flutter 3.41, Python 3.14 Free-Threaded (No-GIL) + FastAPI, MongoDB 2dsphere geo-indexing, Redis caching, Dash moderation, and 380+ automated tests without mocks.
-6. **Slide 6 — Conclusion, Future Vision & Mega Live Demonstration:** Predictive AI for automated barrier classification, accessible campus routing, audience QR scanning, and Q&A.
+6. **Slide 6 — Conclusion, Future Vision & Mega Live Demonstration:** Predictive AI for automated barrier classification, accessible campus routing, audience QR scanning, institutional logos, and Q&A.
 
 ---
 
@@ -83,10 +83,11 @@ This repository hosts the official interactive web presentation prepared for **S
 - **Student Researchers / Presenters:**
   - **João da Cruz N. Neto** — Researcher & Software Engineer (`joaodacruznatividade@gmail.com`)
   - **Daniel Moreira Barra** — Researcher & Biomedical Engineering Student
-- **Faculty Advisor:**
+- **Faculty Advisors:**
   - **Prof. Dr. Ronaldo de Freitas Zampolo** — Signal Processing Laboratory (LaPS) Coordinator
+  - **Prof. Dr. Agostinho Luiz da Silva Castro** — Microcomputers and Controllers Laboratory (LAMIC) Coordinator
 - **Institutions:**
-  - **LaPS / LAPSHub** (Laboratório de Processamento de Sinais)
+  - **LaPS & LAMIC / LAPSHub** (Laboratório de Processamento de Sinais & Laboratório de Microcomputadores e Controladores)
   - **ITEC** (Instituto de Tecnologia)
   - **UFPA** (Universidade Federal do Pará), Belém, Pará, Brazil
 
