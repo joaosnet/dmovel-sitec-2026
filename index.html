@@ -801,7 +801,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 max-w-2xl compact-cards-landscape">
             <div class="p-2.5 sm:p-3.5 rounded-xl glass-card border-sky-500/30">
               <p class="text-[9px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Discentes Pesquisadores</p>
-              <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-base font-bold text-adaptive-title hover:text-sky-400 inline-flex items-center space-x-1.5 transition-colors group" title="Acessar Portfólio Pessoal de João Neto">
+              <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-base font-bold text-adaptive-title hover:text-sky-400 inline-flex items-center space-x-1.5 transition-colors group" title="Acessar Contato de João Neto">
                 <span>João da Cruz N. Neto</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-sky-400 opacity-70 group-hover:opacity-100"></i>
               </a>
@@ -1327,7 +1327,7 @@
     <!-- SLIDE 6: IMPACTO ACADÊMICO, FUTURO & MEGA TESTE AO VIVO                   -->
     <!-- ========================================================================= -->
     <section class="slide flex-col justify-between p-6 sm:p-8 lg:p-14 relative overflow-hidden" data-slide="6" 
-             data-notes="Para concluir, o DMovel mostra como a engenharia da computação no ITEC/UFPA pode gerar impacto social real e inclusivo. Nossos próximos passos envolvem visão computacional com IA para detecção automática de barreiras e rotas integradas com o transporte público. No card ao lado vocês encontram tanto o Web App para teste quanto o meu portfólio pessoal em joaosnet.github.io. Agradecemos a atenção de todos e abrimos agora para perguntas e demonstração ao vivo!"
+             data-notes="Para concluir, o DMovel mostra como a engenharia da computação no ITEC/UFPA pode gerar impacto social real e inclusivo. Nossos próximos passos envolvem visão computacional com IA para detecção automática de barreiras e rotas integradas com o transporte público. No card ao lado vocês encontram tanto o Web App para teste quanto a minha página de contato em joaosnet.github.io. Agradecemos a atenção de todos e abrimos agora para perguntas e demonstração ao vivo!"
              aria-label="Slide 6: Conclusão, Impacto Acadêmico e Teste ao Vivo">
       
       <!-- Top Header Info -->
@@ -1398,19 +1398,19 @@
           </div>
         </div>
 
-        <!-- Right: 3D Flip Card with Toggle Switch (DMovel Web App <-> João Neto Portfolio) -->
+        <!-- Right: 3D Flip Card with Toggle Switch (DMovel Web App <-> João Neto Contato) -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="flip-card-container">
             
             <!-- Toggle Switch Tabs Bar -->
             <div class="flex items-center justify-center p-1 rounded-2xl bg-slate-800/80 backdrop-blur border border-sky-500/40 mb-2 shadow-lg max-w-[320px] mx-auto">
-              <button id="toggle-tab-app" onclick="flipQRCodeCard('app')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md" aria-label="Mostrar QR Code do DMovel App">
+              <button id="toggle-tab-app" onclick="flipQRCodeCard('app')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md cursor-pointer" aria-label="Mostrar QR Code do DMovel App">
                 <i class="fa-solid fa-mobile-screen"></i>
                 <span>DMovel App</span>
               </button>
-              <button id="toggle-tab-portfolio" onclick="flipQRCodeCard('portfolio')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white" aria-label="Mostrar QR Code do Portfólio de João Neto">
-                <i class="fa-solid fa-laptop-code"></i>
-                <span>Portfólio</span>
+              <button id="toggle-tab-portfolio" onclick="flipQRCodeCard('portfolio')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white cursor-pointer" aria-label="Mostrar QR Code de Contato de João Neto">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Contato</span>
               </button>
             </div>
 
@@ -1437,8 +1437,8 @@
                     </a>
                   </div>
 
-                  <button type="button" onclick="flipQRCodeCard('portfolio')" class="mt-2 px-3.5 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-bold inline-flex items-center space-x-1.5 transition-colors border border-sky-200 shadow-sm cursor-pointer" aria-label="Girar para Portfólio de João Neto">
-                    <span>Ver Portfólio de João Neto</span>
+                  <button type="button" onclick="flipQRCodeCard('portfolio')" class="mt-2 px-3.5 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-bold inline-flex items-center space-x-1.5 transition-colors border border-sky-200 shadow-sm cursor-pointer" aria-label="Girar para Contato de João Neto">
+                    <span>Ver Contato de João Neto</span>
                     <i class="fa-solid fa-rotate text-xs text-sky-500"></i>
                   </button>
 
@@ -1460,21 +1460,21 @@
                 </div>
               </div>
 
-              <!-- Face 2: João Neto Portfolio (Initially hidden, revealed on flip) -->
+              <!-- Face 2: João Neto Contato (Initially hidden, revealed on flip) -->
               <div id="flip-face-portfolio" class="flip-card-face hidden">
                 <div class="p-4 sm:p-5 rounded-3xl qr-badge-container text-center border-4 border-indigo-500/60 shadow-2xl bg-white">
                   <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 text-xs font-black uppercase tracking-wider mb-2">
-                    <i class="fa-solid fa-laptop-code text-sm text-indigo-600 animate-pulse"></i>
-                    <span>Portfólio de João Neto</span>
+                    <i class="fa-solid fa-address-card text-sm text-indigo-600 animate-pulse"></i>
+                    <span>Contato • João Neto</span>
                   </div>
 
-                  <!-- Large Portfolio QR Code -->
+                  <!-- Large Contato QR Code -->
                   <div class="bg-white p-2.5 sm:p-3 rounded-2xl shadow-inner inline-block mx-auto border-2 border-slate-200 my-1">
-                    <div id="qrcode-slide-6-portfolio" class="flex justify-center" aria-label="QR Code do Portfólio de João Neto"></div>
+                    <div id="qrcode-slide-6-portfolio" class="flex justify-center" aria-label="QR Code de Contato de João Neto"></div>
                   </div>
 
                   <div class="mt-2 text-center">
-                    <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-xs sm:text-sm text-indigo-700 hover:text-indigo-900 font-extrabold" title="Visitar Portfólio de João Neto">
+                    <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-xs sm:text-sm text-indigo-700 hover:text-indigo-900 font-extrabold" title="Visitar Contato de João Neto">
                       <span>joaosnet.github.io</span>
                       <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>

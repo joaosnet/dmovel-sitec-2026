@@ -86,7 +86,7 @@ This repository hosts the official interactive web presentation prepared for **S
 ## 👥 Authors & Academic Credentials
 
 - **Student Researchers / Presenters:**
-  - **João da Cruz N. Neto** — Researcher & Software Engineer ([Personal Portfolio](https://joaosnet.github.io/))
+  - **João da Cruz N. Neto** — Researcher & Software Engineer ([Personal Contact](https://joaosnet.github.io/))
   - **Daniel Moreira Barra** — Researcher & Biomedical Engineering Student
 - **Faculty Advisors:**
   - **Prof. Dr. Ronaldo de Freitas Zampolo** — Signal Processing Laboratory (LaPS) Coordinator

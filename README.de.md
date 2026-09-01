@@ -40,6 +40,6 @@
 
 ## 👥 Akademische Betreuung & Autoren
 
-- **Forscher / Vortragende:** [João da Cruz N. Neto (Portfolio)](https://joaosnet.github.io/) & Daniel Moreira Barra (UFPA)
+- **Forscher / Vortragende:** [João da Cruz N. Neto (Kontakt)](https://joaosnet.github.io/) & Daniel Moreira Barra (UFPA)
 - **Akademische Betreuung:** Prof. Dr. Ronaldo de Freitas Zampolo (LaPS) & Prof. Dr. Agostinho Luiz da Silva Castro (LAMIC)
 - **Labore:** Laboratório de Processamento de Sinais (LaPS) & Laboratório de Microcomputadores e Controladores (LAMIC) • ITEC / UFPA
