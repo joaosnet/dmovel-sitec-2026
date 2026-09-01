@@ -40,6 +40,6 @@
 
 ## 👥 Encadrement Académique & Auteurs
 
-- **Chercheurs / Présentateurs :** João da Cruz N. Neto & Daniel Moreira Barra (UFPA)
+- **Chercheurs / Présentateurs :** [João da Cruz N. Neto (Portfolio)](https://joaosnet.github.io/) & Daniel Moreira Barra (UFPA)
 - **Directeurs de Recherche :** Prof. Dr. Ronaldo de Freitas Zampolo (LaPS) & Prof. Dr. Agostinho Luiz da Silva Castro (LAMIC)
 - **Laboratoires :** Laboratório de Processamento de Sinais (LaPS) & Laboratório de Microcomputadores e Controladores (LAMIC) • ITEC / UFPA

@@ -85,7 +85,7 @@
         "name": "Apresentação DMovel SITEC UFPA 2026",
         "headline": "Mapeando Cidades Acessíveis para Todos",
         "author": [
-          { "@type": "Person", "name": "João da Cruz N. Neto" },
+          { "@type": "Person", "name": "João da Cruz N. Neto", "url": "https://joaosnet.github.io/" },
           { "@type": "Person", "name": "Daniel Moreira Barra" }
         ],
         "contributor": [
@@ -298,7 +298,8 @@
 
     /* Global QR Image Scaling */
     #qrcode-slide-1 img, #qrcode-slide-1 canvas,
-    #qrcode-slide-6 img, #qrcode-slide-6 canvas {
+    #qrcode-slide-6 img, #qrcode-slide-6 canvas,
+    #qrcode-slide-6-portfolio img, #qrcode-slide-6-portfolio canvas {
       max-width: 100% !important;
       height: auto !important;
       display: block;
@@ -449,10 +450,19 @@
         padding: 0.4rem 0.5rem !important;
         border-radius: 12px !important;
       }
-      .qr-badge-container #qrcode-slide-1,
-      .qr-badge-container #qrcode-slide-6 {
+      .qr-badge-container.dual-qr-card {
+        max-width: 250px !important;
+        padding: 0.3rem 0.5rem !important;
+      }
+      .qr-badge-container #qrcode-slide-1 {
         max-width: 90px !important;
         max-height: 90px !important;
+        margin: 0 auto !important;
+      }
+      .qr-badge-container #qrcode-slide-6,
+      .qr-badge-container #qrcode-slide-6-portfolio {
+        max-width: 68px !important;
+        max-height: 68px !important;
         margin: 0 auto !important;
       }
       .qr-badge-container p, .qr-badge-container a {
@@ -722,7 +732,10 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 max-w-2xl compact-cards-landscape">
             <div class="p-2.5 sm:p-3.5 rounded-xl glass-card border-sky-500/30">
               <p class="text-[9px] sm:text-xs text-sky-400 uppercase font-bold tracking-wider">Discentes Pesquisadores</p>
-              <p class="text-xs sm:text-base font-bold text-adaptive-title">João da Cruz N. Neto</p>
+              <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-base font-bold text-adaptive-title hover:text-sky-400 inline-flex items-center space-x-1.5 transition-colors group" title="Acessar Portfólio Pessoal de João Neto">
+                <span>João da Cruz N. Neto</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-sky-400 opacity-70 group-hover:opacity-100"></i>
+              </a>
               <p class="text-xs sm:text-base font-bold text-adaptive-title">Daniel Moreira Barra</p>
               <p class="text-[10px] text-adaptive-muted mt-0.5">Engenharia • UFPA</p>
             </div>
@@ -1013,9 +1026,16 @@
         
         <!-- Left Column: Feature Highlights -->
         <div class="lg:col-span-5">
-          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-sky-950 text-sky-400 text-[9px] sm:text-xs font-bold mb-2 sm:mb-3 border border-sky-500/40">
-            <i class="fa-solid fa-mobile-screen"></i>
-            <span>Interface Inclusiva & Fluida</span>
+          <div class="flex flex-wrap items-center gap-1.5 mb-2">
+            <span class="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-[9px] sm:text-[10px] font-bold">
+              <i class="fa-brands fa-android"></i><span>Android 16</span>
+            </span>
+            <span class="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-sky-950/80 border border-sky-500/40 text-sky-400 text-[9px] sm:text-[10px] font-bold">
+              <i class="fa-brands fa-flutter"></i><span>Flutter 120 FPS</span>
+            </span>
+            <span class="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-[9px] sm:text-[10px] font-bold">
+              <i class="fa-brands fa-apple"></i><span>iOS Ready</span>
+            </span>
           </div>
           
           <h2 class="font-heading font-black text-xl sm:text-3xl lg:text-4xl text-adaptive-title mb-2 sm:mb-3">
@@ -1131,14 +1151,47 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 slide-5-grid">
           
-          <!-- Card 1: Frontend -->
-          <div class="p-3 sm:p-6 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-sky-500">
-            <div class="w-10 h-10 sm:w-14 sm:h-14 mx-auto rounded-xl sm:rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl sm:text-3xl mb-2 sm:mb-4">
-              <i class="fa-brands fa-flutter"></i>
+          <!-- Card 1: Frontend & Mobile Ecosystem -->
+          <div class="p-3 sm:p-5 rounded-xl sm:rounded-2xl glass-card text-center border-t-4 border-sky-500 flex flex-col justify-between">
+            <div>
+              <!-- Main Mobile Icons Cluster -->
+              <div class="flex items-center justify-center space-x-2 mb-2 sm:mb-3">
+                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg sm:text-2xl shadow-inner" title="Flutter">
+                  <i class="fa-brands fa-flutter"></i>
+                </div>
+                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg sm:text-2xl shadow-inner" title="Android">
+                  <i class="fa-brands fa-android"></i>
+                </div>
+                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-slate-700/40 text-slate-200 flex items-center justify-center text-lg sm:text-2xl shadow-inner" title="Apple iOS">
+                  <i class="fa-brands fa-apple"></i>
+                </div>
+              </div>
+              <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">Mobile & Web</h4>
+              <p class="text-[10px] sm:text-xs text-sky-400 font-bold mb-1">Flutter 3.41 • Dart 3.11</p>
+              <p class="text-[10px] sm:text-xs text-adaptive-muted">120 FPS, Biometria FIDO2, Material 3 e Passkeys Nativas.</p>
             </div>
-            <h4 class="font-heading font-bold text-sm sm:text-lg text-adaptive-title">Mobile & Web</h4>
-            <p class="text-[10px] sm:text-xs text-sky-400 font-bold mb-1 sm:mb-2">Flutter 3.41 / Dart 3.11</p>
-            <p class="text-[10px] sm:text-xs text-adaptive-muted">60/120 FPS, Material 3, Biometria FIDO2/Passkeys e Temas Dinâmicos.</p>
+            
+            <!-- Mobile Ecosystem Micro-Badges -->
+            <div class="mt-2 pt-1.5 border-t border-slate-700/40 flex flex-wrap items-center justify-center gap-1 text-[9px]">
+              <span class="px-1.5 py-0.5 rounded bg-sky-950/80 border border-sky-500/30 text-sky-300 font-bold flex items-center space-x-1">
+                <i class="fa-brands fa-flutter text-[9px]"></i><span>Flutter</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-cyan-950/80 border border-cyan-500/30 text-cyan-300 font-bold flex items-center space-x-1">
+                <i class="fa-solid fa-code text-[9px]"></i><span>Dart</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-300 font-bold flex items-center space-x-1">
+                <i class="fa-brands fa-android text-[9px]"></i><span>Android</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-600 text-slate-200 font-bold flex items-center space-x-1">
+                <i class="fa-brands fa-apple text-[9px]"></i><span>iOS</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-teal-950/80 border border-teal-500/30 text-teal-300 font-bold flex items-center space-x-1">
+                <i class="fa-solid fa-map-location-dot text-[9px]"></i><span>OSM</span>
+              </span>
+              <span class="px-1.5 py-0.5 rounded bg-purple-950/80 border border-purple-500/30 text-purple-300 font-bold flex items-center space-x-1">
+                <i class="fa-solid fa-palette text-[9px]"></i><span>Material 3</span>
+              </span>
+            </div>
           </div>
 
           <!-- Card 2: Backend -->
@@ -1201,7 +1254,7 @@
     <!-- SLIDE 6: IMPACTO ACADÊMICO, FUTURO & MEGA TESTE AO VIVO                   -->
     <!-- ========================================================================= -->
     <section class="slide flex-col justify-between p-6 sm:p-8 lg:p-14 relative overflow-hidden" data-slide="6" 
-             data-notes="Para concluir, o DMovel mostra como a engenharia da computação no ITEC/UFPA pode gerar impacto social real e inclusivo. Nossos próximos passos envolvem visão computacional com IA para detecção automática de barreiras e rotas integradas com o transporte público. Agradecemos a atenção de todos e abrimos agora para perguntas e demonstração ao vivo pelo Web App!"
+             data-notes="Para concluir, o DMovel mostra como a engenharia da computação no ITEC/UFPA pode gerar impacto social real e inclusivo. Nossos próximos passos envolvem visão computacional com IA para detecção automática de barreiras e rotas integradas com o transporte público. No card ao lado vocês encontram tanto o Web App para teste quanto o meu portfólio pessoal em joaosnet.github.io. Agradecemos a atenção de todos e abrimos agora para perguntas e demonstração ao vivo!"
              aria-label="Slide 6: Conclusão, Impacto Acadêmico e Teste ao Vivo">
       
       <!-- Top Header Info -->
@@ -1272,41 +1325,68 @@
           </div>
         </div>
 
-        <!-- Right: Mega Live QR Code Hero for the Entire Audience -->
+        <!-- Right: Dual Live QR Codes (Web App + João Neto Portfolio) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="p-5 sm:p-7 rounded-3xl qr-badge-container text-center border-4 border-sky-500/50 shadow-2xl max-w-sm w-full">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase tracking-wider mb-2 sm:mb-3">
-              <i class="fa-solid fa-qrcode text-base"></i>
-              <span>Escaneie e Teste Agora!</span>
+          <div class="p-3 sm:p-5 rounded-3xl qr-badge-container dual-qr-card text-center border-4 border-sky-500/50 shadow-2xl max-w-sm sm:max-w-md w-full">
+            <div class="inline-flex items-center space-x-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-sky-100 text-sky-800 text-[10px] sm:text-xs font-black uppercase tracking-wider mb-2">
+              <i class="fa-solid fa-qrcode text-xs sm:text-sm"></i>
+              <span>Escaneie e Conecte-se</span>
             </div>
 
-            <div class="bg-white p-2.5 sm:p-3 rounded-2xl shadow-inner inline-block mx-auto border-2 border-slate-300">
-              <div id="qrcode-slide-6" class="flex justify-center" aria-label="Mega QR Code para o Web App do DMovel"></div>
+            <!-- Dual QR Codes Grid -->
+            <div class="grid grid-cols-2 gap-2 sm:gap-3 items-stretch my-1">
+              
+              <!-- QR 1: DMovel Web App -->
+              <div class="bg-slate-50 p-1.5 sm:p-2.5 rounded-2xl border border-slate-200 flex flex-col justify-between text-center">
+                <div class="text-[9px] sm:text-[11px] font-black text-sky-800 uppercase tracking-wider mb-1 flex items-center justify-center space-x-1">
+                  <i class="fa-solid fa-mobile-screen text-sky-600"></i>
+                  <span>DMovel App</span>
+                </div>
+                <div class="bg-white p-1 sm:p-1.5 rounded-xl shadow-inner inline-block mx-auto border border-slate-200">
+                  <div id="qrcode-slide-6" class="flex justify-center" aria-label="QR Code DMovel Web App"></div>
+                </div>
+                <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" rel="noopener noreferrer" class="mt-1 text-[8px] sm:text-[10px] text-sky-700 font-bold hover:underline truncate block" title="Abrir DMovel Web App">
+                  Testar App →
+                </a>
+              </div>
+
+              <!-- QR 2: João Neto Portfolio -->
+              <div class="bg-slate-50 p-1.5 sm:p-2.5 rounded-2xl border border-slate-200 flex flex-col justify-between text-center">
+                <div class="text-[9px] sm:text-[11px] font-black text-indigo-800 uppercase tracking-wider mb-1 flex items-center justify-center space-x-1">
+                  <i class="fa-solid fa-laptop-code text-indigo-600"></i>
+                  <span>Portfólio</span>
+                </div>
+                <div class="bg-white p-1 sm:p-1.5 rounded-xl shadow-inner inline-block mx-auto border border-slate-200">
+                  <div id="qrcode-slide-6-portfolio" class="flex justify-center" aria-label="QR Code Portfólio João Neto"></div>
+                </div>
+                <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="mt-1 text-[8px] sm:text-[10px] text-indigo-700 font-bold hover:underline truncate block" title="Visitar Portfólio de João Neto">
+                  joaosnet.github.io →
+                </a>
+              </div>
+
             </div>
 
-            <p class="mt-3 sm:mt-4 text-xs sm:text-sm font-extrabold text-slate-900">
-              Acesse o DMovel Web no seu smartphone:
-            </p>
-            <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" class="text-[11px] sm:text-xs text-sky-700 font-mono underline block mt-1 hover:text-sky-900 font-bold truncate">
-              https://lapshub.github.io/dmovel_web_app/
-            </a>
-
-            <div class="mt-3 pt-2.5 border-t border-slate-200 text-[10px] sm:text-[11px] text-slate-600 font-medium">
-              Contato: <strong class="text-slate-900">joaodacruznatividade@gmail.com</strong>
+            <!-- Direct Portfolio Link -->
+            <div class="mt-2 pt-1.5 border-t border-slate-200 text-center">
+              <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 text-[10px] sm:text-xs text-sky-700 hover:text-sky-900 font-bold" title="Portfólio & Contato de João Neto">
+                <i class="fa-solid fa-globe"></i>
+                <span>Portfólio & Contato: <strong>joaosnet.github.io</strong></span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
             </div>
 
             <!-- Official Institutional Logos in Slide 6 Card -->
-            <div class="mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between">
-              <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Realização:</span>
-              <div class="flex items-center space-x-2">
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-7" title="Universidade Federal do Pará (UFPA)">
-                  <img src="assets/images/logo_ufpa.png" alt="UFPA" class="h-5 w-auto object-contain">
+            <div class="mt-2 pt-1.5 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-wider">Realização:</span>
+              <div class="flex items-center space-x-1.5 sm:space-x-2">
+                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Universidade Federal do Pará (UFPA)">
+                  <img src="assets/images/logo_ufpa.png" alt="UFPA" class="h-4 sm:h-5 w-auto object-contain">
                 </div>
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-7" title="Laboratório de Processamento de Sinais (LaPS)">
-                  <img src="assets/images/logo_laps.png" alt="LaPS" class="h-5 w-auto object-contain">
+                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Laboratório de Processamento de Sinais (LaPS)">
+                  <img src="assets/images/logo_laps.png" alt="LaPS" class="h-4 sm:h-5 w-auto object-contain">
                 </div>
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-7" title="Laboratório de Microcomputadores e Controladores (LAMIC)">
-                  <img src="assets/images/logo_lamic.png" alt="LAMIC" class="h-5 w-auto object-contain">
+                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Laboratório de Microcomputadores e Controladores (LAMIC)">
+                  <img src="assets/images/logo_lamic.png" alt="LAMIC" class="h-4 sm:h-5 w-auto object-contain">
                 </div>
               </div>
             </div>
@@ -1645,6 +1725,7 @@
   <!-- ========================================================================= -->
   <script>
     const WEB_APP_URL = "https://lapshub.github.io/dmovel_web_app/";
+    const PORTFOLIO_URL = "https://joaosnet.github.io/";
     let currentSlide = 1;
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -1729,15 +1810,27 @@
         }
       }
 
-      // Slide 6 Mega Hero QR
+      // Slide 6 Dual QR: Web App
       if (document.getElementById("qrcode-slide-6")) {
         new QRCode(document.getElementById("qrcode-slide-6"), {
           text: WEB_APP_URL,
-          width: 170,
-          height: 170,
+          width: 125,
+          height: 125,
           colorDark: "#034275",
           colorLight: "#FFFFFF",
-          correctLevel: QRCode.CorrectLevel.H
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      }
+
+      // Slide 6 Dual QR: João Neto Portfolio
+      if (document.getElementById("qrcode-slide-6-portfolio")) {
+        new QRCode(document.getElementById("qrcode-slide-6-portfolio"), {
+          text: PORTFOLIO_URL,
+          width: 125,
+          height: 125,
+          colorDark: "#1E1B4B",
+          colorLight: "#FFFFFF",
+          correctLevel: QRCode.CorrectLevel.M
         });
       }
     }

@@ -72,7 +72,7 @@ Este repositório contém a apresentação web oficial interativa para a **SITEC
 ## 👥 Autoria & Créditos Acadêmicos
 
 - **Discentes Pesquisadores / Apresentadores:**
-  - **João da Cruz N. Neto** — Pesquisador & Engenheiro de Software (`joaodacruznatividade@gmail.com`)
+  - **João da Cruz N. Neto** — Pesquisador & Engenheiro de Software ([Portfólio Pessoal](https://joaosnet.github.io/))
   - **Daniel Moreira Barra** — Pesquisador & Discente de Engenharia Biomédica
 - **Orientação Docente:**
   - **Prof. Dr. Ronaldo de Freitas Zampolo** — Coordenador do Laboratório de Processamento de Sinais (LaPS)
