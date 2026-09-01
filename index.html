@@ -463,15 +463,21 @@
         max-width: 250px !important;
         padding: 0.3rem 0.5rem !important;
       }
+      .flip-card-container {
+        max-width: 220px !important;
+      }
+      .flip-card-container #qrcode-slide-6,
+      .flip-card-container #qrcode-slide-6-portfolio {
+        max-width: 85px !important;
+        max-height: 85px !important;
+        margin: 0 auto !important;
+      }
+      .flip-card-container .qr-badge-container {
+        padding: 0.35rem 0.5rem !important;
+      }
       .qr-badge-container #qrcode-slide-1 {
         max-width: 90px !important;
         max-height: 90px !important;
-        margin: 0 auto !important;
-      }
-      .qr-badge-container #qrcode-slide-6,
-      .qr-badge-container #qrcode-slide-6-portfolio {
-        max-width: 68px !important;
-        max-height: 68px !important;
         margin: 0 auto !important;
       }
       .qr-badge-container p, .qr-badge-container a {
@@ -631,6 +637,34 @@
       #video-modal {
         padding: 0.5rem !important;
       }
+    }
+
+    /* 3D Flip Card Container & Animation for Slide 6 */
+    .flip-card-container {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      width: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .flip-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(180deg);
     }
 
     /* Focus Ring for Keyboard Accessibility */
@@ -833,7 +867,7 @@
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+        <div class="items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0 hidden md:flex">
           <div id="qrcode-slide-2" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
             <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
@@ -929,7 +963,7 @@
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+        <div class="items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0 hidden md:flex">
           <div id="qrcode-slide-3" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
             <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
@@ -1027,7 +1061,7 @@
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+        <div class="items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0 hidden md:flex">
           <div id="qrcode-slide-4" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
             <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
@@ -1148,7 +1182,7 @@
         </div>
 
         <!-- Persistent Top-Right QR Badge -->
-        <div class="flex items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0">
+        <div class="items-center space-x-2 sm:space-x-3 qr-badge-container px-2 sm:px-3 py-1 sm:py-1.5 border border-sky-400/40 flex-shrink-0 hidden md:flex">
           <div id="qrcode-slide-5" class="w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center"></div>
           <div class="text-left leading-tight pr-1 hidden sm:block">
             <span class="text-[9px] font-extrabold text-sky-800 block uppercase">Teste ao Vivo</span>
@@ -1344,70 +1378,111 @@
           </div>
         </div>
 
-        <!-- Right: Dual Live QR Codes (Web App + João Neto Portfolio) -->
+        <!-- Right: 3D Flip Card with Toggle Switch (DMovel Web App <-> João Neto Portfolio) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="p-3 sm:p-5 rounded-3xl qr-badge-container dual-qr-card text-center border-4 border-sky-500/50 shadow-2xl max-w-sm sm:max-w-md w-full">
-            <div class="inline-flex items-center space-x-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-sky-100 text-sky-800 text-[10px] sm:text-xs font-black uppercase tracking-wider mb-2">
-              <i class="fa-solid fa-qrcode text-xs sm:text-sm"></i>
-              <span>Escaneie e Conecte-se</span>
+          <div class="flip-card-container">
+            
+            <!-- Toggle Switch Tabs Bar -->
+            <div class="flex items-center justify-center p-1 rounded-2xl bg-slate-800/80 backdrop-blur border border-sky-500/40 mb-2 shadow-lg max-w-[320px] mx-auto">
+              <button id="toggle-tab-app" onclick="flipQRCodeCard('app')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md" aria-label="Mostrar QR Code do DMovel App">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>DMovel App</span>
+              </button>
+              <button id="toggle-tab-portfolio" onclick="flipQRCodeCard('portfolio')" class="flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white" aria-label="Mostrar QR Code do Portfólio de João Neto">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Portfólio</span>
+              </button>
             </div>
 
-            <!-- Dual QR Codes Grid -->
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 items-stretch my-1">
+            <!-- 3D Flip Card Body -->
+            <div id="qr-flip-inner" class="flip-card-inner">
               
-              <!-- QR 1: DMovel Web App -->
-              <div class="bg-slate-50 p-1.5 sm:p-2.5 rounded-2xl border border-slate-200 flex flex-col justify-between text-center">
-                <div class="text-[9px] sm:text-[11px] font-black text-sky-800 uppercase tracking-wider mb-1 flex items-center justify-center space-x-1">
-                  <i class="fa-solid fa-mobile-screen text-sky-600"></i>
-                  <span>DMovel App</span>
+              <!-- Front Face: DMovel Web App (Default, Large QR) -->
+              <div class="flip-card-front">
+                <div class="p-4 sm:p-5 rounded-3xl qr-badge-container text-center border-4 border-sky-500/60 shadow-2xl bg-white">
+                  <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-900 text-xs font-black uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-mobile-screen-button text-sm text-sky-600 animate-bounce"></i>
+                    <span>Teste ao Vivo o Web App</span>
+                  </div>
+
+                  <!-- Large QR Code -->
+                  <div class="bg-white p-2.5 sm:p-3 rounded-2xl shadow-inner inline-block mx-auto border-2 border-slate-200 my-1">
+                    <div id="qrcode-slide-6" class="flex justify-center" aria-label="QR Code para testar o DMovel Web App"></div>
+                  </div>
+
+                  <div class="mt-2 text-center">
+                    <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-xs sm:text-sm text-sky-700 hover:text-sky-900 font-extrabold" title="Abrir DMovel Web App">
+                      <span>lapshub.github.io/dmovel_web_app/</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                  </div>
+
+                  <button onclick="flipQRCodeCard('portfolio')" class="mt-2 px-3 py-1 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 text-[11px] font-bold inline-flex items-center space-x-1 transition-colors border border-sky-200">
+                    <span>Ver Portfólio de João Neto</span>
+                    <i class="fa-solid fa-rotate text-[10px]"></i>
+                  </button>
+
+                  <!-- Realização Logos -->
+                  <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between">
+                    <span class="text-[9px] text-slate-500 font-bold uppercase">Realização:</span>
+                    <div class="flex items-center space-x-1.5">
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="UFPA">
+                        <img src="assets/images/logo_ufpa.png" alt="UFPA" class="h-4 w-auto object-contain">
+                      </div>
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="LaPS">
+                        <img src="assets/images/logo_laps.png" alt="LaPS" class="h-4 w-auto object-contain">
+                      </div>
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="LAMIC">
+                        <img src="assets/images/logo_lamic.png" alt="LAMIC" class="h-4 w-auto object-contain">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="bg-white p-1 sm:p-1.5 rounded-xl shadow-inner inline-block mx-auto border border-slate-200">
-                  <div id="qrcode-slide-6" class="flex justify-center" aria-label="QR Code DMovel Web App"></div>
-                </div>
-                <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" rel="noopener noreferrer" class="mt-1 text-[8px] sm:text-[10px] text-sky-700 font-bold hover:underline truncate block" title="Abrir DMovel Web App">
-                  Testar App →
-                </a>
               </div>
 
-              <!-- QR 2: João Neto Portfolio -->
-              <div class="bg-slate-50 p-1.5 sm:p-2.5 rounded-2xl border border-slate-200 flex flex-col justify-between text-center">
-                <div class="text-[9px] sm:text-[11px] font-black text-indigo-800 uppercase tracking-wider mb-1 flex items-center justify-center space-x-1">
-                  <i class="fa-solid fa-laptop-code text-indigo-600"></i>
-                  <span>Portfólio</span>
+              <!-- Back Face: João Neto Portfolio (Rotated 180deg, Large QR) -->
+              <div class="flip-card-back">
+                <div class="p-4 sm:p-5 rounded-3xl qr-badge-container text-center border-4 border-indigo-500/60 shadow-2xl bg-white">
+                  <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 text-xs font-black uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-laptop-code text-sm text-indigo-600 animate-pulse"></i>
+                    <span>Portfólio de João Neto</span>
+                  </div>
+
+                  <!-- Large Portfolio QR Code -->
+                  <div class="bg-white p-2.5 sm:p-3 rounded-2xl shadow-inner inline-block mx-auto border-2 border-slate-200 my-1">
+                    <div id="qrcode-slide-6-portfolio" class="flex justify-center" aria-label="QR Code do Portfólio de João Neto"></div>
+                  </div>
+
+                  <div class="mt-2 text-center">
+                    <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-xs sm:text-sm text-indigo-700 hover:text-indigo-900 font-extrabold" title="Visitar Portfólio de João Neto">
+                      <span>joaosnet.github.io</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                  </div>
+
+                  <button onclick="flipQRCodeCard('app')" class="mt-2 px-3 py-1 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-[11px] font-bold inline-flex items-center space-x-1 transition-colors border border-indigo-200">
+                    <i class="fa-solid fa-rotate text-[10px]"></i>
+                    <span>Voltar para DMovel App</span>
+                  </button>
+
+                  <!-- Realização Logos -->
+                  <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between">
+                    <span class="text-[9px] text-slate-500 font-bold uppercase">Realização:</span>
+                    <div class="flex items-center space-x-1.5">
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="UFPA">
+                        <img src="assets/images/logo_ufpa.png" alt="UFPA" class="h-4 w-auto object-contain">
+                      </div>
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="LaPS">
+                        <img src="assets/images/logo_laps.png" alt="LaPS" class="h-4 w-auto object-contain">
+                      </div>
+                      <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6" title="LAMIC">
+                        <img src="assets/images/logo_lamic.png" alt="LAMIC" class="h-4 w-auto object-contain">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="bg-white p-1 sm:p-1.5 rounded-xl shadow-inner inline-block mx-auto border border-slate-200">
-                  <div id="qrcode-slide-6-portfolio" class="flex justify-center" aria-label="QR Code Portfólio João Neto"></div>
-                </div>
-                <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="mt-1 text-[8px] sm:text-[10px] text-indigo-700 font-bold hover:underline truncate block" title="Visitar Portfólio de João Neto">
-                  joaosnet.github.io →
-                </a>
               </div>
 
-            </div>
-
-            <!-- Direct Portfolio Link -->
-            <div class="mt-2 pt-1.5 border-t border-slate-200 text-center">
-              <a href="https://joaosnet.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 text-[10px] sm:text-xs text-sky-700 hover:text-sky-900 font-bold" title="Portfólio & Contato de João Neto">
-                <i class="fa-solid fa-globe"></i>
-                <span>Portfólio & Contato: <strong>joaosnet.github.io</strong></span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-              </a>
-            </div>
-
-            <!-- Official Institutional Logos in Slide 6 Card -->
-            <div class="mt-2 pt-1.5 border-t border-slate-200 flex items-center justify-between">
-              <span class="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-wider">Realização:</span>
-              <div class="flex items-center space-x-1.5 sm:space-x-2">
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Universidade Federal do Pará (UFPA)">
-                  <img src="assets/images/logo_ufpa.png" alt="UFPA" class="h-4 sm:h-5 w-auto object-contain">
-                </div>
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Laboratório de Processamento de Sinais (LaPS)">
-                  <img src="assets/images/logo_laps.png" alt="LaPS" class="h-4 sm:h-5 w-auto object-contain">
-                </div>
-                <div class="bg-white px-2 py-0.5 rounded-lg border border-slate-300 flex items-center h-6 sm:h-7" title="Laboratório de Microcomputadores e Controladores (LAMIC)">
-                  <img src="assets/images/logo_lamic.png" alt="LAMIC" class="h-4 sm:h-5 w-auto object-contain">
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1456,7 +1531,7 @@
       </div>
 
       <!-- Iframe Container -->
-      <div class="relative w-full flex-grow bg-slate-950 overflow-hidden">
+      <div class="relative w-full flex-grow bg-slate-950 overflow-hidden" style="-webkit-overflow-scrolling: touch;">
         <iframe id="dmovel-iframe" src="https://lapshub.github.io/dmovel_web_app/" class="w-full h-full border-0" allow="geolocation; camera; clipboard-read; clipboard-write; fullscreen" loading="lazy" title="DMovel Web App"></iframe>
       </div>
 
@@ -1540,7 +1615,7 @@
 
     <!-- Video Canvas Container -->
     <div class="relative w-full max-w-6xl mx-auto my-auto flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl border border-sky-500/30 bg-black aspect-video max-h-[76vh]">
-      <video id="motivational-video" class="w-full h-full object-contain" controls preload="metadata" playsinline>
+      <video id="motivational-video" class="w-full h-full object-contain" controls preload="metadata" playsinline webkit-playsinline>
         <source src="assets/video/dmovel_video_motivacional.mp4" type="video/mp4">
         Seu navegador não suporta a tag de vídeo HTML5.
       </video>
@@ -1565,21 +1640,21 @@
     <button onclick="openVideoModal(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-red-600 text-red-300 hover:text-white text-xs font-semibold">
       <i class="fa-solid fa-play text-xs"></i><span>Vídeo (M)</span>
     </button>
-    <button onclick="toggleTts(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-emerald-300 hover:text-white text-xs font-semibold">
+    <button onclick="toggleTTS(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-emerald-300 hover:text-white text-xs font-semibold">
       <i class="fa-solid fa-volume-high text-xs"></i><span>Voz (V)</span>
     </button>
     <div class="flex items-center space-x-1 bg-slate-800 rounded-xl px-1.5 py-1">
-      <button onclick="changeFontSize(0.1)" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Aumentar Fonte">A+</button>
+      <button onclick="zoomIn()" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Aumentar Fonte">A+</button>
       <span class="text-slate-600 text-xs">|</span>
-      <button onclick="changeFontSize(-0.1)" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Diminuir Fonte">A-</button>
+      <button onclick="zoomOut()" class="px-1.5 text-blue-300 hover:text-white text-xs font-bold" title="Diminuir Fonte">A-</button>
     </div>
-    <button onclick="toggleSpeakerNotes(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-semibold">
+    <button onclick="toggleNotes(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-semibold">
       <i class="fa-solid fa-note-sticky text-xs"></i><span>Notas (N)</span>
     </button>
     <button onclick="toggleFullscreen(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-cyan-600 text-cyan-300 hover:text-white text-xs font-semibold">
       <i class="fa-solid fa-expand text-xs"></i><span>Tela Cheia</span>
     </button>
-    <button onclick="openA11yModal(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-sky-700 hover:bg-sky-600 text-white text-xs font-semibold">
+    <button onclick="toggleA11yModal(); toggleToolsDrawer();" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-sky-700 hover:bg-sky-600 text-white text-xs font-semibold">
       <i class="fa-solid fa-universal-access text-xs"></i><span>Acessibilidade</span>
     </button>
   </div>
@@ -1802,19 +1877,19 @@
 
     // --- QR Code Generator Initialization ---
     function initQRCodes() {
-      // Slide 1 Hero QR
+      // Slide 1 Hero QR (Ampliado para 190px)
       if (document.getElementById("qrcode-slide-1")) {
         new QRCode(document.getElementById("qrcode-slide-1"), {
           text: WEB_APP_URL,
-          width: 160,
-          height: 160,
+          width: 190,
+          height: 190,
           colorDark: "#034275",
           colorLight: "#FFFFFF",
           correctLevel: QRCode.CorrectLevel.H
         });
       }
 
-      // Small Badges for Slides 2, 3, 4, 5
+      // Small Badges for Slides 2, 3, 4, 5 (Apenas visíveis em Desktop)
       for (let i = 2; i <= 5; i++) {
         const el = document.getElementById(`qrcode-slide-${i}`);
         if (el) {
@@ -1829,28 +1904,52 @@
         }
       }
 
-      // Slide 6 Dual QR: Web App
+      // Slide 6 3D Flip Card: Web App QR (Ampliado para 190px)
       if (document.getElementById("qrcode-slide-6")) {
         new QRCode(document.getElementById("qrcode-slide-6"), {
           text: WEB_APP_URL,
-          width: 125,
-          height: 125,
+          width: 190,
+          height: 190,
           colorDark: "#034275",
           colorLight: "#FFFFFF",
-          correctLevel: QRCode.CorrectLevel.M
+          correctLevel: QRCode.CorrectLevel.H
         });
       }
 
-      // Slide 6 Dual QR: João Neto Portfolio
+      // Slide 6 3D Flip Card: João Neto Portfolio QR (Ampliado para 190px)
       if (document.getElementById("qrcode-slide-6-portfolio")) {
         new QRCode(document.getElementById("qrcode-slide-6-portfolio"), {
           text: PORTFOLIO_URL,
-          width: 125,
-          height: 125,
+          width: 190,
+          height: 190,
           colorDark: "#1E1B4B",
           colorLight: "#FFFFFF",
-          correctLevel: QRCode.CorrectLevel.M
+          correctLevel: QRCode.CorrectLevel.H
         });
+      }
+    }
+
+    // --- Slide 6 3D Flip Card Controller ---
+    function flipQRCodeCard(target) {
+      const inner = document.getElementById('qr-flip-inner');
+      const tabApp = document.getElementById('toggle-tab-app');
+      const tabPortfolio = document.getElementById('toggle-tab-portfolio');
+      if (!inner) return;
+
+      const shouldFlip = (target === 'portfolio') || (target === 'toggle' && !inner.classList.contains('flipped'));
+
+      if (shouldFlip) {
+        inner.classList.add('flipped');
+        if (tabApp && tabPortfolio) {
+          tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white";
+          tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md";
+        }
+      } else {
+        inner.classList.remove('flipped');
+        if (tabApp && tabPortfolio) {
+          tabApp.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md";
+          tabPortfolio.className = "flex-1 py-1.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 text-slate-300 hover:text-white";
+        }
       }
     }
 
@@ -2142,11 +2241,22 @@
       const docEl = document.documentElement;
       const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
       if (req) {
-        return req.call(docEl).then(() => {
-          updateFullscreenUI();
-        }).catch(err => {
-          console.log('Fullscreen request note:', err);
-        });
+        try {
+          const res = req.call(docEl);
+          if (res && res.then) {
+            return res.then(() => {
+              updateFullscreenUI();
+            }).catch(err => {
+              console.log('Fullscreen request note:', err);
+              window.scrollTo(0, 1);
+            });
+          }
+        } catch (err) {
+          console.log('Fullscreen sync error handled:', err);
+          window.scrollTo(0, 1);
+        }
+      } else {
+        window.scrollTo(0, 1);
       }
       return Promise.resolve();
     }
@@ -2154,11 +2264,18 @@
     function exitAppFullscreen() {
       const exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
       if (exit) {
-        return exit.call(document).then(() => {
-          updateFullscreenUI();
-        }).catch(err => {
-          console.log('Exit fullscreen note:', err);
-        });
+        try {
+          const res = exit.call(document);
+          if (res && res.then) {
+            return res.then(() => {
+              updateFullscreenUI();
+            }).catch(err => {
+              console.log('Exit fullscreen note:', err);
+            });
+          }
+        } catch (err) {
+          console.log('Exit fullscreen sync error handled:', err);
+        }
       }
       return Promise.resolve();
     }
