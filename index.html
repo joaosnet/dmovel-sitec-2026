@@ -340,6 +340,10 @@
         min-height: 100dvh !important;
         padding: max(0.65rem, env(safe-area-inset-top)) max(0.65rem, env(safe-area-inset-right)) max(6.5rem, env(safe-area-inset-bottom)) max(0.65rem, env(safe-area-inset-left)) !important;
       }
+      .slide.active {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
       .slide h1 {
         font-size: 1.65rem !important;
         line-height: 1.25 !important;
@@ -365,10 +369,24 @@
         padding-bottom: 7.5rem !important;
       }
       .slide-3-pillars {
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
       }
       .slide-3-pillars > div {
-        padding: 0.65rem 0.85rem !important;
+        padding: 0.5rem 0.75rem !important;
+      }
+      .slide-3-pillars h3 {
+        font-size: 0.92rem !important;
+        margin-bottom: 0.2rem !important;
+      }
+      .slide-3-pillars p {
+        font-size: 0.72rem !important;
+        line-height: 1.25 !important;
+      }
+      .slide-3-pillars .w-10 {
+        width: 2rem !important;
+        height: 2rem !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.35rem !important;
       }
       .slide[data-slide="4"] {
         padding-bottom: 7.5rem !important;
