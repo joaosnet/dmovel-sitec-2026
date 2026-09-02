@@ -16,6 +16,10 @@
 [![Acessibilidade](https://img.shields.io/badge/WCAG%202.1-Conformidade%20AAA-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Web App](https://img.shields.io/badge/App%20Online-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
+<br/><br/>
+
+[![DMovel Apresentação SITEC UFPA 2026](assets/images/social_preview.png)](https://joaosnet.github.io/dmovel-sitec-2026/)
+
 <p align="center">
   <strong>Apresentação interativa em 6 slides com Emulador Iframe do App, Tour Guiado para novos usuários, Vídeo Motivador em tela cheia, Acessibilidade Universal & Teste ao Vivo por QR Code para a Semana do Instituto de Tecnologia (SITEC 2026) da Universidade Federal do Pará (UFPA).</strong>
 </p>

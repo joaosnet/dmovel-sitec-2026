@@ -16,6 +16,10 @@
 [![Accessibility](https://img.shields.io/badge/WCAG%202.1-AAA%20Compliant-emerald?style=for-the-badge&logo=w3c&logoColor=white)](https://joaosnet.github.io/dmovel-sitec-2026/)
 [![Live Web App](https://img.shields.io/badge/Live%20App-dmovel__web__app-blueviolet?style=for-the-badge&logo=flutter&logoColor=white)](https://lapshub.github.io/dmovel_web_app/)
 
+<br/><br/>
+
+[![DMovel SITEC UFPA 2026 Presentation](assets/images/social_preview.png)](https://joaosnet.github.io/dmovel-sitec-2026/)
+
 <p align="center">
   <strong>Interactive 6-Slide Presentation with Fullscreen Motivational Video, Built-in App Iframe Emulator, Interactive Guided Tour, Universal Accessibility & Live Web App QR Testing for the Technology Institute Week (SITEC 2026) at the Federal University of Pará (UFPA).</strong>
 </p>
