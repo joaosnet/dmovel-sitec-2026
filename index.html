@@ -1644,11 +1644,14 @@
           <span class="font-bold text-sm">DMovel Web App • Emulador Interativo</span>
         </div>
         <div class="flex items-center space-x-2">
+          <button id="btn-reload-iframe" onclick="reloadAppIframe()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs transition-colors" title="Recarregar Web App" aria-label="Recarregar Web App">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
           <a href="https://lapshub.github.io/dmovel_web_app/" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-400 hover:text-sky-300 font-semibold px-2 py-1 rounded-lg bg-sky-950 border border-sky-800/60 transition-colors inline-flex items-center space-x-1" title="Abrir em Nova Aba">
             <span>Nova Aba</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>
-          <button onclick="closeAppEmulator()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Fechar Emulador">
+          <button id="btn-close-emulator" onclick="closeAppEmulator()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Fechar Emulador">
             <i class="fa-solid fa-xmark text-lg"></i>
           </button>
         </div>
@@ -2603,38 +2606,52 @@
       }
     });
 
-    // --- Button Bindings ---
-    document.getElementById('btn-next').addEventListener('click', nextSlide);
-    document.getElementById('btn-prev').addEventListener('click', prevSlide);
-    document.getElementById('btn-app-emulator').addEventListener('click', toggleAppEmulator);
-    document.getElementById('btn-close-emulator').addEventListener('click', closeAppEmulator);
-    document.getElementById('btn-reload-iframe').addEventListener('click', reloadAppIframe);
-    document.getElementById('btn-video').addEventListener('click', toggleVideoModal);
-    document.getElementById('btn-close-video').addEventListener('click', closeVideoModal);
-    document.getElementById('btn-theme').addEventListener('click', toggleTheme);
-    document.getElementById('btn-tts').addEventListener('click', toggleTTS);
-    document.getElementById('btn-zoom-in').addEventListener('click', zoomIn);
-    document.getElementById('btn-zoom-out').addEventListener('click', zoomOut);
-    document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
-    document.getElementById('btn-notes').addEventListener('click', toggleNotes);
-    document.getElementById('btn-close-notes').addEventListener('click', toggleNotes);
-    document.getElementById('btn-a11y-help').addEventListener('click', toggleA11yModal);
-    document.getElementById('btn-close-a11y').addEventListener('click', toggleA11yModal);
-    document.getElementById('btn-understood-a11y').addEventListener('click', toggleA11yModal);
+    // --- Button Bindings (Safe Optional Chaining) ---
+    document.getElementById('btn-next')?.addEventListener('click', nextSlide);
+    document.getElementById('btn-prev')?.addEventListener('click', prevSlide);
+    document.getElementById('btn-app-emulator')?.addEventListener('click', toggleAppEmulator);
+    document.getElementById('btn-close-emulator')?.addEventListener('click', closeAppEmulator);
+    document.getElementById('btn-reload-iframe')?.addEventListener('click', reloadAppIframe);
+    document.getElementById('btn-video')?.addEventListener('click', toggleVideoModal);
+    document.getElementById('btn-close-video')?.addEventListener('click', closeVideoModal);
+    document.getElementById('btn-theme')?.addEventListener('click', toggleTheme);
+    document.getElementById('btn-tts')?.addEventListener('click', toggleTTS);
+    document.getElementById('btn-zoom-in')?.addEventListener('click', zoomIn);
+    document.getElementById('btn-zoom-out')?.addEventListener('click', zoomOut);
+    document.getElementById('btn-fullscreen')?.addEventListener('click', toggleFullscreen);
+    document.getElementById('btn-notes')?.addEventListener('click', toggleNotes);
+    document.getElementById('btn-close-notes')?.addEventListener('click', toggleNotes);
+    document.getElementById('btn-a11y-help')?.addEventListener('click', toggleA11yModal);
+    document.getElementById('btn-close-a11y')?.addEventListener('click', toggleA11yModal);
+    document.getElementById('btn-understood-a11y')?.addEventListener('click', toggleA11yModal);
     document.getElementById('mobile-fullscreen-chip')?.addEventListener('click', toggleFullscreen);
 
     // Tour buttons
-    btnTourNext.addEventListener('click', nextTourStep);
-    btnTourPrev.addEventListener('click', prevTourStep);
-    document.getElementById('btn-tour-skip').addEventListener('click', finishTour);
+    btnTourNext?.addEventListener('click', nextTourStep);
+    btnTourPrev?.addEventListener('click', prevTourStep);
+    document.getElementById('btn-tour-skip')?.addEventListener('click', finishTour);
 
     // Initialize Presentation
-    window.addEventListener('DOMContentLoaded', () => {
-      initQRCodes();
-      updateSlide(1);
-      checkFirstTimeTour();
-      updateFullscreenUI();
-    });
+    function startPresentation() {
+      try {
+        initQRCodes();
+      } catch (err) {
+        console.error('Error in initQRCodes:', err);
+      }
+      try {
+        updateSlide(1);
+        checkFirstTimeTour();
+        updateFullscreenUI();
+      } catch (err) {
+        console.error('Error starting presentation:', err);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', startPresentation);
+    } else {
+      startPresentation();
+    }
   </script>
 </body>
 </html>
