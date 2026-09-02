@@ -1,0 +1,7 @@
+# Cursor Rules - DMovel SITEC UFPA 2026
+# Documentação completa em AGENTS.md
+
+- SITEC 2026 Logo: Sempre que escrever ou mencionar 'SITEC 2026' ou 'Semana do Instituto de Tecnologia', inclua o logotipo oficial da SITEC 2026 UFPA ('assets/images/logo_sitec_icon.png' ou 'logo_sitec_2026.png').
+- Social Preview: Sempre que modificar o site, capture e atualize o preview social em 1280x640 ('social_preview.png' e 'assets/images/social_preview.png') com as metatags og:image e twitter:image atualizadas e faça push para o repositório remoto.
+- Autoria e Laboratórios: Sempre inclua LaPS e LAMIC juntos, mencione a orientação dos Professores Ronaldo Zampolo e Agostinho Castro, e mantenha o contato de João Neto apontando para https://joaosnet.github.io/ como 'Contato'.
+- Responsividade: Mantenha compatibilidade perfeita em 1280x720, 360x760 e 760x360 sem nenhum elemento cortado.
